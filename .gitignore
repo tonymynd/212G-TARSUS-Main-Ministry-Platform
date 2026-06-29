@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Build
+dist/
+.next/
+out/
+
+# Environment
+.env
+.env.*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+
+# Obsidian (if synced into project)
+.obsidian/
