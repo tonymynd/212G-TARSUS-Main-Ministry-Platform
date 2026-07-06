@@ -155,7 +155,7 @@ export async function POST(req: Request) {
             'Authorization': 'Bearer ' + DEEPSEEK_API_KEY
           },
           body: JSON.stringify({
-            model: 'deepseek-chat',
+            model: 'deepseek-reasoner',
             messages: [
               {
                 role: 'system',
@@ -163,7 +163,6 @@ export async function POST(req: Request) {
               },
               ...historyDeepSeek
             ],
-            temperature: 0.2,
             max_tokens: 4096
           })
         }
@@ -175,7 +174,15 @@ export async function POST(req: Request) {
       }
 
       const data = await response.json();
-      text = data.choices?.[0]?.message?.content || '';
+      const messageObj = data.choices?.[0]?.message;
+      let mainContent = messageObj?.content || '';
+      const reasoningContent = messageObj?.reasoning_content || '';
+      
+      if (reasoningContent) {
+        text = `> **Thinking Process:**\n> \n> ${reasoningContent.replace(/\n/g, '\n> ')}\n\n${mainContent}`;
+      } else {
+        text = mainContent;
+      }
     } else if (GEMINI_API_KEY) {
       const response = await fetch(
         'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=' + GEMINI_API_KEY,
@@ -219,20 +226,31 @@ export async function POST(req: Request) {
     // 4. Post-processing / Sanitization
     text = text.trim();
 
-    // Ensure it starts with the salutation
-    if (!text.startsWith(expectedSalutation)) {
+    // Ensure it starts with the salutation (but after the thinking block if present)
+    let thinkingBlock = '';
+    let contentToProcess = text;
+    
+    const thinkingMatch = text.match(/^(> \*\*Thinking Process:\*\*\n(?:> .*\n)*\n)/);
+    if (thinkingMatch) {
+      thinkingBlock = thinkingMatch[1];
+      contentToProcess = text.substring(thinkingBlock.length).trim();
+    }
+
+    if (!contentToProcess.startsWith(expectedSalutation)) {
       const rawSalutation = expectedSalutation.replace(/\*\*/g, '');
-      const indexBold = text.indexOf(expectedSalutation);
-      const indexRaw = text.indexOf(rawSalutation);
+      const indexBold = contentToProcess.indexOf(expectedSalutation);
+      const indexRaw = contentToProcess.indexOf(rawSalutation);
       
       if (indexBold !== -1) {
-        text = text.substring(indexBold);
+        contentToProcess = contentToProcess.substring(indexBold);
       } else if (indexRaw !== -1) {
-        text = expectedSalutation + "\n\n" + text.substring(indexRaw + rawSalutation.length).trim();
+        contentToProcess = expectedSalutation + "\n\n" + contentToProcess.substring(indexRaw + rawSalutation.length).trim();
       } else {
-        text = expectedSalutation + "\n\n" + text;
+        contentToProcess = expectedSalutation + "\n\n" + contentToProcess;
       }
     }
+    
+    text = thinkingBlock + contentToProcess;
 
     // Ensure it ends with the benediction
     if (!text.endsWith(expectedBenediction)) {
