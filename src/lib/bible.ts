@@ -42,7 +42,13 @@ const abbrevMap: Record<string, string> = {
   'tit': 'Titus', 'ti': 'Titus', 'tito': 'Titus', 'phm': 'Philemon', 'phile': 'Philemon', 'filemn': 'Philemon', 'heb': 'Hebrews', 'he': 'Hebrews', 'hebreos': 'Hebrews', 'jam': 'James', 'jas': 'James', 'santiago': 'James',
   '1pe': '1 Peter', '1pet': '1 Peter', '1pedro': '1 Peter', '2pe': '2 Peter', '2pet': '2 Peter', '2pedro': '2 Peter', '1jo': '1 John', '1jon': '1 John', '1jn': '1 John', '1juan': '1 John',
   '2jo': '2 John', '2jon': '2 John', '2jn': '2 John', '2juan': '2 John', '3jo': '3 John', '3jon': '3 John', '3jn': '3 John', '3juan': '3 John', 'jde': 'Jude', 'judas': 'Jude',
-  'rev': 'Revelation', 're': 'Revelation', 'apocalipsis': 'Revelation'
+  'rev': 'Revelation', 're': 'Revelation', 'apocalipsis': 'Revelation',
+  // Starman's Two-Letter Abbreviations
+  'am': 'Amos', 'cl': 'Colossians', 'da': 'Daniel', 'dt': 'Deuteronomy', 'ec': 'Ecclesiastes', 'er': 'Ezra', 'es': 'Esther', 'ez': 'Ezekiel', 
+  'ga': 'Galatians', 'ge': 'Genesis', 'hb': 'Habakkuk', 'hg': 'Haggai', 'ho': 'Hosea', 'is': 'Isaiah', 'ja': 'James', 'jb': 'Job', 'jd': 'Jude', 
+  'je': 'Jeremiah', 'jg': 'Judges', 'jl': 'Joel', 'jo': 'Jonah', 'js': 'Joshua', 'la': 'Lamentations', 'le': 'Leviticus', 'ma': 'Malachi', 'mi': 'Micah',
+  'na': 'Nahum', 'ne': 'Nehemiah', 'nu': 'Numbers', 'ob': 'Obadiah', 'pm': 'Philemon', 'pr': 'Proverbs', 'ru': 'Ruth', 'so': 'Song of Solomon', 
+  'ze': 'Zechariah', 'zp': 'Zephaniah'
 };
 
 export function lookupVerseRange(book: string, chapter: number, startVerse?: number, endVerse?: number): Verse[] {
