@@ -59,7 +59,7 @@ function CitationBadge({ num, citation }: { num: string; citation: Citation }) {
 
   return (
     <span 
-      style={{ position: 'relative', display: 'inline-block' }}
+      style={{ position: 'relative', display: 'inline-block', textIndent: 0 }}
       onMouseEnter={() => setVisible(true)}
       onMouseLeave={() => setVisible(false)}
     >
@@ -102,7 +102,6 @@ function CitationBadge({ num, citation }: { num: string; citation: Citation }) {
             borderRadius: '8px',
             padding: '12px',
             boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
-            marginBottom: '8px',
             fontFamily: 'system-ui, -apple-system, sans-serif',
             textAlign: 'left',
             color: 'black'
