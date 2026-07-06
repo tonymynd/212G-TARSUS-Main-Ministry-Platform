@@ -1,0 +1,21 @@
+---
+title: "six"
+type: "study"
+original_path: "c:\STORAGE\G\GodShew\3-RESOURCES(Pantry)\GodShew\six.md"
+---
+
+DEAD to 6 things when allegorically crucified with Christ:
+
+1) Dead to old man ('anthropos'=liar: Rom 3:4): Romans 6:6
+
+2) Dead to sin(law), but alive unto God(Grace): Romans 6:11
+
+3) Dead to the law: Romans 7:4; Rom 10:4 (1Cor 15:56)
+
+4) Dead to the flesh (fleshy affections & lust): Galatians
+
+5:24
+
+5) Dead to rudiments of the world: Colossians 2:20 (1Jn 2:16)
+
+6) Dead to CJ=servant; alive as JC=Lord: Philippians 2:5-11

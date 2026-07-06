@@ -1,0 +1,17 @@
+---
+title: "1st prayer of continental Congress"
+type: "post"
+original_path: "C:\STORAGE\M\Manifold-Grace\3-RESOURCES(Pantry)\ORG-NOTES\Social-Media-Captures\GMP\FB\FB-Josh_Howerton-1st_prayer_of_continental_Congress-20260701.md"
+---
+[FB-Josh_Howerton-1st_prayer_of_continental_Congress-20260701.mp4](<file:///F:/O/ORG/Social Media Video Wisdom (ORG)/GMP/FB/FB-Josh_Howerton-1st_prayer_of_continental_Congress-20260701.mp4>)
+
+## Description
+
+I'm going to read the FIRST prayer delivered to the Continental Congress and it's going to blow your mind. Why have they fought so hard to erase this? Allow me to answer this question 🇺🇸✝️
+
+## Transcript
+Listeners, this going to blow your mind. You have no idea how much Christian sort of standards were written into all the, you know, many of the founding documents. So, all I'm going to do right here is read the prayer of the first Continental Congress.
+
+Oh Lord, our heavenly Father, high and mighty King of kings and Lord of lords who does from thy throne behold all the dwellers on earth and reignest with power supreme and uncontrolled over all the kingdoms, empires, and look down in mercy we beseech thee on these our American states who have fled to thee from the rod of the oppressor and thrown themselves on thy gracious protection, desiring to be henceforth dependent only on thee. To thee have they appealed for the righteousness of their cause. To thee do they now look up for that countenance and support which thou alone can't give. Take them therefore, heavenly Father, under thy nurturing care. Give them wisdom of council and valor on field. Now I'm going to skip forward so the prayer ends like this: preserve the health of their bodies and the vigor of their minds. Shower down on them and millions they here represent such temporal blessings as thou seest expedient for them in this world and crown them with everlasting glory in the world to come. And then here's how it ends. All this we ask in the name and through the merits of Jesus Christ thy Son and our Savior. Amen.
+
+That, ladies and gentlemen, was the first prayer at the first Continental Congress. And then fast forward 250 years and you have people saying in no sense yeah was our nation founded on Christian in any way. It's crazy. I got a little explanation for why this is. What you're seeing is literally, you're seeing Romans one in action. Yes. It says that when people exchange the truth of God for a lie, it says that they quote suppress the truth in their unrighteousness. So, whenever an ideology becomes an idol and by the way, secularism is an ideology that becomes an idol. Whenever an ideology becomes an idol, truth suppression begins to happen. What is truth suppression look like? It looks like rewriting the entire founding of nation so that it doesn't sound like it was in any sense Christian. Now, why did they do that? Here's the strategy. Rewrite the past to control the future. Yes. I just want to say that one more time. If we want the future of a nation, a society, a culture to be a godless, secular, honestly, gospel-opposing future. Well, then, we have to rewrite the past. Right. In order to control the future. That's the strategy. That's why dudes like that are really important. That guy right there.

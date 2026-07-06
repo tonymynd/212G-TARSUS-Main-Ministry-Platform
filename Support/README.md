@@ -6,13 +6,14 @@ Project **212G-TARSUS-Main-Ministry-Platform** — main ministry platform for GM
 
 ## Source Corpus (read-only — Pantry)
 
-| Source | Path | Notes |
-|--------|------|-------|
-| Posts | `3-RESOURCES(Pantry)/Daniel Miles/Daniel-Miles-Posts-Archive/` | 3,759 files, 2014–2025 |
-| Emails | `3-RESOURCES(Pantry)/Daniel Miles/Dan Emails/` | 129 files; `Accepted/`, `Keepers but not for AI/` |
-| Studies | `3-RESOURCES(Pantry)/Daniel Miles/*.md` | Standalone authorship docs |
-| Person | `3-RESOURCES(Pantry)/Daniel Miles/Daniel Miles.md` | Founder GodShew.org |
-| Style reference | `3-RESOURCES(Pantry)/GodShew/` | Doctrine and voice reference for Tarsus |
+| Source          | Path                                                           | Notes                                             |
+| --------------- | -------------------------------------------------------------- | ------------------------------------------------- |
+| Posts           | `3-RESOURCES(Pantry)/Daniel Miles/Daniel-Miles-Posts-Archive/` | 3,759 files, 2014–2025                            |
+| Emails          | `3-RESOURCES(Pantry)/Daniel Miles/Dan Emails/`                 | 129 files; `Accepted/`, `Keepers but not for AI/` |
+| Studies         | `3-RESOURCES(Pantry)/Daniel Miles/*.md`                        | Standalone authorship docs                        |
+| Person          | `3-RESOURCES(Pantry)/Daniel Miles/Daniel Miles.md`             | Founder GodShew.org                               |
+| Style reference | `3-RESOURCES(Pantry)/GodShew/`                                 | Doctrine and voice reference for Tarsus           |
+| Charity Study   | `3-RESOURCES(Pantry)/ABOVE all these things put on charity`     | Massive Study                                     |
 
 ## Scope (from layout)
 

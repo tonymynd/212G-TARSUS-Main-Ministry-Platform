@@ -1,0 +1,18 @@
+---
+title: "consciousmb-Kanye Silences Paparazzis"
+type: "post"
+original_path: "C:\STORAGE\M\Manifold-Grace\3-RESOURCES(Pantry)\ORG-NOTES\Social-Media-Captures\GMP\TT\TT-Unknown-consciousmb-Kanye_Silences_Paparazzis-20230930.md"
+---
+[TT-Unknown-consciousmb-Kanye_Silences_Paparazzis-20230930.mp4](<file:///F:/O/ORG/Social Media Video Wisdom (ORG)/GMP/TT/TT-Unknown-consciousmb-Kanye_Silences_Paparazzis-20230930.mp4>)
+
+## Description
+
+
+## Transcript
+
+
+## Related Files
+
+The following related files are available in the source directory for reference (editing, translation, etc.):
+
+- **Derivative**: `F:\G\GMP\Projects\Media and Entertainment\TT-consciousmb-Kanye Silences Paparazzis\TT-consciousmb-Kanye Silences Paparazzis .mp4` (4.8 MB)

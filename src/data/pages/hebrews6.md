@@ -1,0 +1,140 @@
+---
+title: "Hebrews6"
+type: "study"
+original_path: "c:\STORAGE\G\GodShew\3-RESOURCES(Pantry)\GodShew\Hebrews6.md"
+---
+
+
+## Hebrews Chapter 5 - Use Senses To Discern Law is both good and evil
+
+
+[![[godshewlogo2.jpg|His Angel plays the Last Trump it]]](GodShew-Home.md)
+
+### Hebrews 5: discern law: both good and evil, ends bad  
+
+Hebrews Chp 5: Law is both good and evil, ends bad.  
+Use your God given senses to discern (a void) [law](RevelatorySermons24.md).  
+Use senses to discern both good and [evil](Law.md) ends [bad](lawphoto.md).  
+[Strong meat](Law.md#Was) belongeth to [them that are of full age](GodShew.md#nomorechildren).  
+  
+[Grace walk](GraceWalk.md) to Hebrews 12; But then "[run](GraceRun.md)" to [the end](NoLawNoDeadEnd.md) of [Hebrews](ShewBread3.md#dblem)  
+  
+Related Web Pages: [Hebrews: is as if a mini bible itself](GodShew2.md#Hebrews)  
+[Hebrews: is written as if a good > better > best chat](GodShew.md#GBB)  
+[Grace Conclusion, of Hebrews, is The Pauline "Token"](Paul.md#Format)
+
+
+A Verse By Verse Commentary on The Epistle Of Paul The Apostle To The Hebrews Chapter 5. Index:  
+
+[Intro Comments](Hebrews.md) \ [Title](Hebrews.md#Title) \ [Author](Hebrews.md#Author) \ [Hebrews 1](Hebrews2.md) \ [Hebrews 2](Hebrews3.md) \ [Hebrews  3](Hebrews4.md) \ [Hebrews 4](Hebrews5.md) \ Hebrews  5 \ [Hebrews  6](Hebrews7.md) \ [Hebrews 7](Hebrews8.md) \ [Hebrews 8](Hebrews9.md) \ [Hebrews 9](Hebrews10.md) \  [Hebrews 10](Hebrews11.md) \ [Hebrews 11](Hebrews12.md) \ [Hebrews 12](Hebrews13.md) \ [Hebrews 13](Hebrews14.md) \ The Summation \
+
+
+[Holy Kiss](HolyKiss.md): [Greeting](Paul.md#Format): [Grace unto you](GraceUntoYou.md), and peace,  
+from God our Father and the Lord Jesus Christ.
+
+## Hebrews Chapter 5 - Discern Law: both good and evil, ends bad  
+
+General Theme of Hebrews Chapter 5: [Priesthoods?](TwainShew5.md#Priesthoods)  
+Discern "both good and [evil": law](BiblicalDots.md) ends badly: with [evil concupiscence](Concupiscence.md).  
+C of thru [J>C](ShewBread.md#contraryto): is the author of ["eternal" salvation](TwainShew6.md#Salvations): [Prototype](RevelatorySermons17.md) of [eternal life.](NoLawNoDeadEnd.md)  
+"After the order of Melchisedec" speaks of the "[after-ward](HowbeitAfterward.md)" of such [before/after](TwainShew.md).  
+Strong meat belongeth to them that are of full age. Grace is for man of babe/child/man.  
+  
+
+  
+Hebrews 5 begins a focus on priesthoods, the priesthood and the order of Jesus > Christ, notably being "after the order of Melchisedec", which is mentioned no less than six times in Hebrews 5-7, twice in Hebrews 5 (perhaps to make a point); And as if comparing the [two orders](TwainShew5.md) of such [priesthoods](TwainShew5.md#Priesthoods) as an [allegorical](Allegory.md) before/after scenario of law/grace. Hebrews 5 also notes Christ of Jesus > Christ is only the "author" of "eternal" salvation, not both author and finisher as Jesus is of our faith; As if the head of the body: the head of every man (of babe/child/man): Christ decides what's best for the whole body is [no law](NoLawNoDeadEnd.md), since the result of priests adding law to grace results in infirmities and a dead end (Hebrews 7:23). Those who do such are not suffered to continue the human race by reason of death. The conclusion of Hebrews Chapter 5 states "[ye](YeYou.md)" folk, such as the Hebrews (plura), are as an adult "babe", unweaned from law, and unable to discern both good + evil (grace + law) ends bad. Ye of ye/you are dull of hearing. Ye are dull of hearing can't hear what the law saith (I will forget you, and I will forsake you), nor what an [unjust judge (law)](RevelatorySermons23.md) saith to them who ask to be avenged (I will take vengeance on those asking to be avenged), nor what the Spirit saith unto the churches (if ye bite and devour one another with law, take heed that you be not consumed one of another).  
+
+.............................................................  
+  
+
+Hebrews 5:1 For every high priest taken from among men is ordained for men in things [[pertaining](Hebrews10.md)] to God, that he may offer both gifts and sacrifices for sins:...  
+  
+Note it says every priest taken from among "men" (the plural of "man") is ordained for "men", and such offer both gifts (tithes, offerings) and sacrifices for "sins" (but when no law, sin is not imputed: Romans 5:13) to their God (law: majesty on high). For "[the God of all grace](GodShew2.md#Allness)", also called "[that God](ShewBread5.md#IAMTHAT)" of this/that, does not even impute sin, no, not even to "them" of them/us (2Cor 5:19). The God of peace neither requests nor takes any pleasure in such offerings and [sacrifices](TwainShew6.md#Sacrifices), which are "of the law" (Psalms 40; Psalms 51:16; Hosea 6:6; Matthew 9:13; Matthew 12:7; [Hebrews 10: all](Hebrews11.md)). In fact the "immutable" will of that God, the "living" God of [twain](TwainShew3.md#Gods), is "[I will have mercy, and not sacrifice](ShewBread5.md#willx2)". Paul The Apostle, who writes To The Hebrews(plura), is called "[his witness unto all men(plura)](Paul.md#witness)", and an [Hebrew of Hebrews](Allegory1.md). Such is as the singular speaking to plural ([double minded](DoubleMinded.md); [twofold](Allegory3.md); [highminded](Highminded.md) who mind things on high such as plural heavens).  
+  
+Hebrews 5:2 Who can have compassion on the ignorant, and on them that are out of the way; for that he himself also is compassed with infirmity...  
+  
+Many seem to think it speaks of Christ here, but rather the "who", "he", and "himself" mentioned is talking about Melchisedec, who is himself also compassed with infirmity (law) and needeth healing; For Christ: is the end of the law (the end of infirmity), doesn't need healing, but rather is healer to those who are compassed with infirmity (sick, due to their legalism). Likewise the last of two priests and two priesthoods being compared does not have infirmity but rather is healer to the first who is himself also compassed with infirmity, even with the worst sort of infirmity called death, which Christ: is the end of the law (Romans 10:4) could not be holden of because [he gave law no place to law](ShewBread.md#contraryto)... [Christ](RevelatorySermons17.md) being the [perfect](Perfection.md) "[man](TwainShew.md#Blesseds)" to whom the Lord (that Spirit: grace, is now the Lord) will not impute sin: Romans 4:8; which is also to allegory say Christ is the man of child/man, the grace of law/grace, to whom no law = no sin = no infirmity applies.  
+  
+Hebrews 5:3 And by reason hereof he ought, as for the people, so also for himself, to offer for sins.  
+  
+And by "reason hereof" followed by "he ought" speaks of what Paul is concluding, that both people and priest alike who mix grace + law (good + evi) are sinners since [law](Law.md) not only imputes sin (Romans 5:13), and unto all if any do (by one man sin and death came upon all, made all sinners, none righteous), but law is also the strength of sin's death sting (1Cor 15:56). So law has a deadly sting, and therefore law is called "the ministration of death" (2Cor 3). So such a highminded high priest ought to offer, both for the people and for himself, gifts and sacrifices for sins. Christ is the end of the law, is therefore also the end of such gifts and sacrifices for sins. Abolition of law is also abolition of the sacrifices, since it's the abolition of sins.  
+
+  
+
+Hebrews 5:4 And no man taketh this honour unto himself, but he that is called of God, as [was] Aaron.And no "man" taketh "this" honour unto himself. Only a child would do "this" (impute sin and death to all), such as more the "child" of "hell" spoken of in Mt 23:15, who sits in [Moses' seat](Allegory4.md) (law). So allegorically Paul's calling Aaron an ignorant child of hell(law), called of Law (God of Aaron) a high priest (who's highminded, minds high things like plural heavens), which not only resulted in people and priest being sinners, but all being both saved + destroyed after by grace + law (Jude 5). Yet Paul did this, as Terrorist Saul of Tarsus, and also as Wretched Paul, till he put away childish things to become a man (1Cor 13); Albeit done in ignorance and with a zeal for Law, even to keeping his law as pure as possible.  
+  
+Hebrews 5:5 So also Christ glorified not himself to be made an high priest; but he that said unto him, Thou art my Son, to day have I begotten thee.  
+  
+This is where it gets tricky, for "have I" is a [question](SAQs.md) not a statement, uncertain not certain; just as am I and I am are mirrorly allegorical for uncertain and certain existence. Christ didn't glorify himself to be made an "high" priest like Aaron; For it would have made him and all people sinners. Note: it's important to remember Christ of Jesus Christ is the end of the law which has both begin/end; Whereas grace, which is eternal, has neither begin nor end.  
+  
+Hebrews 5:6 As he saith also in another [place], Thou [art] a priest for ever after the order of Melchisedec.To properly understand the [allegory](Allegory.md) of [plural and contrary Scriptures](BibleContradictions.md) we must first realize it's allegory (Galatians 4) and then start looking for the allegoric clues, like the "also" and the "after" mentioned herein denoting such is the second part of allegoric before/after scenarios, the grace part of law/grace being after, the man part of child/man being after, the understanding part of ignorance/understanding being after. So "after" the order of Melchisedec speaks of after-ward.  
+  
+With respect to "also" we find be ye perfect in Matthew 5:48 is therefore "also" merciful in Luke 6:36; But law was neither merciful, nor perfect (Hebrews 3, 8, 10). So it allegorically says wheresoever [this gospel](CurrentEvents.md) (of [this/that](ShewBread7.md#Worlds) [gospels](TwainShew3.md#Gospels) of [this/that](ShewBread7.md#Worlds) [Gods](TwainShew3.md#Gods)) is preached throughout the whole world, "also that" shall be told, and for comparison of [all this/that](TwainShew8.md), to know which is witch of [twain](TwainShew.md), know [that God is one](ShewBread2.md#OneSlice) (not twain), the [only](Potentate.md) true God of false/true Gods.  So the other God lies (laws), and thereby dies. True God neither lies nor dies, and never changes, nor ever forsakes anyone.  
+  
+With respect to "after" (of before/after priesthoods) we find the priesthood talked about is "after" the order of Melchisedec, after the priesthood of Aaron. [Two priesthoods](TwainShew5.md#Priesthoods), two orders thereof, not Christ having the same priesthood, for as it tells us in Hebrews 7:23 Melchisedec type priests all died, and from a bad case of life + death (grace + law), whereas Christ (of through Jesus-> Christ) could not be holden of death for Christ is [the end of the law](ShewBread9.md#Expired) (of begin/end of the law; whereas grace has neither begin nor end). [No law = no sin = no dead end](NoLawNoDeadEnd.md)... that (of this/that) is the true (of false/true) [passion of the Christ](PassionMovieReview.md). The other wise (suffering, sacrifice) is earthy sensual devilish wisdom.  
+  
+Hebrews 5:7 Who in the days of his flesh, when he had offered up prayers and supplications with strong crying and tears unto him that was able to save him from death, and was heard in that he feared;  
+  
+Remembering it's an allegory, we then get into [comparison](TwainShew.md) of flesh/spirit of Jesus/Christ, the Jesus thereof being the child part of [child](GodShew.md#nomorechildren)/man who would naturally (of natural/spiritua) cry and fear of such fear/love of law/grace. For Christ: the end of the law, is the spirit part of flesh/spirit, man part of child/man, and has no law (no death to fear or cry about), as law(enmity) got "abolished from his flesh" (law got abolished from his grace + law) in Ephesians 2, whom we are in Ephesians 5. Christ of through Jesus > Christ is as (grace + law) - law = (pure) grace. So, allegorically law got abolished from us, for we are in him: in him is no sin (no law, sin, or death). Jesus, of Jesus Christ, was born under law, and of woman. Christ is the end of the law, and of being deceived. Jesus spoke of both fear and fear not before the cross, but resurrected Christ speaks only of peace after the cross... allegorically denoting law (worketh wrath) got nailed to the cross as the enmity witch produced "fear hath torment". Hence we are told that [God given](Revelations2.md#Rev5) victory, to "[us](ShewBread2.md#justus)", is [through](through.md) [Jesus > Christ](GodShew5.md), the Christ thereof being the end of the law, which [had an expiry date](ShewBread9.md), expired long ago now.  
+  
+Hebrews 5:8 Though he were a Son, yet learned he obedience by the things which he suffered;  
+  
+Though he "were" a Son... a Son, even though he be heir of all things (Heb 1), lord of all, being a child is no different than being a servant (Galatians 4) "as long as he is a child" of child/man, which is as if a servant of servant/son. Now "the" Son is different than "a" Son; For "the Son" of God is the latter part of this/that Sons of God in such things are an allegory. Please note he "were" a Son, of Sons, and now is the Son, the man of child/man. It's imperative we get it: understanding, realizing such things are an allegory with a moral; and give more earnest heed to what's being said. For it's not only allegory, but a "mystery" to solve, so allegoric mystery to solve in time, lest all perish instead of none perish.  
+  
+Yet "learned he"? Again we have the question (not statement): "learned he". A statement would be he learned. So let us not get confused by thinking a question is a statement, or that law is grace, or that child is man, or that before is after. Christ did not need to learn obedience, by suffering, but rather is obedience to His Grace, who will have mercy, and not sacrifice. Christ is the end of the law neither obeyed nor disobeyed any law at all; But rather gave law (sin and death thereof) no place to exist, other than being a counter part in a shew, the part to be done away when perfection of grace and truth comes. Grace and truth "came" (already) by Jesus Christ, and for comparison to Law and lie given by Moses. Law folk often like to turn it around and beat their children, thinking suffering will help such children learn obedience, and the obedience they demand is to their unjust and hypocritical grace + law... is not Christ like nor Godlike at all; not the man of child/man nor the understanding of ignorance/understanding... for the evidence reveals legalistic governmental christian residential schools produced bad results, and such spiritual abuse takes a long time in healing. Sacrifice, suffering thereof, are childish things to put away in order to become a man kind (1Cor 13).  
+  
+Hebrews 5:9 And being made perfect, he became the author of eternal salvation unto all them that obey him;  
+  
+Of created/made, God said: let us "make" man (of child/man). The child is created imperfect, as the law of law/grace is imperfect. So "being made perfect" speaks of putting away the child part of child/man, the law part of law/grace, the before part of before/after, and being grace-us of them/us, all grace and no law at all (just as that God is all light and no darkness at all). Being made (of created/made) perfect (of imperfect/perfect) he became (of was/is) the author of eternal salvation (of temporal/eternal salvations). Notice Christ is only the "author" of eternal salvation; As Christ is only the second of three Saviours mentioned in the bible:  
+(i) Jesus: Saviour of Israel (of Jacob/Israe)  
+(ii) Christ: Saviour of the world x2 (for both Jews and Gentiles)  
+(iii) [God: our Saviour](RevelatorySermons6.md), who will have two things: all men saved and all men aware what they're saved from: law.  
+So reconciled is neither to two Sons Jesus, nor to false/true Christs, but "to God". Be ye reconciled to God: 2Cor 5. Yet [reconciling the world](Reconciliation.md) is done "in Christ", not in Jesus brought division (unrest), not peace (rest); And by "that God".  
+  
+Many, deceived by many, perceive Jesus is the author and finisher of eternal salvation from other verses which speak of Jesus being the author and finisher of our faith. But here we note Christ, the head of the body, is only the author of eternal salvation, something which involves both head and body. For even though the head of the body may decide to have eternal life, it doesn't happen till the body goes there (just as the head can decide to go to the store, but doesn't get there till the body takes it there). So Christ: the end of the law is the author of eternal salvation, and we, his body, are to finish what Christ authored, once and for all, by going full steam ahead to us-ward, to no law = no dead end, to all live (not some only) happily ever after (of before/after) and none perish by such grace + law is as life + death = a dead end.  
+  
+Christ is the author of eternal salvation. Eternal salvation? In the [allegorical](Allegory.md) God shew there are [two sorts of salvation](TwainShew6.md#Salvations), temporal and eternal. The temporal sort is life + death = a dead end. Many say: such is life, but this is not true, for life is eternal, eternally alive (God cannot die... allegory: Grace cannot law). So being made perfect he became us (of them/us), and author of "eternal" salvation ([no law, no death](NoLawNoDeadEnd.md)). So when [childish christians](RevelatorySermons10.md) ask me: are you saved, I usually reply with: what sort of salvation, the temporal or eternal sort? Noah was saved, but we also find him among those in the hALL of shame of Heb 11: these all died and received not the promise (eternal life). Those saved out of Egypt were all destroyed after (Jude 5), denoting grace + law is as salvation + destruction. Last Adam doesn't need salvation, but rather is salvation to first Adam, and so none perish. Perhaps the salvation you're proposing via [this gospel](CurrentEvents.md) of this/that [gospels](TwainShew3.md#Gospels) is temporal salvation, and to such Horeb-bull I say: [none for me thanks](ShewBread7.md#Return), I'll stick with eternal life of eternal salvation which Christ: [the end of the law](ShewBread9.md#Expired) is the author of, and go fwd only (of bwd/fwd) to [us-ward](Usward.md).  
+  
+Hebrews 5:10 Called of God an high priest after the order of Melchisedec.  
+  
+Again we have mention of "after the order of Melchisedec" as being what's "called of God", who called both day(light) and night(darkness) to come (of go/come) now (of then/now) and let us (all us now of them/us) reason together. Reason together, look at the evidence, see what's evident from forty witnesses giving testimony for 1,600 yrs (time it took to write Bible)... for it's reason-able, compute-able, prove-able, know-able, and now-able. What is? When grace (wisdom from above) is firstly [pure](GodShew2.md#Allness), then peace-able: James 3:17. And notably peace with God and eternal salvation are [through](through.md) [Jesus > Christ](GodShew5.md): Christ thereof being defined as "the end of the law" (no law = no sin = no death sting). So [reconciling the world unto God](Reconciliation.md) is done "in Christ", not in two Sons Jesus brought division (unrest), not peace (rest). For changeable  Jesus is only Saviour of Israel, but unchangeable Christ is Saviour of the world x2: John 4:42; 1John 4:14.  
+  
+Hebrews 5:11 Of whom we have many things to say, and hard to be uttered, seeing ye are dull of hearing.  
+  
+Of ye/you, "ye are dull of hearing". Of ye (do err)/you (made perfect, stablished, strengthened, settled), ye can't hear what the unjust judge (law) saith to those asking to be avenged, nor what the Spirit saith unto the churches; Because "ye" are dull of hearing, dull of hearing, not sharp of hearing, nor sharper than any twoedged sword, which the word of God: grace, is. So it's notably "ye" of ye/you who must be born again, of incorruptible grace, not corruptible law. Yet even you of ye/you can fall: Galatians 5:4. So the admonition is to take heed, to give more earnest heed to what's said.  
+  
+Of [ye/you](YeYou.md), it's "ye (do err) are dull of hearing", the [dblemindead](ShewBread3.md#dblem) folk, the twofold sort, the childish sort, the grace + law sort. Ye is the biblical allegorical plural of you, like Hebrews is the plural of Hebrew, and the plural allegorically denotes grace + law. So Paul (a Hebrew of Hebrews, one of twain, now man of child/man) writes to the "Hebrews"(plura) calling such "ye" folk "dull of hearing", babes not yet weaned of law, unlearned (even though study more than others), unskillful in the word of righteousness: grace... is sharper than any twoedged sword (smarter than any grace + law folk).  
+  
+Yet who better to write to Hebrews than [Paul](Paul.md) of Saul/Paul, himself a Hebrew, and well versed in the law, but now fully able to prove his point: grace is sufficient (no law req'd), and from the Scriptures (written aforetime as scripture vs scripture), and to the Hebrews who so love the old testament of old/new testaments. For the new is contained in the old as one of twain, and therefore if it condemns the old, it condemns itself also. Hence God did not send His Son to condemn (law) the world, but rather that through him the world might be saved. Selah.  
+  
+I am (His Grace is) not come to destroy (law), but to fulfill (grace). Selah.  
+  
+To wit, [that God](ShewBread5.md#IAMTHAT), in Christ, [reconciling the world](Reconciliation.md), unto [himself](GodShew2.md#Allness), did NOT impute sin, not even unto them (2Cor 5:19)... for such would impute sin & death unto all, even unto himself. Law imputes sin (Rom 4:15; 5:13), is sin (Rom 14:23; Gal 3:12), is the strength of sin (1Cor 15:56) which has a dead sting (1Cor 15:56; James 1:15), so to not impute sin is to law not, condemn not, judge not, since law back-fires, for law worketh wrath, not peace, sacrifice, not mercy. Hence [the will of God](RevelatorySermons6.md) is: "[I will have mercy (grace), and not sacrifice (law)](ShewBread5.md#willx2)": Hos 6:6; Mt 9:13.  
+  
+Hebrews 5: 12  For when for the time ye ought to be teachers, ye have need that one teach you again which [be] the first principles of the oracles of God; and are become such as have need of milk, and not of strong meat.  
+  
+Paul uses "sharpness" of exhortation  (in your face truth), but not to put down, rather to up lift and awake to righteousness. Of times, then and now, now is the time ye folk (Hebrews) ought to be teachers. But alas, they have need to be taught, and by that one, which [be] the first principles (law of law/grace worketh wrath of wrath/peace) of the oracles (law/grace) of God.  
+  
+Notice the use of both ye and you here, "ye" have need that one teach "you" again (for you obviously didn't get it: understanding). Ye shall know the truth (not optiona) and the truth shall make you free (a make-ing of create/make... let us [of them/us] make [of create/make] man [of child/man] is what God said in the beginning where the end is declared (Is 46:10)... the end (of begin/end) of such before/after being all get it: understanding, so none perish due to ignorance, especially willing ignorance. Knowing the truth isn't optional as many ass u me. And [teaching first, learning after, is preposterous order](OneLiners.md#BibleTranslators), the reverse of what ought to be. It's ye folk (of ye/you) who go (of go/come) and teach (of learn/teach), unaware the Scriptures were written aforetime for our "learning": Rom 15:4, and there is only one teacher, master, of us all, who said to make disciples (students) of all men (plural, the dblemindead ye folk, the twofold).  
+  
+Such child of hell folk (Matthew 23) who notably sit in Moses seat: Law, have need to be taught, and such Hebrews who ought to be teachers by now are become as babes who can only take milk, being not yet weaned from the law, witch was a schoolmaster unto Christ: the end of the law, and law was notably a schoolmaster (Galatians 3) which failed every student (Romans 9:31; Hebrews 7:23; Hebrews 11: 13, 39). This schoolmaster should be dismissed.  
+Hebrews 5:13 For every one that useth milk [is] unskillful in the word of righteousness: for he is a babe.Every one (all of a first one man scenario in [Romans 5's two one man scenarios](Bibles.md)) that useth milk (law) [is] unskillful in the word of righteousness (grace): for he is a babe (infant, not even a child, not of age). Babes (Hebrews) and [carnal children](RevelatorySermons10.md) (Corinthians), small c christians, are not yet weaned from the law. The allegory is the child of child/man uses milk of milk/meat, which is law/grace (curse/bless). God did not say let them make child, but rather let us make man, declaring the end (of begin/end) of such before/after from the beginning... for love(God) is not blind, love sees the end from the begin as what's best of good better best, else it doesn't even begin such a twainy shew. God saw only good x6, and very good the 7th time in Genesis 1. God did not see both good and evil, since both good and evil ends bad.  
+  
+In the same manner as above every one (all of first one man of twain) that hangeth on a tree is cursed (cursed every one: Galatians 3), so it's not wise, at least not pure wisdom from above (of two wisdoms compared in James 3), to get hung up on the cross; For the exhortation is not to get hung up on the cross, but go [through](through.md) it, through [Jesus >Christ](GodShew5.md) to Christ: is the end of the law, to no law = no dead end. Furthermore go through Christ > God-ward afterward. So be ye reconciled to God is as be ye reconciled (through Jesus > Christ) > to God. Three stages of conversion. Eg: (Terrorist Saul>Wretched Paul)>Paul The Apostle. Eg: (Fisherman Simon>Denying Peter)>Converted Peter.  
+Hebrews 5:14 But strong meat belongeth to them that are of full age, [even] those who by reason of use have their senses exercised to discern both good and evil.Strong meat, in your face truth, full proof based on all the evidence, belongeth to them that are of full age, adults, man kind of child/man, who by reason of use have their (five) senses exercised to discern (a void) both good and evil (ends badly). JC said God said: either make the tree good or evil, not both, for both is an oxyMORON with a BAD ending. Let's discern both good and evil, both grace and law,  life and death, ends badly; Because [law](Law.md) is both good and [evil](BiblicalDots.md).  
+  
+              Law is good, but law is also evil; Discern both good and evil ends badly.  
+            Law is holy, but highminded law is unholy; Both holy and unholy ends bad.  
+            Law is natural and spiritual, but spiritual abuse is harmful. Grace is harmless.  
+  
+Use your God given senses to discern both good and evil. If it looks fishy, sounds like Horeb-bull, smells pewy, tastes bitter-sweet, and feels like hell when swallowed, then it's probably grace + law, law thereof being spiritual food poison since it [expired](ShewBread9.md#Expired) l-o-n-g ago. Even Solomon the wise guy said such grace + law was all vanity (and vexation [frustration] of Spirit) 33 times in his Ecclesiastes. Sow: if it's dung, flush it. Law is dung, so flush it. Selah.  
+  
+
+Dare To Compare Paul's Conclusion of To The Hebrews: "Grace with you all. Amen".  
+With Conclusion of Holy Bible: "The grace of our Lord Jesus Christ with you all. Amen".  
+  
+
+< [Index of Hebrews verse by verse Commentary](Hebrews.md) \ [Next page: Hebrews Chapter 6](Hebrews7.md):  go on unto [perfection](Perfection.md) >
+
+
+[Home Page](GodShew-Home.md))  -  [About Us](GodsheworgExplanation.md)  -  We are open to scrutiny: [Email Us](mailto:approved@godshew.org) a comment on this page  -  [Bibles](Bibles.md)  -  [Sight Map](SiteMap.md)

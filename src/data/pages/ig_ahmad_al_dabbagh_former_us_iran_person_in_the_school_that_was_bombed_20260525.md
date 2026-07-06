@@ -1,0 +1,9 @@
+---
+title: "former us Iran person in the school that was bombed"
+type: "post"
+original_path: "C:\STORAGE\M\Manifold-Grace\3-RESOURCES(Pantry)\ORG-NOTES\Social-Media-Captures\GMP\IG\IG-Ahmad_Al-Dabbagh-former_us_Iran_person_in_the_school_that_was_bombed-20260525.md"
+---
+[IG-Ahmad_Al-Dabbagh-former_us_Iran_person_in_the_school_that_was_bombed-20260525.mp4](<file:///F:/O/ORG/Social Media Video Wisdom (ORG)/GMP/IG/IG-Ahmad_Al-Dabbagh-former_us_Iran_person_in_the_school_that_was_bombed-20260525.mp4>)
+
+## Transcript
+I want to explain to Americans who think that you have some justification or or of aggression against Iran. I want you as parents to think how you would feel if the situation were reversed and this wall was your school made from Tucson, Arizona, where these rakey on weapons, these Tomahawk missiles were produced. Imagine if you had children in Tucson, Arizona, they got bombed by Iran and they murdered 132 of your children. How would you feel? How would you feel? Would you be wrong to say death to Iran if they murdered all of your kids? Would you have a dearer? How dare you raise down these lies on the world? You tell me one terrorist incident. One that the Islamic Republic of Iran has dug to you. Not a one, not a single one. And what do we do? We have a pedophile president covering for the Epstein files, slaughtering children in a satanic ritual sacrifice for the Jewish state of Israel. The Jewish state of Israel owns my nation. I say shame on you forever for this. And I say Donald Trump needs to hang for treason according to the Constitution. I sworn oath to protect in the fent. I am telling you America the enemy is inside the gate. Iran is not a problem.

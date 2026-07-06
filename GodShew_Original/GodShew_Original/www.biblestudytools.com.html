@@ -1,0 +1,761 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Study the Bible Online - Search and Find Verses</title>
+    <meta name="description" content="Use our free online Bible to grow deeper in the Word. Read verses by topic, study Scripture while you highlight or underline verses and use a large library of popular resources." />
+    <meta name="keywords" content="Bible Study Tools, Online Bible, The Holy Bible, Gateway, Online, Verses, Versions, Translations, Commentary, Concordance, Scripture, New, Old Testament, Christian, Interlinear, Parallel, KJV, NIV" />
+    <meta name="viewport" content="width=720, maximum-scale=1.0" />
+
+    <link href="http://www.biblestudytools.com/resource/theme/default/index/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="http://www.biblestudytools.com/resource/theme/default/index/jquery-ui-1.8.17.custom/jquery-ui-1.8.17.custom.css" rel="stylesheet" type="text/css" />
+    <link href="http://www.biblestudytools.com/resource/theme/default/index/style.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript">
+        var searchUrl = 'http://www.biblestudytools.com/search/';
+        var suggestUrl = 'http://suggest.biblestudytools.com/';
+        var communityProxyUrl = 'http://www.biblestudytools.com/resource/serviceproxy/CommunityProxy.svc/';
+        var NotesSnippetUrl = "http://www.biblestudytools.com/community/notes/communitynotessnippet.ashx/?num=4&format=simple";
+        var MoreNotesUrl = 'http://www.biblestudytools.com/community/';
+        var proxyUrl = 'http://www.biblestudytools.com/Resource/Serviceproxy/VerseOfTheDay.svc/';
+    </script>
+    <script src="http://www.biblestudytools.com/resource/javascript/combined.ashx?page=index" type="text/javascript"></script>
+    <script type='text/javascript'>var allpass_containerRequests = [], allpass_publicationId = null, allpass_parentPublicationId = null;</script>
+<script type='text/javascript' src='http://allpass.salemwebnetwork.com/newsletters/init?language='></script>
+
+<script type='text/javascript'>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+    (function() {
+        var gads = document.createElement('script');
+        gads.async = true;
+        gads.type = 'text/javascript';
+        var useSSL = 'https:' == document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:') + 
+        '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+    })();
+</script>
+<script type="text/javascript">
+    var gptClientWidth = document.documentElement.clientWidth;
+    var gptPath = window.location.pathname.toLowerCase() + (window.location.pathname == '/' ? 'home/' : '');
+    gptPath = gptPath.substring(0, gptPath.lastIndexOf('/'));
+
+    googletag.cmd.push(function() {
+        
+        if (gptClientWidth >= 0 && gptClientWidth <= 1000000)
+            googletag.defineSlot('/6177/biblestudytools.com' + gptPath, [728,90], 'gpt-ad-0').addService(googletag.pubads()).setTargeting('pos', '728x90-1');
+        
+        if (document.referrer.indexOf('facebook') >= 0)
+            googletag.pubads().setTargeting('ref','fb');
+
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();       
+    });
+</script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2396832-49']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+
+<body>
+    
+<!-- DFP Interstitial -->
+<script type="text/javascript">
+    var ord = window.ord || Math.floor(Math.random() * 1e16);
+    document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N6177/adj//6177/biblestudytools.com' + gptPath + ';sz=1x1;ord=' + ord + '?"><\/script>');
+</script>
+
+
+<!--
+    <div class="app-banner">
+        <a href="http://www.biblestudytools.com/bible-reading-plan/">
+            <img id="readingPlan" class="" src="http://media.salemwebnetwork.com/biblestudytools3/theme/default/index/images/Reading-Plans-Alert-2014.png" />
+        </a>
+    </div>
+-->
+    <div class="menu-bar bottom">
+        <div class="menu-container">
+
+            <span class="footer-text">Copyright &copy;
+                <span id="lblYear">2014</span>
+                Bible Study Tools. All rights reserved.</span>
+
+            <ul class="pull-right">
+                <li class="menu-link parent"><a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">About Us</a>
+                    <div class="sub-menu bottom-up menu-about-us dropdown-menu keep-open">
+                        <h1>BibleStudyTools.com is the largest free online Bible website for verse search and in-depth studies.
+                        </h1>
+                        <p>
+                            Search Bible verses using the translation and <a href="http://www.biblestudytools.com/bible-versions/">version</a> you prefer with over 39 to choose from including <a href="http://www.biblestudytools.com/kjv/">King James Version (KJV)</a>, <a href="http://www.biblestudytools.com/niv/">New International Version (NIV)</a>, <a href="http://www.biblestudytools.com/nas/">New American Standard (NASB)</a>, <a href="http://www.biblestudytools.com/msg/">The Message (MSG)</a>, <a href="http://www.biblestudytools.com/nlt/">New Living Translation (NLT)</a>, <a href="http://www.biblestudytools.com/csb/">Holman Christian Standard (HCSB)</a>, <a href="http://www.biblestudytools.com/esv/">English Standard Version (ESV)</a> and other versions.
+                        </p>
+                        <p>
+                            Our rich online library includes well known and trusted commentaries including the popular Matthew Henry Commentary, concordances like 
+                                        <a href="http://www.biblestudytools.com/concordances/strongs-exhaustive-concordance/">Strong's Exhaustive Concordance</a> and
+                                        <a href="http://www.biblestudytools.com/concordances/naves-topical-bible/">Naves Topical Concordance</a>, <a href="http://www.biblestudytools.com/dictionary/">Bible dictionaries</a>, Biblical encyclopedias
+                                        and historical Christian and church books including Fox's Book of Martyrs.  
+                                        Our free <a href="http://www.biblestudytools.com/bible-reading-plan/">Bible reading plans</a>
+                            allow you to chart your progress through a 365 daily reading schedule and our <a href="http://www.biblestudytools.com/parallel-bible/">Parallel Bible</a>
+                            will supplement your study of God's Word as you seek to understand the different translations and interpret the original language.
+                                        In addition, Bible verses by topic help you find encouragement, guidance and help for any situation or need.
+                        </p>
+                        <p>
+                            For a more in-depth study of Scripture, our website offers Greek and Hebrew <a href="http://www.biblestudytools.com/interlinear-bible/">Interlinear</a>
+                            for the New and Old Testament, and <a href="http://www.biblestudytools.com/lexicons/">lexicons</a> for original Greek and Hebrew reading of Scripture.  
+                                        Whether you are a seasoned Bible scholar or just starting to read the Word of God, our tools meet your needs and level of study!
+                                        Use our gateway to free resources when you need a quick verse search or to start a daily reading plan and dig deeper into Scripture.
+                        </p>
+                        <p>
+                            Read more <a href="http://www.biblestudytools.com/about-us/">About Us</a>, <a href="http://www.biblestudytools.com/link-to-bst/">Use BST on your site</a>, and view our <a href="http://www.biblestudytools.com/site-map/">Online Bible Sitemap.</a>
+                        </p>
+                    </div>
+                </li>
+                <li class="menu-link"><a href="http://www.salemwebnetwork.com/our-brands/privacy-policy/" class="menu-item">Privacy Policy</a></li>
+
+                <li class="menu-link parent"><a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">Special Thanks</a>
+                    <div class="sub-menu bottom-up menu-thanks dropdown-menu keep-open">
+                        <ul class="children">
+                            <li><a target="_new" href="http://www.zondervan.com">Zondervan</a> and Biblica for use of the NIV, TNIV and the NIrV</li>
+                            <li><a target="_new" href="http://www.americanbible.org">The American Bible Society</a> for use of the <i>Good News Translation</i></li>
+                            <li><a target="_new" href="http://www.bakerpublishinggroup.com">Baker Publishing Group</a> for use of the <i>Evangelical Dictionary of Biblical Theology;</i></li>
+                            <li><a target="_new" href="http://www.broadmanholman.com/">Broadman &amp; Holman Publishers</a> for the use of <i>Holman Christian Standard Bible</i></li>
+                            <li>Deuel Enterprises, Inc. for use of <i>Third Millennium Bible</i></li>
+                            <li><a href="http://www.godsword.org/">God's Word to the Nations</a> and Baker Publishing Group for permission to use the <i>GOD'S WORD</i> Translation of the Holy Bible</li>
+                            <li><a target="_new" href="http://www.messianicjewish.net/">Jewish New Testament Publications, Inc.</a> for the use of the <i>Complete Jewish Bible</i></li>
+                            <li><a target="_new" href="http://www.lockman.org">The Lockman Foundation</a> for permission to use the <i>New American Standard Bible</i></li>
+                            <li><a target="_new" href="http://www.ncccusa.org">The National Council of the Churches of Christ in the USA</a> for use of the <i>New Revised Standard Version</i></li>
+                            <li><a target="_new" href="http://www.thomasnelson.com">Thomas Nelson Publishers</a> for the use of <i>New King James Version</i> of the Holy Bible</li>
+                            <li><a target="_new" href="http://www.tyndale.com">Tyndale House Publishers</a> for permission to use the <i>New Living Translation</i></li>
+                            <li><a target="_new" href="http://www.logos.com/">Logos Bible Study Software</a> for the use of <i>10,000 Sermon Illustrations</i></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="menu-link parent"><a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">Our Sites</a>
+                    <div class="sub-menu bottom-up menu-our-sites dropdown-menu keep-open">
+                        <ul class="children">
+                            <li>
+                                <a target="_new" class="site-list-logo logo-ccom" href="http://www.christianity.com/">
+                                    <img src="http://media.salemwebnetwork.com/biblestudytools3/theme/default/index/images/logo-christianity.png" alt="Christianity.com" />
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_new" class="site-list-logo logo-cw" href="http://www.crosswalk.com/">
+                                    <img src="http://media.salemwebnetwork.com/biblestudytools3/theme/default/index/images/logo-crosswalk.png" alt="Crosswalk.com" />
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_new" class="site-list-logo logo-gt" href="http://www.godtube.com/">
+                                    <img src="http://media.salemwebnetwork.com/biblestudytools3/theme/default/index/images/logo-godtube.png" alt="Godtube.com" />
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_new" class="site-list-logo logo-jesus-org" href="http://www.jesus.org/">
+                                    <img src="http://media.salemwebnetwork.com/biblestudytools3/theme/default/index/images/logo-jesus.png" alt="Jesus.org" />
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_new" class="site-list-logo logo-op" href="http://www.oneplace.com/">
+                                    <img src="http://media.salemwebnetwork.com/biblestudytools3/theme/default/index/images/logo-oneplace.png" alt="Oneplace.com" />
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_new" class="site-list-logo logo-cc" href="http://www.crosscards.com/">
+                                    <img src="http://media.salemwebnetwork.com/biblestudytools3/theme/default/index/images/logo-crosscards.png" alt="Crosscards.com" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.salemwebnetwork.com">Network of Sites...</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="pre-nav">
+            <ul>
+                <li class="tw">
+                    <a href="https://twitter.com/biblestudytools" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @biblestudytools</a>
+                    <script>    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+                </li>
+                <li class="fb">
+                    <div>
+                        <span>Like BibleStudyTools.com</span>
+                        <iframe class="fb-element" src="//www.facebook.com/plugins/like.php?href=https://www.facebook.com/biblestudytools&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=21" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="menu-bar top">
+            <div class="menu-container">
+                <ul>
+                    <li class="menu-link parent">
+                        <a href="#" rel="http://www.biblestudytools.com/library/" data-toggle="dropdown" class="dropdown-toggle menu-item head-link">Library</a>
+                        <div class="sub-menu dropdown-menu keep-open">
+                            <ul class="children">
+                                <li><a href="http://www.biblestudytools.com/bible-versions/">Bible Versions</a></li>
+                                <li><a href="http://www.biblestudytools.com/apocrypha/">Apocrypha Books</a></li>
+                                <li><a href="http://www.biblestudytools.com/commentaries/">Commentaries</a></li>
+                                <li><a href="http://www.biblestudytools.com/concordances/">Concordances</a></li>
+                                <li><a href="http://www.biblestudytools.com/dictionaries/">Dictionaries</a></li>
+                                <li><a href="http://www.biblestudytools.com/encyclopedias/">Encyclopedias</a></li>
+                                <li><a href="http://www.biblestudytools.com/history/">History</a></li>
+                                <li><a href="http://www.biblestudytools.com/lexicons/">Lexicons</a></li>
+                                <li><a href="http://www.biblestudytools.com/classics/">Classics</a></li>
+                                <li><a href="http://www.biblestudytools.com/resources/">Other Resources</a></li>
+                                <li><a href="http://www.biblestudytools.com/authors/">Authors</a></li>
+                                <li><a href="http://www.biblestudytools.com/books-of-the-bible/">Books Of The Bible</a></li>
+                                <li><a href="http://www.biblestudytools.com/audio-bible/">Audio Bible</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="menu-link empty"><a href="http://www.biblestudytools.com/bible-reading-plan/" class="menu-item">Reading Plans</a></li>
+                    <li class="menu-link parent"><a href="#" rel="http://www.biblestudytools.com/bible-study/" data-toggle="dropdown" class="dropdown-toggle menu-item head-link">Bible Study</a>
+                        <div class="sub-menu dropdown-menu keep-open">
+                            <ul class="children">
+                                <li><a href="http://www.biblestudytools.com/devotionals/">Devotionals</a></li>
+                                <li><a href="http://www.biblestudytools.com/bible-reading-plan/">Reading Plans</a></li>
+                                <li><a href="http://www.biblestudytools.com/parallel-bible/">Parallel Bible</a></li>
+                                <li><a href="http://www.biblestudytools.com/interlinear-bible/">Interlinear Bible</a></li>
+                                <li><a href="http://www.biblestudytools.com/compare-translations/">Compare Translations</a></li>
+                                <li><a href="http://www.biblestudytools.com/topical-verses/">Topical Verses</a></li>
+                                <li><a href="http://www.biblestudytools.com/bible-verse-of-the-day/">Daily Bible Verse</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="menu-link parent"><a href="#" rel="http://www.biblestudytools.com/pastor-resources/" data-toggle="dropdown" class="dropdown-toggle menu-item head-link">Pastors</a>
+                        <div class="sub-menu dropdown-menu keep-open">
+                            <ul class="children">
+                                <li><a href="http://www.biblestudytools.com/pastor-resources/illustrations/">Sermon Illustrations</a></li>
+                                <li><a href="http://www.biblestudytools.com/sermons/">Sermons</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="menu-link parent"><a href="#" rel="http://www.biblestudytools.com/community/" data-toggle="dropdown" class="dropdown-toggle menu-item head-link" rel="nofollow">Community</a>
+                        <div class="sub-menu community parent dropdown-menu keep-open">
+                            <ul class="children">
+                                <li><a href="http://www.biblestudytools.com/community/notes/" rel="nofollow">Notes</a></li>
+                                <li><a href="http://www.biblestudytools.com/community/tags/" rel="nofollow">Tags</a></li>
+                                <li><a href="http://www.biblestudytools.com/community/groups/" rel="nofollow">Groups</a></li>
+                                <li><a href="http://www.biblestudytools.com/community/events/" rel="nofollow">Events</a></li>
+                                <li><a href="http://www.biblestudytools.com/community/users/" rel="nofollow">My Profile</a></li>
+                                <li><a href="http://www.facebook.com/biblestudytools/" rel="nofollow">Facebook</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="menu-link parent">
+                        <a href="#" rel="http://www.biblestudytools.com/video/" data-toggle="dropdown" class="dropdown-toggle menu-item head-link">Video</a>
+                        <div class="sub-menu video dropdown-menu keep-open">
+                            <ul class="children">
+                                
+                                <li>
+                                    <a href="http://www.biblestudytools.com/video/what-s-the-book-of-amos-about.html">
+                                        <img class="play-overlay" src="http://media.salemwebnetwork.com/biblestudytools3/theme/default/index/images/play-overlay.png" />
+                                        <img class="video-image" src="http://cdn.salemweb.net/godtube/2012/12/20/423239-004-tn.jpg">
+                                        <p>What&#39;s the Book of Amos About?</p>
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="http://www.biblestudytools.com/video/what-does-blessed-are-the-poor-in-spirit-mean-matthew-5-3.html">
+                                        <img class="play-overlay" src="http://media.salemwebnetwork.com/biblestudytools3/theme/default/index/images/play-overlay.png" />
+                                        <img class="video-image" src="http://cdn.salemweb.net/godtube/2013/05/30/439577_480p_thumbnails4.jpg">
+                                        <p>What Does &quot;Blessed Are the Poor in Spirit&quot; Mean (Matthew 5:3)?</p>
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="http://www.biblestudytools.com/video/what-does-paul-s-speech-on-mars-hill-mean-to-us-today-acts-17.html">
+                                        <img class="play-overlay" src="http://media.salemwebnetwork.com/biblestudytools3/theme/default/index/images/play-overlay.png" />
+                                        <img class="video-image" src="http://cdn.salemweb.net/godtube/2013/03/14/432006_480p_thumbnails4.jpg">
+                                        <p>What Does Paul&#39;s Speech on Mars Hill Mean to Us Today (Acts 17)?</p>
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="menu-link parent">
+                        <a href="#" rel="http://www.biblestudytools.com/blogs/" data-toggle="dropdown" class="dropdown-toggle menu-item head-link">Blogs</a>
+                        <div class="sub-menu blog dropdown-menu keep-open">
+                            <ul class="children">
+                                
+                                <li>
+                                    <a href="http://www.biblestudytools.com/blogs/founders-ministries-blog/how-pastors-can-keep-from-losing-heart-part-3-self-denial.html">
+                                        <div class="center">
+                                            <img src="http://media.salemwebnetwork.com/cms/BST/7071-founders.125w.tn.jpg">
+                                        </div>
+                                        <div class="right">
+                                            <span class="title">How Pastors Can Keep from Losing Heart, Part 3: Self-Denial</span>
+                                            <span class="author">Founders Ministries Blog</span>
+                                        </div>
+                                    </a>
+                                    <div style="clear: both;"></div>
+                                </li>
+                                
+                                <li>
+                                    <a href="http://www.biblestudytools.com/blogs/philip-nation/transition-to-a-going-church.html">
+                                        <div class="center">
+                                            <img src="http://media.salemwebnetwork.com/cms/BST/7263-starting-line.55w.tn.jpg">
+                                        </div>
+                                        <div class="right">
+                                            <span class="title">5 Changes to Become a “Going” Church</span>
+                                            <span class="author">Philip Nation</span>
+                                        </div>
+                                    </a>
+                                    <div style="clear: both;"></div>
+                                </li>
+                                
+                                <li>
+                                    <a href="http://www.biblestudytools.com/blogs/stephen-altrogge/don-t-let-systematic-theology-mess-with-your-head.html">
+                                        <div class="center">
+                                            <img src="http://media.salemwebnetwork.com/cms/BST/5477-fear-face-man.55w.tn.jpg">
+                                        </div>
+                                        <div class="right">
+                                            <span class="title">Don’t Let Systematic Theology Mess With Your Head</span>
+                                            <span class="author">Stephen Altrogge</span>
+                                        </div>
+                                    </a>
+                                    <div style="clear: both;"></div>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="menu-link parent right-align"><a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">Newsletters</a>
+                        <div class="sub-menu newsletters dropdown-menu keep-open">
+                            <div id='allpass_container463' style='clear:both;'></div>
+<script type='text/javascript'>
+if (typeof(allpass_containerRequests) !== 'undefined') { allpass_containerRequests.push([$('#allpass_container463'), 'Narrow', null, null]); }
+</script>
+                        </div>
+                    </li>
+                    <li class="menu-link parent right-align"><a href="#" rel="http://www.biblestudytools.com/help/" data-toggle="dropdown" class="dropdown-toggle menu-item help-link">Help</a>
+                        <div class="sub-menu help dropdown-menu keep-open">
+                            <ul class="children">
+                                <li><a href="http://www.biblestudytools.com/help/video.aspx">Videos</a></li>
+                                <li><a href="http://www.biblestudytools.com/contact-us/" rel="nofollow">Contact Us</a></li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="menu-link parent right-align"><a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">More</a>
+                        <div class="sub-menu more dropdown-menu keep-open">
+                            <ul class="children">
+                                <li><a href="http://www.biblestudytools.com/bible-versions/" rel="nofollow">Bible Versions</a></li>
+                                <li><a href="http://www.biblestudytools.com/parallel-bible/" rel="nofollow">Parallel Bible</a></li>
+                                <li><a href="http://www.biblestudytools.com/dictionaries/smiths-bible-dictionary/old-testament.html" rel="nofollow">Old Testament</a></li>
+                                <li><a href="http://www.biblestudytools.com/dictionaries/smiths-bible-dictionary/new-testament.html" rel="nofollow">New Testament</a></li>
+                                <li><a href="http://www.biblestudytools.com/link-to-bst/" rel="nofollow">Linking to BST</a></li>
+                                <li><a href="http://www.biblestudytools.com/interlinear-bible/" rel="nofollow">Interlinear Bible</a></li>
+                                <li><a href="http://www.biblestudytools.com/topical-verses/" rel="nofollow">Verses by Topic</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="LoginControl" class="menu-link parent right-align">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">Sign In</a>
+                        <div class="sub-menu dropdown-menu keep-open">
+
+                            <div class="sign-in">
+                                <form action="http://www.biblestudytools.com/user/login.aspx" method="post" id="sign-in-form">
+                                    <div class="layover-element">
+                                        <label for="sign-in-username" class="sign-in">Username</label>
+                                        <input type="text" id="sign-in-username" name="UserName" />
+                                    </div>
+                                    <div class="layover-element">
+                                        <label for="sign-in-password" class="sign-in">Password</label>
+                                        <input type="password" id="sign-in-password" name="Password" autocomplete="off" />
+                                    </div>
+                                    <span class="form-actions">
+                                        <button>Sign In</button>
+                                        <label class="checkbox inline stay-signed-in">
+                                            <input type="checkbox" id="RememberMe" name="RememberMe" checked="checked" />Stay signed in</label>
+                                    </span>
+                                    <a href="http://www.biblestudytools.com/user/forgotpassword.aspx" class="forgot-password">Forgot your password?</a>
+                                </form>
+
+                                <div class="alt-sign-in">
+                                    <div class="sign-in-using">Sign in using</div>
+                                    <div class="alt-images">
+                                        
+                                        <a href="http://allpass.salemwebnetwork.com/login/oauth/google?returnUrl=http://www.biblestudytools.com/user/ThirdPartyLoginResponse.aspx&app=biblestudytools" class="popup">
+                                            <img src="http://media.salemwebnetwork.com/biblestudytools3/theme/default/login/google.png" width="20" height="20" title="Google" alt="Google" />
+                                        </a>
+                                        
+                                        <a href="http://allpass.salemwebnetwork.com/login/oauth/facebook?returnUrl=http://www.biblestudytools.com/user/ThirdPartyLoginResponse.aspx&app=biblestudytools" class="popup">
+                                            <img src="http://media.salemwebnetwork.com/biblestudytools3/theme/default/login/facebook.png" width="20" height="20" title="Facebook" alt="Facebook" />
+                                        </a>
+                                        
+                                        <a href="http://allpass.salemwebnetwork.com/login/oauth/live?returnUrl=http://www.biblestudytools.com/user/ThirdPartyLoginResponse.aspx&app=biblestudytools" class="popup">
+                                            <img src="http://media.salemwebnetwork.com/biblestudytools3/theme/default/login/live.png" width="20" height="20" title="Hotmail/MSN-Live" alt="Hotmail/MSN-Live" />
+                                        </a>
+                                        
+                                        <a href="http://allpass.salemwebnetwork.com/login/openid/yahoo?returnUrl=http://www.biblestudytools.com/user/ThirdPartyLoginResponse.aspx&app=biblestudytools" class="popup">
+                                            <img src="http://media.salemwebnetwork.com/biblestudytools3/theme/default/login/yahoo.png" width="20" height="20" title="Yahoo!" alt="Yahoo!" />
+                                        </a>
+                                        
+                                    </div>
+                                </div>
+
+                                <div class="new-account">
+                                    <a href="http://www.biblestudytools.com/user/create.aspx" class="register-user">Create a new account</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+
+        <div id="divLogoBanner">
+            <img id="logo" class="" src="http://media.salemwebnetwork.com/biblestudytools3/theme/default/index/images/logo.png" alt="Bible Study Tools" />
+        </div>
+
+        <h1 id="logo-text">Growing deeper in the Word</h1>
+        <div class="search-wrapper">
+            <form action="http://www.biblestudytools.com/search/" method="post" id="search-form">
+                <div class="ui-widget layover-element">
+                    <label for="query" class="query-placeholder">Search the Bible</label>
+                    <input type="text" id="query" spellcheck="false" name="query" />
+                </div>
+            </form>
+            <a id="find-it" href="#"></a>
+        </div>
+
+        <div class="sub-search">
+            <span id="btb-wrapper">
+                <a id="btb" href="#" class=""></a>
+
+                <div class="popover browse bottom">
+                    <div class="arrow"></div>
+                    <div class="popover-inner">
+
+                        <div id="bb-result" class="browse-bible">
+                            <a id="bb-selected-translation" href="#" onclick="browseBible.ShowTranslationSelector(); return false;"></a>
+                            <div class="translations" id="bb-translation-list"></div>
+                            <div class="books" id="bb-book-list"></div>
+                            <div class="chapters" id="bb-chapter-list"></div>
+                        </div>
+                        <script type="text/javascript">
+                            var browseBible = new Salem.BrowseBible('http://www.biblestudytools.com/Resource/ServiceProxy/BrowseBibleDropDownProxy.svc/', 'niv');
+                        </script>
+
+                    </div>
+
+                </div>
+
+            </span>
+
+            <div class="post-browse">
+                <div id="calendar"></div>
+                <span id="tbr-calendar"></span>
+                <span class="tbr-pre" id="tbr-pre">Today's Bible Reading: </span>
+                <div style="display: inline;" id="TodaysBibleReadingPassage">
+                    <a id="TodaysBibleReadingPassageLink" href="http://www.biblestudytools.com/passage.aspx?q=Mark 5:21-43; 2 Samuel 14; Daniel 8">Mark 5:21-43; 2 Samuel 14; Daniel 8</a>
+                </div>
+                <span class="dot-sep">&middot</span><a class="advanced-search" href="http://www.biblestudytools.com/search/">Advanced Search</a>
+
+            </div>
+        </div>
+
+        <ul class="sub-search-menu">
+            <li class="my-bible">
+                <a href="http://www.biblestudytools.com/my-bible/">
+                    <div title="My Bible" class="menu-image"></div>
+                    <h2 class="menu-title">My Bible</h2>
+                </a>
+            </li>
+            <li class="votd">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                    <div title="Verse of the Day" class="menu-image"></div>
+                    <h2 class="menu-title">Verse of the Day</h2>
+                </a>
+
+                <div class="sub-menu-content-popover dropdown-menu keep-open">
+                    <div class="content">
+                        <div class="VerseOfTheDay"><div class="Date">June 21</div><a href="http://www.biblestudytools.com/psalms/16-8.html" class="VerseTitle"><h3>Psalm 16:8 (NIV)</h3></a><div class="VerseText">I have set the LORD always before me. Because he is at my right hand, I will not be shaken.</div><a href="http://www.biblestudytools.com/psalms/16.html" class="VerseContext">Read Psalm 16</a></div>
+                        <a href="http://www.biblestudytools.com/bible-verse-of-the-day/" class="daily-bible-verse">Daily Bible Verse</a>
+                    </div>
+                    <div class="arrow"></div>
+                </div>
+            </li>
+            <li class="popular-verses">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                    <div title="Popular Verses" class="menu-image"></div>
+                    <h2 class="menu-title">Popular Verses</h2>
+                </a>
+
+                <div class="sub-menu-content-popover dropdown-menu keep-open">
+                    <div class="content">
+                        <div class="two-pane">
+                            <div class="pane">
+                                <div class="title">Popular Bible Verses</div>
+                                <div class="pbv-list wrap-right small"><ul><li><a href="http://www.biblestudytools.com/john/3-16.html">John 3:16</a></li><li><a href="http://www.biblestudytools.com/jeremiah/29-11.html">Jeremiah 29:11</a></li><li><a href="http://www.biblestudytools.com/romans/8-28.html">Romans 8:28</a></li><li><a href="http://www.biblestudytools.com/philippians/4-13.html">Philippians 4:13 </a></li><li><a href="http://www.biblestudytools.com/genesis/1-1.html">Genesis 1:1</a></li><li><a href="http://www.biblestudytools.com/proverbs/3-5.html">Proverbs 3:5</a></li><li><a href="http://www.biblestudytools.com/proverbs/3-6.html">Proverbs 3:6</a></li><li><a href="http://www.biblestudytools.com/romans/12-2.html">Romans 12:2</a></li><li><a href="http://www.biblestudytools.com/philippians/4-6.html">Philippians 4:6</a></li><li><a href="http://www.biblestudytools.com/matthew/28-19.html">Matthew 28:19</a></li></ul></div>
+                            </div>
+                            <div class="pane">
+                                <div class="title">Bible Verses by Topic</div>
+                                <div>
+                                    <ul class="grey-dot">
+                                        <li><a href="http://www.biblestudytools.com/topical-verses/family-bible-verses/">Family Bible Verses</a></li>
+                                        <li><a href="http://www.biblestudytools.com/topical-verses/peace-bible-verses/">Peace Bible Verses</a></li>
+                                        <li><a href="http://www.biblestudytools.com/topical-verses/love-bible-verses/">Love Bible Verses</a></li>
+                                        <li><a href="http://www.biblestudytools.com/topical-verses/fear-bible-verses/">Fear Bible Verses</a></li>
+                                        <li><a href="http://www.biblestudytools.com/topical-verses/">More Topics</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="clear: both;"></div>
+                    </div>
+                    <div class="arrow"></div>
+                </div>
+            </li>
+            <li class="commentaries">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                    <div title="Commentaries" class="menu-image"></div>
+                    <h2 class="menu-title">Commentaries</h2>
+                </a>
+
+                <div class="sub-menu-content-popover dropdown-menu keep-open">
+                    <div class="content">
+                        <div class="title">Most Popular Bible Commentaries</div>
+                        <div>
+                            <ul class="grey-dot wrap-right large">
+                                <li><a href="http://www.biblestudytools.com/commentaries/geneva-study-bible/">Geneva Study Bible</a></li>
+                                <li><a href="http://www.biblestudytools.com/commentaries/peoples-new-testament/">People's New Testament</a></li>
+                                <li><a href="http://www.biblestudytools.com/commentaries/gills-exposition-of-the-bible/">John Gill's Exposition of the Bible</a></li>
+                                <li><a href="http://www.biblestudytools.com/commentaries/wesleys-explanatory-notes/">Wesley's Explanatory Notes</a></li>
+                                <li><a href="http://www.biblestudytools.com/commentaries/matthew-henry-complete/">Matthew Henry Commentary on the Whole Bible</a></li>
+                                <li><a href="http://www.biblestudytools.com/commentaries/">More Commentaries</a></li>
+                            </ul>
+                        </div>
+                        <div style="clear: both;"></div>
+                    </div>
+                    <div class="arrow"></div>
+                </div>
+            </li>
+            <li class="notes">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                    <div title="Notes" class="menu-image"></div>
+                    <h2 class="menu-title">Notes</h2>
+                </a>
+
+                <div class="sub-menu-content-popover notes dropdown-menu keep-open">
+                    <div class="content">
+                        <span class="wait-image"></span>
+                        <span class="wait-message">Loading - Please wait</span>
+                    </div>
+                    <div class="arrow"></div>
+                </div>
+            </li>
+            <li class="bible-study-tips">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                    <div title="Bible Study" class="menu-image"></div>
+                    <h2 class="menu-title">Bible Study</h2>
+                </a>
+
+                <div class="sub-menu-content-popover dropdown-menu keep-open">
+                    <div class="content bible-study-tips">
+                        <div class="two-pane">
+                            <div class="pane">
+                                <div class="title">Bible Study</div>
+                                <a class="image" href="http://www.biblestudytools.com/bible-study/topical-studies/five-steps-to-peace-in-a-really-bad-situation-11632298.html">
+                                    <img  class="Thumbnail"
+                                        alt="Five Steps to Peace in a Really Bad Situation" title="Five Steps to Peace in a Really Bad Situation" src="http://media.salemwebnetwork.com/cms/BST/7441-sad-woman-close.55w.tn.jpg" />
+                                </a>
+                                <div class="article-info">
+                                    <a class="article-title" href="http://www.biblestudytools.com/bible-study/topical-studies/five-steps-to-peace-in-a-really-bad-situation-11632298.html">Five Steps to Peace in a Really Bad Situation</a>
+                                    <div class="author">Paul Dean</div>
+                                    <span class="abstract-mini">
+                                        How can we get peace if we&#39;re headed into or in the midst of a crisis? God tells us how to do just that.
+                                    </span>
+                                </div>
+                                <div style="clear: both;"></div>
+                                <a href="http://www.biblestudytools.com/bible-study/" class="more-link">More Bible Study</a>
+                            </div>
+                            <div class="pane">
+                                <div class="title">Study Tips</div>
+
+                                <a class="image" href="http://www.biblestudytools.com/bible-study/tips/3-simple-steps-for-studying-the-bible.html">
+                                    <img  class="Thumbnail"
+                                        alt="3 Simple Steps for Studying the Bible" title="3 Simple Steps for Studying the Bible" src="http://media.salemwebnetwork.com/cms/BST/5383-commentaries-stack.55w.tn.jpg" />
+                                </a>
+                                <div class="article-info">
+                                    <a class="article-title" href="http://www.biblestudytools.com/bible-study/tips/3-simple-steps-for-studying-the-bible.html">3 Simple Steps for Studying the Bible</a>
+                                    <div class="author">Jim George, Th.M.</div>
+                                    <span class="abstract-mini">
+                                        There are a number of ways we can study the Bible, but one of the most effective and simple approaches to reading and understanding God’s Word involves three simple steps.
+                                    </span>
+                                </div>
+                                <div style="clear: both;"></div>
+                                <a href="http://www.biblestudytools.com/bible-study/tips/" class="more-link">More Study Tips</a>
+                            </div>
+                        </div>
+                        <div style="clear: both;"></div>
+                    </div>
+                    <div class="arrow"></div>
+                </div>
+            </li>
+            <li class="app">
+                <a href="http://itunes.apple.com/us/app/free-bible-study-tools/id396906089?mt=8" target="_blank">
+                    <div title="Free Bible App" class="menu-image"></div>
+                    <h2 class="menu-title">Free Bible App</h2>
+                </a>
+            </li>
+        </ul>
+
+        <div class="footer">
+
+            <div class="advert">
+
+                <div class="pre">
+                    <span>Advertisement</span>
+                    <span class="pull-right"><a href="http://www.salemwebnetwork.com/advertise-with-us/">Advertise with us</a></span>
+                </div>
+
+                
+<div id='gpt-ad-0' class="ad728x90">
+<script type='text/javascript'>
+    if (gptClientWidth >= 0 && gptClientWidth <= 1000000)
+      googletag.cmd.push(function() { googletag.display('gpt-ad-0'); });
+</script>
+</div>
+
+
+
+                <div class="post"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- /container -->
+    <!-- Adroll Code -->
+    <script type="text/javascript">
+        adroll_adv_id = "WT7QHPQW7FAXVFUC5Q6NFB";
+        adroll_pix_id = "BXCUDL4ITNHJ3C7SIBS6OR";
+        (function () {
+            var oldonload = window.onload;
+            window.onload = function () {
+                __adroll_loaded = true;
+                var scr = document.createElement("script");
+                var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+                scr.setAttribute('async', 'true');
+                scr.type = "text/javascript";
+                scr.src = host + "/j/roundtrip.js";
+                ((document.getElementsByTagName('head') || [null])[0] ||
+                document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+                if (oldonload) { oldonload() }
+            };
+        }());
+</script>
+     <!-- End Adroll Code -->
+    <!-- DFP Retargeting Pixel -->
+    <script type='text/javascript'>
+        var axel = Math.random() + '';
+        var a = axel * 10000000000000;
+        document.write('<img src="http://pubads.g.doubleclick.net/activity;dc_iu=/6177/DFPAudiencePixel;site=biblestudytools;ord=' + a + '?" width=1 height=1 border=0/>');
+    </script>
+    <noscript>
+    <img src="http://pubads.g.doubleclick.net/activity;dc_iu=/6177/DFPAudiencePixel;site=biblestudytools;ord=1?" width=1 height=1 border=0/>
+    </noscript>
+     <!-- End DFP Retargeting Pixel -->
+<script type='text/javascript'>
+// * DFP Audience Pixel *
+var axel = Math.random() + '';
+var a = axel * 10000000000000;
+document.write('<img src="http://pubads.g.doubleclick.net/activity;dc_iu=/6177/DFPAudiencePixel;dc_seg=18959050;ord=' + a + '?" width=1 height=1 border=0/>');
+</script>
+<noscript>
+<img src="http://pubads.g.doubleclick.net/activity;dc_iu=/6177/DFPAudiencePixel;dc_seg=18959050;ord=1?" width=1 height=1 border=0/>
+</noscript>
+</body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('div.menu-bar.bottom').appendTo('div.post');
+        //$("#calendar").datepicker({
+        //    changeMonth: true,
+        //    changeYear: false,
+        //    dateFormat: 'M d'
+        //    //onSelect: function (dateText, inst) {
+        //    //    $("#TodaysBibleReadingPassage").fadeOut(300);
+        //    //    var delay = function () { ChangeTodaysBibleReading(dateText); };
+        //    //    setTimeout(delay, 300);
+        //    //}
+        //});
+
+        $("#calendar").datepicker({
+            changeMonth: true,
+            changeYear: false,
+            dateFormat: 'M d',
+            onSelect: function (dateText, inst) {
+                $("#calendar").fadeOut(300);
+                var delay = function () { ChangeTodaysBibleReading(dateText); };
+                setTimeout(delay, 300);
+            }
+        })
+        .hide()
+        .click(function () {
+
+        });
+
+        $("#tbr-calendar").click(function () {
+            $("#calendar").show();
+        });
+
+        function ChangeTodaysBibleReading(dateText) {
+            var svc = new Salem.Ajax.Service('http://www.biblestudytools.com/resource/serviceproxy/readingplanproxy.svc/');
+            var date = dateText.split(" ");
+            var cssClass = "day-" + date[1];
+            $("#tbr-calendar").removeClass();
+            $("#tbr-calendar").addClass(cssClass);
+            svc.JsonGet("GetReadingPlanPassageTitle", { date: dateText }, ChangeTodaysBibleReading_Success, ChangeTodaysBibleReading_Failure);
+        }
+
+        // passageUrl defined in containing user control
+        function ChangeTodaysBibleReading_Success(ret) {
+            var link = Salem.String.Format('<a href="{0}?q={1}">{1}</a>', 'http://www.biblestudytools.com/passage.aspx', ret);
+                $("#TodaysBibleReadingPassage").fadeIn(500);
+                $("#TodaysBibleReadingPassage").html(link);
+            }
+
+            function ChangeTodaysBibleReading_Failure() {
+                $("#TodaysBibleReadingPassage").html('Error loading passage, please try again.');
+                $("#TodaysBibleReadingPassage").fadeIn(500);
+            }
+
+        // ThirdParty Login
+            if ($(".popup").length) {
+                $(".popup").click(function (e) {
+                    e.preventDefault();
+                    var url = $(this).attr("href");
+                    var testwindow = window.open(url, "mywindow", "location=1,status=1,scrollbars=1,width=900,height=625");
+                    testwindow.moveTo(100, 200);
+                });
+            }
+    });
+</script>
+</html>
+
+

@@ -132,6 +132,7 @@ vault_root: "C:\\STORAGE\\G\\GodShew"
 - **Support folder:** `1-PROJECTS(Stove)/212G-TARSUS-Main-Ministry-Platform/Support/`
 - **Source corpus:** Remains in `3-RESOURCES(Pantry)/Daniel Miles/` — read-only; no moves until Organizing phase.
 - **Reference:** [[Daniel Miles]], GodShew pantry pages, SCRAN archive (`.stversions` if needed).
+- This programmer [mayooear](https://github.com/mayooear) made this similar project with different intention: [[4-ARCHIVES(Freezer)/M/Mayooear/ai-pdf-chatbot-langchain/README |AI PDF chatbot built with LangChain & LangGraph]]. The methodology seems quite old now, but a good reference to look at. 
 
 ---
 

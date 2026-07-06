@@ -1,0 +1,76 @@
+---
+title: "The cradle of Makmood Odd of TMG News Propaganda and Climate Neutrality Studies Middle East Eye"
+type: "post"
+original_path: "C:\STORAGE\M\Manifold-Grace\3-RESOURCES(Pantry)\ORG-NOTES\Social-Media-Captures\GMP\FB\FB-Andy_Vantino_VantinoNews-The_cradle_of_Makmood_Odd_of_TMG_News_Propaganda_and_Climate_Neutrality_Studies_Middle_East_Eye-20260404.md"
+---
+[FB-Andy_Vantino_VantinoNews-The_cradle_of_Makmood_Odd_of_TMG_News_Propaganda_and_Climate_Neutrality_Studies_Middle_East_Eye-20260404.mp4](<file:///F:/O/ORG/Social Media Video Wisdom (ORG)/GMP/FB/FB-Andy_Vantino_VantinoNews-The_cradle_of_Makmood_Odd_of_TMG_News_Propaganda_and_Climate_Neutrality_Studies_Middle_East_Eye-20260404.mp4>)
+
+## Transcript
+
+America has 19 to 25 military bases in the Gulf.
+Does China have military bases in the Gulf?
+Does Russia have...
+Why did...
+13 of them...
+13 of them have been bombed.
+They're not telling you.
+I'm telling people to go to a cradle,
+Muckmood Ud,
+a TMG news propaganda and cold neutrality studies Middle East I.
+Please tell people.
+Please don't take that out.
+Please tell people to watch this.
+Why is it...
+Why is it that...
+Germany now...
+Blames...
+Blames Muslim people, right?
+And...
+And...
+And the best one here...
+The best one.
+Iran should not be protected by international law.
+And...
+And...
+Okay.
+So...
+I just want to remind...
+Hello.
+I just...
+This lady...
+Told me...
+Fascism...
+And Nazism...
+Don't go together.
+I don't want to get into it.
+But I just want to remind people...
+We're here in Germany.
+We're here in Germany, okay?
+The land of N-A-Z-I-S-M.
+Okay, the land.
+What did the Moustache Men do with 1933?
+The first thing he did was...
+Rearmament.
+He went against the Versailles Treaty.
+And he rearmed Germany, right?
+What happened after that?
+The Rhine land.
+What happened after that?
+Zudaten land.
+What happened after that?
+Ansheles, Austria.
+What happened after that?
+1939 Poland.
+Does this remind you of something?
+Does it...
+Does this remind anyone of something that's going on?
+Cuba, Venezuela, Greenland, Iran.
+What's next?
+Turkey?
+What's next?
+I mean, every day.
+Every day.
+Goebbels, Borman, Mangle, Dr. Brunt.
+I remind German people of these people.
+Why is the CDU for D-Linka not talking about condemning...
+

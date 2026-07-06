@@ -1,0 +1,37 @@
+---
+title: "Part 002 (es) saturns rise maze matrix burn-in 1280x720 x264"
+type: "post"
+original_path: "C:\STORAGE\M\Manifold-Grace\3-RESOURCES(Pantry)\ORG-NOTES\Social-Media-Captures\GMP\GMP\GMP-Unknown-Part_002_(es)_saturns_rise_maze_matrix_burn-in_1280x720_x264-20230322.md"
+---
+[GMP-Unknown-Part_002_(es)_saturns_rise_maze_matrix_burn-in_1280x720_x264-20230322.mp4](<file:///F:/O/ORG/Social Media Video Wisdom (ORG)/GMP/GMP/GMP-Unknown-Part_002_(es)_saturns_rise_maze_matrix_burn-in_1280x720_x264-20230322.mp4>)
+
+## Description
+
+
+## Transcript
+
+
+this creation, this fallen creation, this machine that runs the reality Saturn, this place, this fallen
+place is a result of the abuse of the knowledge that Lucifer gained from the Father, very intelligent
+being created with spiritual gifting, real gifting music, complete tones, completely abused,
+took the gift, ran with it and abused it, didn't invest his inheritance, didn't invest his gift
+in took it, ran, and that's what we're in guys, so Lucifer is not powerful, it's just a thief.
+In the beginning there was Jack and Jack had a groove, now what does groove mean, let's look into
+the word groove, so in the beginning Jack was there, we're talking of the auroboros here as well,
+but groove is the rhythm, also it's a pharaoh channel, depression, narrow cart, long and narrow,
+rabbit, and also look at this interesting, enjoy one's self, self love, so in the beginning there was
+Jack and Jack had a groove, and from this groove came the groove of all grooves, and while one day
+viciously throwing down on his box, there's your box, the the womb, the black cube, the machine,
+Jack boldly the same as Pandora's box, let there be house, and house music was born,
+I am, you see, I am, the creator, and this is my house, and in my house there is only house music,
+but I am not so selfish because once you enter my house then it becomes our house and our house music,
+to be honest mate you can keep it, we're not bothered about this house anymore, we want to go to
+the father's house where there is many mansions, dimensions, I guess I've got the opinion that
+that's what that's referring to, dimensions, maybe in the father's house there are many different
+places, I can't even begin to think what it would be like, but far far better than Jack's house for
+sure, and you see no one man owns house because house music is a universal language spoken and
+understood by all, you know in the world in Jack's house, you see house is a feeling that no one
+can understand really unless you're deep into the vibe of house, house is an uncontrollable desire
+to jack your body, I wonder what these events are, where they get...
+
+

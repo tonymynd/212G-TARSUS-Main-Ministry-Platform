@@ -1,0 +1,13 @@
+---
+title: "poverty cycled described"
+type: "post"
+original_path: "C:\STORAGE\M\Manifold-Grace\3-RESOURCES(Pantry)\ORG-NOTES\Social-Media-Captures\DSM\FB\FB-AttyUntapped-poverty_cycled_described-20260703.md"
+---
+[FB-AttyUntapped-poverty_cycled_described-20260703.mp4](<file:///F:/O/ORG/Social Media Video Wisdom (ORG)/DSM/FB/FB-AttyUntapped-poverty_cycled_described-20260703.mp4>)
+
+## Description
+
+Poverty Ecosystems keep people and generations stuck in poverty. Awareness of it and how it’s impacting your life/decisions is the first step in finding the way out.
+
+## Transcript
+You want to get out of poverty, you have to exit the poverty ecosystem. I'm the first person in my family to break the cycle of poverty and I still have family that's in it and it's because they're stuck inside the poverty ecosystem. So, what is it? It's an understanding that poverty isn't just about not having a lot of money. It's about all the other factors that are sometimes out of our control that are constantly feeding into one another and can keep a person stuck in poverty. It's the biological and physiological changes that we go through because of the stress and anxiety that poverty brings. It's the environment we live in, the housing, the neighborhoods, the schools which shape our understanding of the world and what we think is possible for ourselves. It's the social systems, the people that you're constantly talking to on a regular basis and forming relationships with and the institutions and resources that are available to you. All of those things are interconnected and feed into one another to keep a person stuck in their current situation. So, how do you get out of it? First and foremost, is awareness. Be aware that the poverty ecosystem exists and how it's impacting your daily decisions. The second thing is the most important, it's education. It doesn't have to be a formal degree although that's going to give you the best return. It could be trade school, a technical program. Is your job offering any classes? Is there a free class at the library that you can take? Is there a book on a skill that you can read and implement in practice so that you can have better opportunities? Anything that's going to increase your knowledge and skill sets to give you employment and income streams. The third thing is especially important for young people or parents to young people and that's temporary exits from the ecosystem. Putting young people into sports, clubs, after-school activities, summer programs, mentorship. This is going to change their mindset and change their understanding of what's possible to them. It's going to give them more opportunities. It's going to give them more resources that they otherwise would not have had.
