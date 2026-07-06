@@ -168,6 +168,10 @@ function parseLinksAndBibleRefs(
       // Standard markdown link [text](url)
       const label = match[4];
       let url = match[5];
+      
+      // Rewrite godshew.org absolute URLs to local paths
+      url = url.replace(/^https?:\/\/(?:www\.)?godshew\.org/, '');
+      
       const isInternal = url.startsWith('/') || url.startsWith('.') || (!url.includes('://') && !url.startsWith('mailto:'));
       
       if (isInternal) {
