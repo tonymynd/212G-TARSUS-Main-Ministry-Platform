@@ -92,7 +92,25 @@ I am Tarsus (The Apostle), grounding my answers strictly in the scripture of tru
   };
 
   useEffect(() => {
-    fetchSessions();
+    const restoreSession = async () => {
+      await fetchSessions();
+      const savedSessionId = sessionStorage.getItem('currentSessionId');
+      if (savedSessionId) {
+        try {
+          const res = await fetch(`/api/sessions/${savedSessionId}`);
+          if (res.ok) {
+            const data = await res.json();
+            if (data.session) {
+              setCurrentSessionId(data.session.id);
+              setMessages(data.session.messages);
+            }
+          }
+        } catch (e) {
+          console.error("Error restoring session:", e);
+        }
+      }
+    };
+    restoreSession();
   }, []);
 
   const saveCurrentSession = async (currentMessages: typeof messages, sessionId: string | null) => {
@@ -111,6 +129,7 @@ I am Tarsus (The Apostle), grounding my answers strictly in the scripture of tru
         if (!sessionId) {
           setCurrentSessionId(id);
         }
+        sessionStorage.setItem('currentSessionId', id);
         fetchSessions();
         return id;
       }
@@ -134,6 +153,7 @@ I am Tarsus (The Apostle), grounding my answers strictly in the scripture of tru
         if (data.session) {
           setCurrentSessionId(data.session.id);
           setMessages(data.session.messages);
+          sessionStorage.setItem('currentSessionId', data.session.id);
         }
       }
     } catch (e) {
@@ -143,6 +163,7 @@ I am Tarsus (The Apostle), grounding my answers strictly in the scripture of tru
 
   const handleNewChat = () => {
     setCurrentSessionId(null);
+    sessionStorage.removeItem('currentSessionId');
     setMessages([
       {
         role: 'bot',
