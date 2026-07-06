@@ -34,6 +34,7 @@ function MainLayoutContent({ initialPages, initialBooks }: MainLayoutProps) {
     selectedChapter,
     setSelectedChapter,
     highlightedVerses,
+    setHighlightedVerses,
     markedPageIds,
     toggleMarkPage,
     clearMarkedPages
@@ -415,15 +416,20 @@ I am Tarsus (The Apostle), grounding my answers strictly in the scripture of tru
 
               <div className="bible-verses-list">
                 {verses.map((v, i) => {
-                  const isHighlighted = highlightedVerses && v.verse >= highlightedVerses.start && (!highlightedVerses.end || v.verse <= highlightedVerses.end);
+                  const isHighlighted = highlightedVerses && v.verse >= highlightedVerses.start && v.verse <= (highlightedVerses.end || highlightedVerses.start);
                   return (
                     <div 
                       key={i}
                       id={`verse-${v.verse}`}
                       className="bible-verse-item"
-                      style={isHighlighted ? { backgroundColor: '#f1f3f4', borderRadius: '4px', padding: '4px', margin: '-4px 0 4px 0' } : undefined}
+                      onClick={() => setHighlightedVerses({ start: v.verse, end: v.verse })}
+                      style={{
+                        cursor: 'pointer',
+                        transition: 'background-color 0.2s',
+                        ...(isHighlighted ? { backgroundColor: '#e2e8f0', borderRadius: '4px', padding: '4px', margin: '-4px 0 4px 0', borderLeft: '3px solid #64748b' } : {})
+                      }}
                     >
-                      <span className="bible-verse-num">{v.verse}</span>
+                      <span className="bible-verse-num" style={isHighlighted ? { fontWeight: 'bold', color: '#334155' } : {}}>{v.verse}</span>
                       {v.text}
                     </div>
                   );
