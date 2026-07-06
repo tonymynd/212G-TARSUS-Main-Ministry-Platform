@@ -19,6 +19,44 @@ interface MarkdownBibleRendererProps {
 function CitationBadge({ num, citation }: { num: string; citation: Citation }) {
   const [visible, setVisible] = useState(false);
 
+  let linkHref = citation.link;
+  let isInternalCitation = false;
+  
+  // Rewrite godshew.org absolute URLs to local paths
+  if (/^https?:\/\/(?:www\.)?godshew\.org/.test(linkHref)) {
+    linkHref = linkHref.replace(/^https?:\/\/(?:www\.)?godshew\.org/, '');
+    isInternalCitation = true;
+  }
+  
+  // If it's already a relative path, it's internal
+  if (linkHref.startsWith('/') || linkHref.startsWith('.')) {
+    isInternalCitation = true;
+  }
+
+  if (isInternalCitation) {
+    let targetSlug = linkHref;
+    let hash = '';
+    if (targetSlug.includes('#')) {
+      const parts = targetSlug.split('#');
+      targetSlug = parts[0];
+      hash = '#' + parts.slice(1).join('#');
+    }
+    
+    targetSlug = targetSlug.replace(/\.(md|htm|html)$/i, '').replace(/^\.\//, '');
+    
+    // If the link is already /pages/something, we don't want to double /pages/_pages_
+    if (targetSlug.startsWith('/pages/')) {
+      linkHref = targetSlug + hash;
+    } else {
+      const sanitizedSlug = targetSlug
+        .toLowerCase()
+        .replace(/[^a-z0-9_&]+/g, '_')
+        .replace(/_+/g, '_')
+        .replace(/^_|_$/g, '');
+      linkHref = `/pages/${sanitizedSlug}${hash}`;
+    }
+  }
+
   return (
     <span 
       style={{ position: 'relative', display: 'inline-block' }}
@@ -58,16 +96,16 @@ function CitationBadge({ num, citation }: { num: string; citation: Citation }) {
             bottom: '100%',
             left: '-10px',
             zIndex: 2000,
-            background: '#fff',
+            width: '280px',
+            background: 'white',
             border: '1px solid var(--border)',
             borderRadius: '8px',
-            boxShadow: '0 6px 24px rgba(0,0,0,0.13)',
-            padding: '1rem 1.1rem',
-            width: '320px',
-            fontSize: '1rem',
-            lineHeight: '1.5',
-            color: 'var(--foreground)',
-            pointerEvents: 'auto',
+            padding: '12px',
+            boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+            marginBottom: '8px',
+            fontFamily: 'system-ui, -apple-system, sans-serif',
+            textAlign: 'left',
+            color: 'black'
           }}
         >
           <span
@@ -95,18 +133,35 @@ function CitationBadge({ num, citation }: { num: string; citation: Citation }) {
               "{citation.snippet}"
             </span>
           )}
-          <a
-            href={citation.link}
-            style={{
-              color: 'var(--accent)',
-              textDecoration: 'underline',
-              fontSize: '0.95rem',
-              fontWeight: 500,
-              pointerEvents: 'auto',
-            }}
-          >
-            {citation.title} →
-          </a>
+          {isInternalCitation ? (
+            <Link
+              href={linkHref}
+              style={{
+                color: 'var(--accent)',
+                textDecoration: 'underline',
+                fontSize: '0.95rem',
+                fontWeight: 500,
+                pointerEvents: 'auto',
+              }}
+            >
+              {citation.title} →
+            </Link>
+          ) : (
+            <a
+              href={linkHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color: 'var(--accent)',
+                textDecoration: 'underline',
+                fontSize: '0.95rem',
+                fontWeight: 500,
+                pointerEvents: 'auto',
+              }}
+            >
+              {citation.title} →
+            </a>
+          )}
         </span>
       )}
     </span>
