@@ -216,6 +216,18 @@ I am Tarsus (The Apostle), grounding my answers strictly in the scripture of tru
     loadChapters();
   }, [selectedBook]);
 
+  // Scroll to highlighted verse
+  useEffect(() => {
+    if (activeTab === 'bible' && highlightedVerses) {
+      setTimeout(() => {
+        const el = document.getElementById(`verse-${highlightedVerses.start}`);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 300);
+    }
+  }, [activeTab, highlightedVerses, verses]);
+
   const handleSend = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!inputVal.trim() || isLoading) return;
@@ -406,7 +418,8 @@ I am Tarsus (The Apostle), grounding my answers strictly in the scripture of tru
                   const isHighlighted = highlightedVerses && v.verse >= highlightedVerses.start && (!highlightedVerses.end || v.verse <= highlightedVerses.end);
                   return (
                     <div 
-                      key={i} 
+                      key={i}
+                      id={`verse-${v.verse}`}
                       className="bible-verse-item"
                       style={isHighlighted ? { backgroundColor: '#f1f3f4', borderRadius: '4px', padding: '4px', margin: '-4px 0 4px 0' } : undefined}
                     >
