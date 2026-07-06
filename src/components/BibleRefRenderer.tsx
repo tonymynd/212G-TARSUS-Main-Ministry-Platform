@@ -26,11 +26,32 @@ export default function BibleRefRenderer({ text }: BibleRefRendererProps) {
       parts.push(cleanText.substring(lastIndex, matchIndex));
     }
 
-    const fullMatchText = match[0];
+    let fullMatchText = match[0];
     const book = match[1];
     const chapter = parseInt(match[2], 10);
     const startVerse = match[3] ? parseInt(match[3], 10) : undefined;
     const endVerse = match[4] ? parseInt(match[4], 10) : undefined;
+    
+    let prefix = '';
+    let suffix = '';
+    
+    // Extract any leading whitespace (e.g. regular space, non-breaking space, etc)
+    const leadingWhitespaceMatch = fullMatchText.match(/^\s+/);
+    if (leadingWhitespaceMatch) {
+      prefix = leadingWhitespaceMatch[0];
+      fullMatchText = fullMatchText.substring(prefix.length);
+    }
+    
+    // Extract any trailing whitespace
+    const trailingWhitespaceMatch = fullMatchText.match(/\s+$/);
+    if (trailingWhitespaceMatch) {
+      suffix = trailingWhitespaceMatch[0];
+      fullMatchText = fullMatchText.substring(0, fullMatchText.length - suffix.length);
+    }
+
+    if (prefix) {
+      parts.push(prefix);
+    }
 
     parts.push(
       <BiblePopoverLink
@@ -42,6 +63,10 @@ export default function BibleRefRenderer({ text }: BibleRefRendererProps) {
         endVerse={endVerse}
       />
     );
+
+    if (suffix) {
+      parts.push(suffix);
+    }
 
     lastIndex = regex.lastIndex;
   }
