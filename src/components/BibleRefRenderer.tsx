@@ -9,8 +9,7 @@ interface BibleRefRendererProps {
 
 export default function BibleRefRenderer({ text }: BibleRefRendererProps) {
   // Group 1: Book name, Group 2: Chapter, Group 3: Start Verse (optional), Group 4: End Verse (optional)
-  const regex = /(?<=^|[\s(])((?:[1-3]\s*)?[A-ZÁÉÍÓÚÑ][a-zA-ZáéíóúÁÉÍÓÚñÑ.]+(?:\s+[a-záéíóúñ+]+)?(?:\s+[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*)\s+(\d+)(?::(\d+)(?:-(\d+))?)?(?=$|[\s.,!?)\]])/g;
-
+  const regex = /(?<=^|[\s(\[;:,&"'\-\/\\])((?:[1-3]\s*)?[A-ZÁÉÍÓÚÑ][a-zA-ZáéíóúÁÉÍÓÚñÑ.]+(?:\s+[a-záéíóúñ+]+)?(?:\s+[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*)\s+(\d+)(?::(\d+)(?:-(\d+))?)?(?=$|[\s.,!?)\];:"'\-\/\\])/g;
 
   const parts: React.ReactNode[] = [];
   let lastIndex = 0;
