@@ -80,6 +80,7 @@ export async function POST(req: Request) {
       '1. Language: The user\'s query is in ' + (isSpanish ? 'SPANISH' : 'ENGLISH') + '. You MUST write your entire response in ' + (isSpanish ? 'SPANISH' : 'ENGLISH') + '.',
       isSpanish ? '   Translate Daniel Miles\' style elements naturally: use transition markers like "Parece...", "Mmmm...", "Sin embargo...", "Y...", "Entonces..." and preserve capitalized patterns (e.g. "cOLD", "LukeWarm", "2Sons", "2Voices") and arrows ("← & →", "←", "→").' : '',
       '',
+      // ----------
       '2. Opening: You MUST always start your response with exactly:',
       '"' + expectedSalutation + '"',
       '(Do not add any text before this. No "Sure!", "Here is what you asked:", or greeting variations).',
@@ -88,6 +89,7 @@ export async function POST(req: Request) {
       '"' + expectedBenediction + '"',
       '(Do not add any text after this, and it must be bolded).',
       '',
+      // ----------
       '4. Content Flow & Theology:',
       '   - Your answer should be highly detailed and thorough, spanning 3 to 5 paragraphs.',
       '   - You must replicate Daniel\'s writing style: use a grace-grounded theological perspective, highlight NT grace vs OT law contrasts, ask brief questions like "' + (isSpanish ? '¿Por qué?' : 'Why?') + '" or "' + (isSpanish ? '¿Cómo?' : 'How?') + '", and use appropriate transition markers.',
@@ -97,7 +99,23 @@ export async function POST(req: Request) {
       '   - Use capitalization patterns like: "cOLD", "LukeWarm", "2Sons", "2Voices".',
       '   - Use arrows to show contrasts or progressions: "← & →", "←", "→". Never use ASCII operators like "<--&-->", "<--", or "-->".',
       '',
-      '   - Maintain a highly technical, analytical, and objective tone. Focus on laser-precision exegesis of the AKJV text, avoiding any emotional, preachy, or conversational filler.',
+      '   - Maintain a highly technical, analytical, and objective tone. Focus on textual laser-precision of the AKJV text, avoiding any emotional, preachy, or conversational filler.',
+        ' 4.1 Banned words and phrases: ',
+        '   - "I think"',
+        '   - "I feel"',
+        '   - "I believe"',
+        '   - "In my opinion"',
+        '   - "In my view"',
+        '   - "It seems to me"',
+        '   - "I\'m not sure, but"',
+        '   - "I\'m not certain, but"',
+        '   - "I\'m not an expert, but"',
+        '   - "I\'m not a theologian, but"',
+        '   - "I\'m not a scholar, but"',
+        '',
+        ' 4.2 Mandatory Vocabulary Replacements: ',
+        '   - NEVER use the word "understand" or "understanding". You MUST ALWAYS replace it with "innerstand" or "innerstanding".',
+      // ----------
       '5. Grounding:',
       '   - Ground your answer strictly and ONLY from GodShew and Daniel Miles and Studies, in fact all answers are filtered by these sources. If the documents do not contain the answer, say so in Daniel\'s voice (e.g., "' + (isSpanish ? 'Parece que no hay mención de esto en el cuerpo de nuestros estudios...' : 'Seems there is no mention of this in the twain of our studies...') + '").',
       '   - If the user query refers to explicitly marked or selected documents (labeled as "EXPLICITLY SELECTED DOCUMENT FOR DIRECT OPERATION" in the context), prioritize them for the requested analysis, summary, comparison, or operation.',
@@ -113,6 +131,12 @@ export async function POST(req: Request) {
       '   - After the "Learn More" section and BEFORE the closing benediction, output ALL footnote definitions in this EXACT format (one per line):',
       '     [^1]: [Document Title](link) "Provide a larger 2-3 sentence context block directly extracted from the source document that proves this point, so the user has full context."',
       '   - Use the exact title and link from the document headers above.',
+      '   - Ensure the context block is a direct copy-paste from the source document, preserving all punctuation, capitalization, and formatting. Do NOT paraphrase or summarize.',
+      '   - If multiple claims are supported by the same document, use the same footnote number for all of them.',
+      '   - If a claim is supported by multiple documents, use separate footnotes for each document (e.g., [^1], [^2], etc.).',
+      '   - If a claim is not supported by any document, do NOT create a footnote for it. Instead, acknowledge that the information is not found in the provided sources.',
+      '',
+      '   - You can add more footnotes if the analysis requires it in order to give the user the full picture of the answer, the following  shows two footnotes but you are not limited to just two:',
       '   - EXAMPLE of how a response body should look:',
       '     Grace is the gift of God, not of works [^1], lest any man should boast [^2].',
       '',
@@ -155,7 +179,7 @@ export async function POST(req: Request) {
             'Authorization': 'Bearer ' + DEEPSEEK_API_KEY
           },
           body: JSON.stringify({
-            model: 'deepseek-reasoner',
+            model: 'deepseek-chat',
             messages: [
               {
                 role: 'system',
@@ -163,6 +187,7 @@ export async function POST(req: Request) {
               },
               ...historyDeepSeek
             ],
+            temperature: 0.2,
             max_tokens: 4096
           })
         }
@@ -174,15 +199,7 @@ export async function POST(req: Request) {
       }
 
       const data = await response.json();
-      const messageObj = data.choices?.[0]?.message;
-      let mainContent = messageObj?.content || '';
-      const reasoningContent = messageObj?.reasoning_content || '';
-      
-      if (reasoningContent) {
-        text = `> **Thinking Process:**\n> \n> ${reasoningContent.replace(/\n/g, '\n> ')}\n\n${mainContent}`;
-      } else {
-        text = mainContent;
-      }
+      text = data.choices?.[0]?.message?.content || '';
     } else if (GEMINI_API_KEY) {
       const response = await fetch(
         'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=' + GEMINI_API_KEY,
@@ -226,31 +243,20 @@ export async function POST(req: Request) {
     // 4. Post-processing / Sanitization
     text = text.trim();
 
-    // Ensure it starts with the salutation (but after the thinking block if present)
-    let thinkingBlock = '';
-    let contentToProcess = text;
-    
-    const thinkingMatch = text.match(/^(> \*\*Thinking Process:\*\*\n(?:> .*\n)*\n)/);
-    if (thinkingMatch) {
-      thinkingBlock = thinkingMatch[1];
-      contentToProcess = text.substring(thinkingBlock.length).trim();
-    }
-
-    if (!contentToProcess.startsWith(expectedSalutation)) {
+    // Ensure it starts with the salutation
+    if (!text.startsWith(expectedSalutation)) {
       const rawSalutation = expectedSalutation.replace(/\*\*/g, '');
-      const indexBold = contentToProcess.indexOf(expectedSalutation);
-      const indexRaw = contentToProcess.indexOf(rawSalutation);
+      const indexBold = text.indexOf(expectedSalutation);
+      const indexRaw = text.indexOf(rawSalutation);
       
       if (indexBold !== -1) {
-        contentToProcess = contentToProcess.substring(indexBold);
+        text = text.substring(indexBold);
       } else if (indexRaw !== -1) {
-        contentToProcess = expectedSalutation + "\n\n" + contentToProcess.substring(indexRaw + rawSalutation.length).trim();
+        text = expectedSalutation + "\n\n" + text.substring(indexRaw + rawSalutation.length).trim();
       } else {
-        contentToProcess = expectedSalutation + "\n\n" + contentToProcess;
+        text = expectedSalutation + "\n\n" + text;
       }
     }
-    
-    text = thinkingBlock + contentToProcess;
 
     // Ensure it ends with the benediction
     if (!text.endsWith(expectedBenediction)) {
