@@ -1,0 +1,126 @@
+---
+title: "RE  Change"
+type: "email"
+original_path: "C:\STORAGE\M\Manifold-Grace\3-RESOURCES(Pantry)\GMP-NOTES\Daniel Miles\Dan Emails\RE_ Change.md"
+---
+---
+
+_Created at 2021-04-22T03:18:25-05:00._
+_Last updated at 2021-04-22T03:18:25-05:00._
+
+
+
+
+---
+
+# RE: Change
+
+
+**Subject:** RE: Change
+**From:** Daniel Miles (danielmiles@sasktel.net)
+**To:** 'Antonio Garciarivas' (tonymynd@gmail.com)
+**Date Received:** Wednesday, July 30, 2014 2:24 PM
+
+Glad to hear Hansi in is responding to you.
+
+I’m still working with Kapila who has kidney disease.
+
+He has temporarily gone back to the Buddha religion,
+
+So he could get money help for his kidney treatments.
+
+Yet he is staying in touch, as if still playing both ends.
+
+All we can do is offer grace, mercy, peace; have patience.
+
+* * *
+
+**From:** Antonio Garciarivas [mailto:tonymynd@gmail.com]
+**Sent:** July-30-14 6:55 AM
+**To:** Daniel Miles
+**Subject:** Re: Change
+
+Thank you Daniel,
+
+Hansi started growing in faith. She is extremely sensitive to my words. I'm learning much from her.
+
+On Tue, Jul 29, 2014 at 10:41 PM, Daniel Miles <[danielmiles@sasktel.net](mailto:danielmiles@sasktel.net)\> wrote:
+
+**PERHAPS HEBREWS 7:12's CHANGE OF LAW IS NOT YET GRACE:**
+
+**GREAT HIGH PRIEST WHO CHANGED LAW IS STILL HIGHMINDED;**
+
+**HIGHMINDED = WHAT NOT TO BE: ROMANS 11:20; 1TIMOTHY 6:17.**
+
+**SO, HEB 13:25's CONCLUSION = GRACE [be] WITH YOU ALL. AMEN.**
+
+Eg: priesthood changed = change also of the law: Hebrews 7:12 KJV:
+
+For the priesthood being changed (from Levitical to Juda priesthood),
+
+there is made of necessity a change also of the law.
+
+Example of Jesus' change of the law: Matthew 5:43→44 KJV:
+
+Mt 5:43 = Love thy neighbour + Hate thine enemy = Old Law
+
+Mt 5:44 = Love your enemies = change of the law = New Law
+
+In contrast, Grace has no enemies; Neither to hate nor to love.
+
+For love (your enemies) can wax cOLD when iniquity abounds.
+
+Perfect Love "thinketh no evil"; Neither to punish nor to forgive.
+
+So charity (never faileth)  is put on above forgiving one another.
+
+Problem: change of the law still has enemies. So did risen Jesus.
+
+For when sat right, Jesus still had enemies to be made footstool.
+
+Still have "enemies" tends to result in this: "jeopardy every hour".
+
+Jeopardy every hour is not peace. True peace has no jeopardy.
+
+Solution: #GraceToU = peace = no law = no enmity = no enemies.
+
+Eg: we have peace with God through Jesus→Christ: Romans 5:1.
+
+Christ is our #peace, who abolished law & refused "mingled" drink.
+
+So God giveth us the #victory = "through our Lord Jesus→Christ".
+
+Problem: new (law) covenant still has two houses: & .
+
+House of Israel = put "laws" in "mind" & "them" in "hearts": Heb 8;
+
+Then I will & will I = put laws in "hearts" & them in "minds": Heb 10.
+
+No wonder, then:
+
+When THEY say Peace and safety, destruction comes on THEM.
+
+Solution: it is a good thing that the heart be established with grace;
+
+Not with meats, which hath not profited them still occupied therein.
+
+POINT: Perhaps Christ-ianity should be about Christ is our peace;
+
+Not about Jesus = division = not peace & partiality = not perfected.
+
+God's Christ is the Saviour of the world: John 4:42 and 1John 4:14.
+
+SO, "we have the mind of Christ" = "the end of the law". BECAUSE:
+
+If still in cloudy Jesus, result can be "wail": "because of him": Rev 1:7.
+
+If "like unto Son of Man" cometh, the result can be "smite the nations".
+
+Final Bible Conclusion: The End to endure unto: Revelation 22:21 KJV:
+
+**The GRACE of our Lord Jesus Christ [be] WITH YOU ALL. AMEN.**
+
+--
+
+**Antonio Garciarivas**
+

@@ -1,0 +1,157 @@
+---
+title: "RevelatorySermons21"
+type: "study"
+original_path: "C:\STORAGE\M\Manifold-Grace\3-RESOURCES(Pantry)\GMP-NOTES\GodShew\RevelatorySermons21.md"
+---
+
+
+# Hebrews 7:26  Higher Than The Heavens  is 7th of 7  
+
+an high priest became: us, holy, harmless, undefiled, separate from sinners, and made, higher than the heavens
+
+
+[![[godshewlogo2.jpg|His Angel plays the Last Trump it]]](GodShew-Home.md)
+
+## Higher Than The Heavens is 7th of 7  
+
+               Hebrews 7:26 an high priest became:  
+
+                1. Us, neither of them vs them, but of one of them/us only  
+                2. Holy, of law is holy + unholy/grace above is holy only  
+                3. Harmless, of law harmless and harmful/grace harmless only  
+                4. Undefiled, of undefiled and defiled/undefiled only... midst  
+                5. Separate, of among sinners/separate from sinners  
+                6. Made, of created/made; but not made one proselyte  
+                7. Higher, of high heavens/higher than the heavens... 7th of 7  
+
+  
+Related Pages: [Mind not high things](Highminded.md)   [7th of 7](SeventhOfSeven.md)   [Allegorical Duality of Up-Right](ShewBread10.md)
+
+
+[Holy Kiss](ShewBread4.md#HK): [Greeting](Paul.md#Format): Grace unto you, and peace,  
+from God our Father and the Lord Jesus Christ.
+
+# [7th of 7](SeventhOfSeven.md): Higher Than The Heavens: [Hebrews 7:26](Hebrews8.md)  
+
+[Above](AboveAServant.md) center/right [duality](TwainShew.md) of [up-right](ShewBread10.md) on high it's [all right](GodShew2.md): no center behind  
+  
+
+Revelatory Look at Hebrews 7:26  
+
+"For such an high priest became us, [who is]  
+holy, harmless, undefiled, separate from sinners,  
+[and](RevelatorySermons6.md) made higher than the heavens;"  
+
+  
+
+Seven Things an [high](Highminded.md) priest "became":  
+
+                          1. [Us](Usward.md), of [them/us](ThemUs.md)  
+                          2. Holy, of [unholy](Law.md)/[holy](GraceUntoYou.md)  
+                          3. Harmless, of [harmful](lawphoto.md)/harmless  
+                          4. Undefiled, of defiled/[undefiled](Religion.md)  
+                          5. Separate, of among sinners/[separate from sinners](Reconciliation.md)  
+                          6. Made, of created/[made](RevelatorySermons17.md)  
+                          7. Higher, of heavens on high/higher than the heavens
+
+Higher than the heavens is where it's all right and no center behind: not right of center/right.  
+
+In a progressive intellectual journey, from the [imperfection of law](http://pub30.bravenet.com/forum/2526810710#bn-forum-1-1-2526810710/179/318377/show) and [law vs law](Romans8.md) [is loser vs loser](Romans8.md) to "[perfection](Perfection.md)" of "[Grace with you all](RevelatorySermons13.md)" getting [the last "Amen"](TwainShew.md#Amens) in the Pauline Epistle [To The Hebrews](Hebrews.md), a [mini bible](GodShew2.md#Hebrews) itself, we find in the [midst](Sevens5.md) "[let us go on unto perfection](Hebrews7.md)" (Heb 6:1 -> Heb 13:25) followed by mention of an high priest becoming "higher than the heavens" in Hebrews 7:26, which is not just higher than the earth as heavens on high are, but above up-right: higher than the heavens. We're not just talking up, nor even [up-right](ShewBread10.md) of things in heavens on high, but above up-right, above the center/right of [law/law and law/grace](RightlyDividing.md) where it's all right: [no center (behind) at all](GodShew2.md#Allness). Such higher than high is the (singular) heaven: realm of "[the God of all grace](GodShew2.md#Allness)" (no law at all), the higher and singular heaven where there is [no law: no sin and death](NoLawNoDeadEnd.md), not even mention nor acknowledging thought of [it](RevelatorySermons24.md). For even mention of [law](Law.md#Was) gives "place" to the devil, law worketh wrath, unpardonable sin and death. So in the [conclusion](RevelatorySermons13.md) of all [Pauline Epistles](PaulineEpistles.md), including [Hebrews](Hebrews.md#Author) & [Revelation](GMP/Notes/GodShew/Revelation.md#Author), [law is not mentioned](Vanish.md).  
+
+        Heaven - higher than the heavens: above up-right where it's all right (Hebrews 7:26)        Heavens (on high) - the (plura) "heavens" are higher than the "earth" (Isaiah 55:9)  
+        Earth - [Earthly](http://www.blueletterbible.org/search/translationResults.cfm?Criteria=earthly&t=KJV). David is not ascended into the "heavens" (Acts 2:34)  
+  
+
+1. High priest became "us" (of [them](ShewBread2.md#inthem)/[us](Usward.md)): holy, harmless, undefiled, separate from sinners ...  
+
+Taking a moment to look at the "sum" of Hebrews 1-7 mentioned in [Hebrews 8:1](Hebrews9.md), it is notable that such speaks of the [Majesty (Gods) of the "heavens"](ShewBread7.md#Worlds); But an high priest, in [Hebrews 7:26](Hebrews8.md), is "higher" than plural [heavens](TwainShew3.md#Heavens), above [duality of up-right](ShewBread10.md), where it's not [holy holy](TwainShew3.md#Holys), but [one holy](ShewBread2.md#OneSlice); not both harmful (law) and harmless (grace), but harmless only; not both defiled and undefiled, but [only](GodShew3.md#Only) [undefiled](RevelatorySermons7.md); not both sinners and separate from sinners, but only [separate from sinners](RevelatorySermons2.md)... for he became [us](ShewBread2.md#justus) of them/us; not both created and made, but made of created/made; and made higher than plural heavens, which is as being [made perfect](RevelatorySermons17.md), which is what "you" are notably "made" by "[the God of all grace](GodShew2.md#Allness)" in the (before/after) [ye/you](YeYou.md) scenario of [1Peter 5:10](Bibles.md) and in accordance with John 8:32's "ye shall know the truth and the truth shall make you free"... which is not optional as [many ass u me](ShewBread7.md#Bliss), but does have a noticeable change from ye to you, which [is as](Allegory.md) being [changed x2](biblicalemblems.md): [from faith to faith](TwainShew2.md#Faiths), and [from glory to glory](TwainShew3.md#Glorys), as if from mountain (Sinai) to mountain (Sion) in the [grace walk becomes run](GraceWalk.md), from [imperfection](Law.md) to [perfection](GraceUntoYou.md), and as if [from "not come" to "come"](Sevens2.md).  
+  
+High priest became us. [Us-ward](Usward.md) is "of" the better of them vs them; Yet us-ward is neither of them vs them oppose themselves, whether it be right of law vs law or right of laws vs grace. For law vs law is as loser vs loser: divided against itself, and even grace of laws vs grace is still partiality, still division and not peace, still gives place to devilish law, which gives place to unpardonable sin and death. So there is an ever increasing cry for [just us](ShewBread2.md#justus), only us, no more them vs them nor even them vs us. So an high priest became us only, not us of them/us. So we're not talking one of twain but neither of twain, as if [best of three things](Best.md) instead of better of two things.  
+  
+
+2. High priest became holy. Yet he was already holy. Go figure.  
+
+High priest became holy; Yet he was already holy. So we're obviously talking grace is holy only, instead of law is both holy and unholy; high-minded being listed among unholy things: 2Timothy 3, and high-minded being law minded when connecting biblical dots. Maybe it's a good time to look at law, to note it's good, but both good and evil ends badly. It's also holy, but both holy and unholy. It's also spiritual, but spiritual abuse is harmful, and we're talking the sort of holy that is harmless. So in saying an high priest became holy we're talking an high priest became grace; in the same manner "the Lord is now that Spirit" (only), of this/that Spirits to try, in order to know which is witch if one is called antichrist: 1John 4 and Christ is the end of the law: Romans 10:4, not the mend of law: Luke 5:36. So saying an high priest became holy is as saying an high priest became grace; and not just grace instead of law of twain law/grace but pure grace by abolition of law: vanish: [poof goes the dragon](Vanish.md). For law is both ready to vanish and shall vanish; like Santa Clause and Easter Bunny vanished when we put away childish things to become man kind. In like manner [Holy Ghost](HGvsHS.md) ([unpardonable sin](ShewBread3.md#unpardonablesin) thereof) vanishes when we put away laws. In putting away our childish laws we should put away Christmas and Easter, since [Christmas has many churchy lies](Christmas.md) and [Easter is so problem-attic it should be canceled](EasterProblems.md) like [VD was canceled in 1969](ValentinesDay.md) for being a lie and becoming an orgy of consumerism. For if not, then we got holy and unholy, instead of holy only.  
+  
+
+ 3. High priest became harmless; and not just for some, but for everyone.  
+
+High priest became harmless. We're not talking harmless to some who believe and harmful to others who don't; but harmless to all. We're talking "merciful": "full of mercy" ([void of sacrifice](Sacrifice.md)). So we're not talking vengeful Son of man changes like an unjust judge, nor awful lawful Jehovah; Not even Son of God on high who's right standing instead of seated right above. So we're not talking [two Sons Jesus](Revelations10.md), but the Son of God who does not accuse or condemn anyone, nor have partiality. Such is [Christ](NoLawNoDeadEnd.md) of "[through](through.md) [Jesus > Christ](ChristJesus.md)". For [reconciling the world](Reconciliation.md) is done "in Christ", not Jesus; Also done by not law imputing sin to them, but Jesus law imputes sin, making sinners all. Not to mention Jesus flat out said he wasn't perfected, in saying [the third [day] I shall be perfected](GodsheworgExplanation.md#ThirdWay), and perhaps either speaking of [the third of three things](GodShew.md) and/or [the third day](ThirdDay.md) (beyond 2000AD) is the last day after two millennial last days expire. For when looking at resurrection appearances we find [appearances can be deceiving](Easter2.md) and false Christs do rise and arise to deceive. So those focusing on Jesus should take another look at John 3:17, John 5:45, John 8:11 to note true Son of God does not accuse, nor condemn; which is to say does not law impute sin to anyone, by not even giving place to law, neither obeying nor disobeying law, rather realizing it's only a counter part to be done away for being a schoolmaster that fails every student and punishes all such failures with a sting of death.  
+  
+God is harmless, by being perfect and also merciful; not also merciless. God is always harmless, never harmful. So let us not think God changes, but rather it is we all who get [changed x2](biblicalemblems.md); first outwardly from child to man, then inwardly from law to grace. For [born again](BornAgain.md) is not what happens to a [child](GodShew.md#nomorechildren), but to a [man](TwainShew.md#Blesseds), and the biblical order is natural first, spiritual [afterward](HowbeitAfterward.md); But if law be spiritual afterward such spiritual abuse is harmful instead of harmless. So also with the high priest there is a change, first of law, then abolition of law to become harmless. For [another law](AnotherLaw.md) is not harmless, but when analyzed it's harmful. Paul tried another law and it made him feel wretched, and to the point he said: "who shall save me from this body of death". With another law comes evil [concupiscence](Concupiscence.md): an ungovernable desire to do what's forbidden followed by guilt trip for doing it, followed by the wages of sin is death: a dead end. So let us not think another law is harmless. Neither let us think a child is harmless, for in Matthew 23 one proselyte is more the CHILD of hell. Same thing applies when looking at Jesus Christ, and through Jesus > Christ. Jesus is the "child" wise men (magi) from twice fallen Babylon visited and called King of the Jews. God did not send his Son till the fulness of time for such law law expired, which is to say Son of God is Christ, and Christ is the end of the law, which is harmless: merciful, full of mercy:, void of sacrificial laws, void of vengeance, void of partiality, void of divisions. So the high priest became harmless.
+
+4. High priest became undefiled. Only pure religion is undefiled.  
+
+High priest became undefiled. Pure religion, of [vain religion vs pure religion](Religion.md), arrived undefiled and remained unspotted in a come and go visit to those afflicted with a bad case of law: life + death. It did not get numbered with the transgressors. It never defiles itself with it's own mouth. So again we're not talking about Jesus, but Christ of through Jesus > Christ; Since Jesus defiled himself by law imputing sin, which by the curse of the law made sinners all and accursed all, including the one who law imputed sin to make sinners. Romans 2 calls such behavior "inexcusable", and notes it has consequences. A consequence Jesus had was "forsaken" by both Gods of "My God, my God". For law doesn't like lukewarm and grace won't compromise. So any mixture of law and grace or grace and law is unacceptable to both Law God and Grace God. Furthermore JC tells us it's not what goes in the mouth which defiles a "man", but what comes out the mouth from the heart. So those who think smoking and drinking defiles a man should think again and watch what they say. Example: thine own mouth condemneth thee, and not I: Job 15:6.  
+  
+High priest became undefiled. So we're talking an high priest became pure religion: pure grace, instead of vain religion: law, or a mixture of grace and law. For law defiles itself by demanding perfection and then being imperfect itself, thereby becoming subject to the surely die lie it promised to all if any tried and failed to keep all the law all the time, obviously a mission impossible. Undefiled also speaks of an incorruptible inheritance that fadeth not away in 1Peter 1:4. So we are not talking corruptible law, but incorruptible grace. For law is both ready to vanish and shall [vanish](Vanish.md). For when [law glory and grace glory are compared](TwainShew3.md#Glorys), as in 2Corinthians 3, law glory fadeth away like the moon and stars do at the coming of the sun. So an high priest became undefiled is as saying what was previously corruptible and mortal law became incorruptible and immortal grace. For high priests had infirmities, which eventually resulted in death. Hebrews 7:23 says they were not suffered to continue by reason of death. So becoming undefiled speaks of becoming immortal; And 1Corinthians 15 notes such is only possible by first putting off the corruption and mortality of law imputed sin, by putting off law to put on grace, which is as putting off death to put on life of the eternal sort. Allegorically it's also putting off Jesus to put on Christ, or putting off child to put on man; then also putting off man to put on God, for God is not a man that he should lie(law), neither Son of man that he should repent(change). In other words [let law be dead testator](RevelatorySermons1.md).  
+  
+
+5. An high priest became separate from sinners: free from sin by abolition of law  
+
+An high priest became separate from sinners, rather than being among those who law impute sin and death for the hell of it. Separate from sinners speaks of an active departure from being among sinners or making anyone sinners; And the only way such is plausible is by the abolition of law. For law imputes sin: Romans 4:15; 5:13. Law also imputes unpardonable sin and death; law being both the source of sin and strength of sin's death sting. Furthermore by the curse of the law if any try and fail to keep all the law all the time, then all are accursed. So then the only plausible way for any and all to be separate from sinners, free from law imputed sin and death, is by abolition of law. So again we're not talking Jesus, who got "numbered with the transgressors", but of "Christ is the end of the law". For Jesus is not the Saviour of the world, but the Saviour of Israel. Christ is the "Saviour of the world" x2. Therefore when it comes to reconciling the world, it's done "in Christ", and done by not law imputing sin to them: 2Corinthians 5:19. That is how you become separate from sinners, free from being among those who law impute sin and free from law imputing sin to others, since law imputing sin to anyone makes sinners all, none righteous, no, not one. But God is one, also God and Son are one, and we all are one. So law imputing sin to any makes sinners all by the curse of the law, which also imputes unpardonable sin and death, both in this world and the to come, both here and there. So it is written, if any say law here or law there, concerning Christ is the end of the law, then believe [it] not x2: Matthew 24: 23,26. Go not forth if they say he is in the desert(wilderness), which essentially says flush Lent and it's evil concupiscence by flushing law as dung. Follow not after them who say things like deceivers say in Luke 21:8. They are lying(lawing). A prime example would be Jack Van Impe: Jack of the Impe family. So let him vanish by simply using your remote, and with one click it becomes poof goes the dragon.  
+  
+
+6. An high priest became made, of created/made; But not made one proselyte.  
+
+An high priest became made, preceded by an "and". So now we are not talking Jesus: Saviour of Israel, nor even Christ: Saviour of the world x2, but [God our Saviour](RevelatorySermons6.md), the third of three Saviours. For what God our Saviour will have is two things connected by "and": (i) all men saved (graced) "and" (ii) all men fully aware what they are delivered from: law, which was God their destroyer. Such speaks of get it: understanding, and to the point there is no misunderstanding at all; no schism. For as Paul notes in 1Corinthians 12:25, "there should be no schism in the body" of Christ. So no carnal contentions, no carnal divisions, no denominations, no sects, no childish laws. For we are not called the body of Jesus: division and not peace, but the body of Christ: peace and not divided.  
+  
+Such will take some explaining for creationists, who haven't yet discerned there's both created and made things by both Creator and Maker, nor the difference between such Before/After: Law/Grace. The Creator both creates and destroys, notably by seeing both good and evil, both clean and unclean. The Maker never destroys, by seeing only good, clean only; which is to say grace only, not both grace and law. God saw "good" x6, then "very good" 7th time in Genesis 1; and notably concerning what was made, or let. So true God, that God, does not see both good and evil (grace and law). Hence there is actually nothing to forgive when it comes to that God is light and in him there is no darkness at all. But in order to forgive you, for Christ's sake, it became necessary to abolish law. Such is the operation of God, to remove all law imputing sin from you all.  
+  
+When getting beyond created of created/made, there are still notably two things that can be made: (i) [one proselyte](Allegory3.md): made more the child of hell, (ii) [one prototype](RevelatorySermons17.md): made author of eternal salvation. In each case it's one man. For God said let us make "man" (not create children nor create men). So the created part of created/made is the before part of before/after, and for compare-i-son, or the counter part to be done away in order to be only the afterward of before/after, or the spiritual of natural/spiritual, which is to say grace of law/grace. We also find the compare-i-son and contrast of Roman 5's "one man" vs "one man" scenario in Matthew 23 and Hebrews 5. In Matthew 23 what is "made" [afterward](HowbeitAfterward.md) is one proselyte: twofold: made more the child of hell (law) than other law children: scribes, Pharisees, fools, hypocrites, vipers, serpents, blind guides who sit in [Moses's seat](Allegory4.md).  
+  
+But in Hebrews 5 what is being "made" afterward is one prototype: "made perfect" to become the "author" of eternal salvation. So the one man vs one man compare-i-son and contrast is also [temporal salvation vs eternal salvation](TwainShew6.md#Salvations). Temporal salvation is both saved and destroyed afterward, which happened to Exodus folk, noted in Jude 1:5. Eternal salvation involves being made perfect; Yet such is only the beginning in 1Peter 5:10's made perfect, stablished, strengthened, and settled by the God of all grace (no law at all). So it is said Christ, being made perfect, became the "author" (only) of eternal salvation. Finishing such eternal salvation involves being made perfect, stablished, strengthened, and settled; in order to pass the [holiness with sobriety test](Charity7.md), a test of [endurance](http://pub30.bravenet.com/forum/2526810710#bn-forum-1-1-2526810710/179/1208755/show), aka a [final exam](Revelations2.md#Rev1), which only "[charity](GMP/Notes/GodShew/Charity.md) never fails", and by being the [3rd of 3](Best.md) and the [7th of 7](Sevens5.md), can pass.  
+  
+Lovers and makers of [lies](Lies.md) (laws) will never pass the final exam, which has a pass mark of 100%. In fact most law lovers and law makers don't even make it past the title and first verse of Revelation without becoming a fail-u-are; by thinking it's written by John, when it's [written and signed by Paul](GMP/Notes/GodShew/Revelation.md#Author). For it's [titled](Revelations2.md#Rev3) as the Revelation (Uncovering) of a saint named [John](RevelatorySermons26.md), first verse compared to the Revelation (uncovering) of [Jesus Christ](ShewBread.md#contraryto); And only [Paul](Steward.md) does both, with only one of [two revelations](Revelations2.md#Rev4) (uncoverings) being God given: the revelation of Jesus Christ. The other is a spoof on Johnny Law; written as a [latter state](Allegory3.md) of man [worse case scenario](Revelations9.md) to a void, not something to hope happens.  
+  
+Everyone is made perfect by Christ's abolition of law in Ephesians 2:15; But in Galatians we find bewitched [churches](Revelations7.md#23) of Galatia who afterward became justified by law again, and thereby fell, from grace to law; Even after being stablished in grace and peace by Paul & company. What then? Then Christ (is the end of the law) is of no effect to you, of ye/you. So it becomes not only necessary to be stablished in grace by being stablished in Christ is the end of the law; But even e-stablished "with" grace, which allegorically speaks of eternally-stablished, which is [a matter of the heart](Heart.md), which is noted in [Hebrews 13](Hebrews14.md). Furthermore e-stablished "with" grace speaks of being "[with](Partiality.md)", not against, as noted in Matthew 12:30's with or against (ends badly). So e-stablished "with" grace speaks of having no part-iality; which speaks of being neither of ["their part" vs "your part"](TheirPartYourPart.md), but rather of being whole (perfect) is not part-iality, rather it's [perfect-ion](Perfection.md). For when perfect-ion comes, then part-iality is done away: 1Corinthians 13. One thing law is not, is [law is not perfect](http://pub30.bravenet.com/forum/2526810710#bn-forum-1-1-2526810710/179/318377/show). So becoming made, in connection with six other things mentioned in Hebrews 7:26, is made perfect.  
+  
+
+7. An high priest became higher than the heavens: higher than plural L/R heavens on high  
+
+An high priest became higher than the heavens, as the 7th of 7 things mentioned in Hebrews 7:26. So we're not talking Jesus, who is seen right "standing" on high in Acts 7:55, but of Christ "sitteth" right "above" such L/R heavens on high: Colossians 3:1-3. For being right of law vs law on high is as being loser of loser vs loser: divided against itself, and even being right of laws vs grace on high is still part-iality, still division and not peace, and still gives place to law worketh wrath, which God hath not appointed "us" to in compare-i-son of them/us: 1Thessalonians 5:3 vs 1Thessalonians 5:9. Peace with God is notably "through Jesus>Christ"; only "in Christ" thereof. For only Christ thereof is seated above: higher than the heavens; And notably appeared to God there for "us", not for either of them vs them. So, as we tied all seven things in Hebrews 7:26 together, the first of 7: "us" is connected to the 7th of 7: higher than the heavens; And to clarify all such are above, of beneath/above, when comparing I am from above vs ye are beneath. Yet even beneath = under, is still not under law but under grace if led of the Spirit. However if not led of the Spirit, but driven of the Ghost, then you are still under Law: the first of [two Gods](TwoGods.md) portrayed to compare, not mix. So biblical exhortation is take away the first to establish the second, take away law to establish grace.  
+
+  
+
+Going higher than high is as being made perfect of imperfect/perfect  
+
+When we [dare to compare](ShewBread8.md#Dare), [dare to walk the walk](GraceWalk.md) instead of just talk the talk, daring to look at earth, AND (plura) heavens (Gods thereof) being higher than the earth, AND an high priest became "higher than the heavens", it makes one [think](GodsheworgExplanation.md) about the "greatest" of "three things" mentioned in the two part [shew](shew.md) about a third part drawn away and cast down to earth by the tail of a dragon (see Revelation 12 & 13 for allegoric mention of such 3/3 - 1/3 = 2/3 = 0.666). Some feel safe on earth, others feel safer in heavens, but where it's safest of all and best for all is higher than the heavens: safest of safe safer safest, smartest of smart smarter smartest, allegorically greatest of [great greater greatest](GodShew.md#Greatest) and best of [good better best](GodShew.md#GBB). No doubt God hath provided some "better" thing for "us" of them/us (Hebrews 11: conclusion), but such is still only better for some of some/all. What's best of all, and best for all (not just some only), is became (past tense) "higher than the heavens" where it's all right via all grace, above up-right, above the duality of up-right.  
+
+    An "high" priest who went up "higher" seems to have [seven](Sevens.md) traits: became  
+    1 - us... of them/us  
+    2 - is holy... of holy holy (one of twain)  
+    3 - harmless... of harmful(law)/harmless(grace)  
+    4 - undefiled... of defiled/undefiled  
+    5 - separate from sinners... no law = no sin = no death  
+    6 - made... of created/made ([made perfect](RevelatorySermons17.md) of imperfect/perfect)  
+    7 - higher than the heavens... higher than (plura)heavens on high... 7th of 7  
+  
+        Higher God: Grace: higher than the heavens on high ... Grace us  
+        High God: Law: divisional center/right heavens on high... Awful Lawful
+
+Exhortations about "high" of high/higher:  
+- "mind not high things": Romans 12:16  
+- "be not high-minded": Romans 11:20; 1Timothy 6:17  
+Because "high-minded" is listed among "un-holy" things: 2Timothy 3  
+But higher than the heavens is separate from sinners, so higher than high.  
+
+  
+
+Note: People recovering from getting "high",  
+to the point of harming themselves and others,  
+[afterward](HowbeitAfterward.md) speak of a "higher" power.  Selah.  
+
+  
+
+Related GodShew.Org Web Pages and Articles:  
+ [Dare to Compare](ShewBread8.md) \ [Heavens](TwainShew3.md#Heavens) \ [Holys](TwainShew3.md#Holys) \ [Gods](TwainShew3.md#Gods) \ [Grace Walk](GraceWalk.md) \ [Great Greater Greatest Chat](GodShew.md#Greatest)  
+[Good Better Best Chat](GodShew.md#GBB) \ [Shew](shew.md) \ [Bible is Allegoric](Allegory.md) \ [Allness of God & Son](GodShew2.md#Allness)  
+[Our only Goal](GodsheworgExplanation.md) is [Get Understanding](Topics.md) of [Us-ward](Usward.md) > [Global Reconciliaiton](Reconciliation.md)  
+[](Revelations4.md)
+
+The [grace](ShewBread6.md#Hallowed) of our Lord [Jesus Christ](ShewBread.md#contraryto) with [you](YeYou.md) all. Amen.  
+  
+< [Index of Revelatory Sermons](RevelatorySermons.md)  \  [Missing Link to WMD found](RevelatorySermons22.md) >
+
+
+[Home Page](GodShew-Home.md))  -  [About Us](GodsheworgExplanation.md)  -  We are open to scrutiny: [Email Us](mailto:approved@godshew.org) a comment on this page  -  [Bibles](Bibles.md)  -   [Sight Map](SiteMap.md)

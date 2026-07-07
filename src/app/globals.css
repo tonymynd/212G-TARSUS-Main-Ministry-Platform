@@ -15,6 +15,7 @@
   --blockquote-text: #444444;
   --chat-input-form-bg: #ffffff;
   --chat-input-bg: #fafafa;
+  --chat-input-focus-bg: #ffffff;
   --popover-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
@@ -32,9 +33,10 @@
   --tab-active-bg: #121212;
   --popover-bg: #1e1e1e;
   --chat-bot-bg: #1e1e1e;
-  --blockquote-text: #aaaaaa;
+  --blockquote-text: #c5c5c5;
   --chat-input-form-bg: #1e1e1e;
   --chat-input-bg: #2a2a2a;
+  --chat-input-focus-bg: #1e1e1e;
   --popover-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -190,7 +192,8 @@ html, body {
   font-size: 0.95rem;
   border: 1px solid var(--border);
   border-radius: 4px;
-  background: #ffffff;
+  background: var(--background);
+  color: var(--foreground);
 }
 
 .bible-chapter-select {
@@ -200,7 +203,8 @@ html, body {
   font-size: 0.95rem;
   border: 1px solid var(--border);
   border-radius: 4px;
-  background: #ffffff;
+  background: var(--background);
+  color: var(--foreground);
 }
 
 .bible-verses-list {
@@ -208,7 +212,8 @@ html, body {
   overflow-y: auto;
   border: 1px solid var(--border-light);
   padding: 0.8rem;
-  background: #ffffff;
+  background: var(--background);
+  color: var(--foreground);
   border-radius: 4px;
 }
 
@@ -347,7 +352,7 @@ html, body {
 
 .chat-input:focus {
   border-color: var(--primary);
-  background: #ffffff;
+  background: var(--chat-input-focus-bg);
   box-shadow: 0 0 0 3px rgba(0, 46, 91, 0.08);
 }
 
@@ -416,6 +421,13 @@ html, body {
 .verse-popover-text {
   font-style: italic;
   margin-bottom: 0.8rem;
+}
+
+.verse-popover-shadow {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-align: right;
+  display: block;
 }
 
 .verse-popover-footer {

@@ -1,8 +1,7 @@
 import { NextResponse } from 'next/server';
 import { searchCorpus } from '@/lib/search';
-import fs from 'fs';
-import path from 'path';
 import { getMemoryString, updateMemory } from '@/lib/memory';
+import { getMarkedPageContent } from '@/lib/pages';
 
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY || '';
 const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY || '';
@@ -17,17 +16,15 @@ export async function POST(req: Request) {
     const userQuery = messages[messages.length - 1].content;
 
     // 1. Search RAG context
-    const searchResults = searchCorpus(userQuery, 5);
+    const searchResults = searchCorpus(userQuery, 10);
     
     // Load explicitly marked documents
     let markedContextStr = '';
-    const pagesDir = path.join(process.cwd(), 'src', 'data', 'pages');
     if (markedPageIds && Array.isArray(markedPageIds) && markedPageIds.length > 0) {
       markedPageIds.forEach((id) => {
-        const filePath = path.join(pagesDir, `${id}.md`);
-        if (fs.existsSync(filePath)) {
+        const content = getMarkedPageContent(id);
+        if (content) {
           try {
-            const content = fs.readFileSync(filePath, 'utf-8');
             let body = content;
             let title = id;
             const fmMatch = content.match(/^---\s*\n([\s\S]*?)\n---\s*\n/);
@@ -81,16 +78,25 @@ export async function POST(req: Request) {
       isSpanish ? '   Translate Daniel Miles\' style elements naturally: use transition markers like "Parece...", "Mmmm...", "Sin embargo...", "Y...", "Entonces..." and preserve capitalized patterns (e.g. "cOLD", "LukeWarm", "2Sons", "2Voices") and arrows ("← & →", "←", "→").' : '',
       '',
       // ----------
-      '2. Opening: You MUST always start your response with exactly:',
-      '"' + expectedSalutation + '"',
-      '(Do not add any text before this. No "Sure!", "Here is what you asked:", or greeting variations).',
+      '2. Thinking Process (MANDATORY):',
+      '   - BEFORE the opening salutation, you MUST include a "Thinking Process" section formatted as a markdown blockquote.',
+      '   - This section should transparently show your analytical reasoning: what sources you are consulting, how you are connecting the user\'s question to Daniel Miles\' teachings, what Bible references you plan to cite, and your theological reasoning chain.',
+      '   - Format it EXACTLY like this:',
+      '     > **Thinking Process:**',
+      '     > ',
+      '     > [Your step-by-step reasoning here, showing how you analyze the question, which documents are relevant, what theological connections you are making, and how you plan to structure the response.]',
+      '   - This thinking section must be substantive (at least 3-5 lines) and genuinely reflect your analytical process. Do NOT make it generic or templated.',
       '',
-      '3. Closing: You MUST always close your response with exactly:',
+      '3. Opening: Immediately after the Thinking Process blockquote, you MUST begin the main response with exactly:',
+      '"' + expectedSalutation + '"',
+      '(No other text between the thinking blockquote and this salutation. No "Sure!", "Here is what you asked:", or greeting variations).',
+      '',
+      '4. Closing: You MUST always close your response with exactly:',
       '"' + expectedBenediction + '"',
       '(Do not add any text after this, and it must be bolded).',
       '',
       // ----------
-      '4. Content Flow & Theology:',
+      '5. Content Flow & Theology:',
       '   - Your answer should be highly detailed and thorough, spanning 3 to 5 paragraphs.',
       '   - You must replicate Daniel\'s writing style: use a grace-grounded theological perspective, highlight NT grace vs OT law contrasts, ask brief questions like "' + (isSpanish ? '¿Por qué?' : 'Why?') + '" or "' + (isSpanish ? '¿Cómo?' : 'How?') + '", and use appropriate transition markers.',
       '   - THEOLOGICAL CONSTRAINT: Never place the believer "under" anything, not even "under grace" or "under the government of the Spirit". In Daniel\'s teachings, "under" implies a vertical hierarchy of law, control, and subordination (the cOLD covenant). Instead, believers are "with grace", "in Christ", or in a union of fellowship. The Kingdom of God is a relationship to be enjoyed, not a government to be "under".',
@@ -115,8 +121,9 @@ export async function POST(req: Request) {
         '',
         ' 4.2 Mandatory Vocabulary Replacements: ',
         '   - NEVER use the word "understand" or "understanding". You MUST ALWAYS replace it with "innerstand" or "innerstanding".',
+        '   - Exhort user to move from any form, verb or conjugation of word "believe" foward "knowing" as is not beliveing what saves us but / .',
       // ----------
-      '5. Grounding:',
+      '6. Grounding:',
       '   - Ground your answer strictly and ONLY from GodShew and Daniel Miles and Studies, in fact all answers are filtered by these sources. If the documents do not contain the answer, say so in Daniel\'s voice (e.g., "' + (isSpanish ? 'Parece que no hay mención de esto en el cuerpo de nuestros estudios...' : 'Seems there is no mention of this in the twain of our studies...') + '").',
       '   - If the user query refers to explicitly marked or selected documents (labeled as "EXPLICITLY SELECTED DOCUMENT FOR DIRECT OPERATION" in the context), prioritize them for the requested analysis, summary, comparison, or operation.',
       '   - At the end of your response, right before the closing benediction, add a short "Learn More" section listing the main articles or studies referenced. Format them as markdown bullet links.',
@@ -124,19 +131,23 @@ export async function POST(req: Request) {
       '     Example:',
       '     Learn More:',
       '     - [God Of All Grace](/pages/godgrace)',
-      '',
-      '6. Inline Citations (CRITICAL - DO THIS):',
-      '   - As you write your response body, place an inline footnote numeral like [^1] immediately after any key claim, idea, or quote that you draw from the provided documents.',
+      '   - peace only comes by innerstanding, Phil 4:7 has a backward CJ: Christ(peace) Jesus(under-standing), indicating a reverse mode peace → unsertanding but in Jesus(innerstanding)→Christ(peace, as he is our peace) is the correct order.',
+      '   - grace is much more than unmerited favor, se post "1-PROJECTS(Stove)/212G-TARSUS-Main-Ministry-Platform/src/data/pages/post_1660"',
+      '   - In grace the workd belive or any other derivation becomes knowing, as it is not beliveing what saves us but knowing is what saves us John 8:32, this is why we are told twice "believe [it] not" MAt 24:23; Mat 24;16', 
+      // ----------
+      '7. Inline Citations (CRITICAL - DO THIS):',
+      '   - As you write your response body, place an inline footnote numeral like [^1] immediately after any key claim, idea, or quote that you draw from the provided documents; strictly use footnotes for claims that are supported by the provided documents. If a claim is not supported by any document, do NOT create a footnote for it nor speak about it unless you can support it with information from the provided documents.',
       '   - Number them sequentially starting from [^1].',
       '   - After the "Learn More" section and BEFORE the closing benediction, output ALL footnote definitions in this EXACT format (one per line):',
       '     [^1]: [Document Title](link) "Provide a larger 2-3 sentence context block directly extracted from the source document that proves this point, so the user has full context."',
       '   - Use the exact title and link from the document headers above.',
       '   - Ensure the context block is a direct copy-paste from the source document, preserving all punctuation, capitalization, and formatting. Do NOT paraphrase or summarize.',
-      '   - If multiple claims are supported by the same document, use the same footnote number for all of them.',
-      '   - If a claim is supported by multiple documents, use separate footnotes for each document (e.g., [^1], [^2], etc.).',
+      '   - DIVERSITY OF SOURCES IS CRITICAL: You MUST draw evidence from AS MANY DIFFERENT source documents as possible. Each paragraph should ideally cite at least 2-3 DIFFERENT documents. Do NOT rely heavily on a single document for the entire response.',
+      '   - EACH FOOTNOTE MUST REFERENCE A DIFFERENT DOCUMENT whenever possible. If the same claim is supported by multiple documents, create SEPARATE footnotes for each one (e.g., [^1] [^2] [^3] after the claim). This gives the user cross-referencing power across the corpus.',
+      '   - Aim for a MINIMUM of 5-8 unique footnotes per response, each from a different source document. You have up to 10 source documents available—use them all if relevant.',
       '   - If a claim is not supported by any document, do NOT create a footnote for it. Instead, acknowledge that the information is not found in the provided sources.',
       '',
-      '   - You can add more footnotes if the analysis requires it in order to give the user the full picture of the answer, the following  shows two footnotes but you are not limited to just two:',
+      '   - You can add more footnotes if the analysis requires it in order to give the user the full picture of the answer. Here is an example with multiple diverse footnotes:',
       '   - EXAMPLE of how a response body should look:',
       '     Grace is the gift of God, not of works [^1], lest any man should boast [^2].',
       '',
@@ -215,7 +226,7 @@ export async function POST(req: Request) {
             contents: historyGemini,
             generationConfig: {
               temperature: 0.2,
-              maxOutputTokens: 8192,
+              maxOutputTokens: 12288,
             },
           }),
         }
@@ -243,6 +254,19 @@ export async function POST(req: Request) {
     // 4. Post-processing / Sanitization
     text = text.trim();
 
+    // Extract thinking process block if present (preserve it)
+    let thinkingBlock = '';
+    const thinkingMatch = text.match(/^((?:>.*\n?)+)/m);
+    if (thinkingMatch && thinkingMatch.index !== undefined) {
+      const blockEnd = thinkingMatch.index + thinkingMatch[0].length;
+      const afterBlock = text.substring(blockEnd).trim();
+      // Only treat as thinking if it appears before the salutation
+      if (afterBlock.includes(expectedSalutation.replace(/\*\*/g, '')) || afterBlock.includes(expectedSalutation)) {
+        thinkingBlock = thinkingMatch[0].trim();
+        text = afterBlock;
+      }
+    }
+
     // Ensure it starts with the salutation
     if (!text.startsWith(expectedSalutation)) {
       const rawSalutation = expectedSalutation.replace(/\*\*/g, '');
@@ -256,6 +280,11 @@ export async function POST(req: Request) {
       } else {
         text = expectedSalutation + "\n\n" + text;
       }
+    }
+
+    // Re-attach thinking block before the salutation
+    if (thinkingBlock) {
+      text = thinkingBlock + '\n\n' + text;
     }
 
     // Ensure it ends with the benediction

@@ -1,5 +1,6 @@
-import fs from 'fs';
 import path from 'path';
+
+const fs = require('fs');
 
 interface SearchDoc {
   title: string;
@@ -81,8 +82,8 @@ export function searchCorpus(query: string, limit = 5) {
     // Read the actual body of the file
     let body = '';
     try {
-      if (fs.existsSync(s.doc.path)) {
-        const rawContent = fs.readFileSync(s.doc.path, 'utf-8');
+      if (fs['existsSync'](s.doc.path)) {
+        const rawContent = fs['readFileSync'](s.doc.path, 'utf-8');
         // Strip frontmatter if present
         body = rawContent.replace(/^---\s*\n([\s\S]*?)\n---\s*\n/, '');
       }

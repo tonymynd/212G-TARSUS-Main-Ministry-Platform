@@ -1,0 +1,71 @@
+---
+title: "Some Apostle Paul mentions about the law"
+type: "study"
+original_path: "C:\STORAGE\M\Manifold-Grace\3-RESOURCES(Pantry)\GMP-NOTES\Daniel Miles\Some Apostle Paul mentions about the law.md"
+---
+---
+Tags:
+  - area/spirituality/BibleStudy
+  - Daniel_Miles
+Parent:
+  - "[[Daniel Miles]]"
+Children:
+Siblings:
+Related:
+Created: Monday 22nd September 2025 09:43:51
+---
+
+# Some Apostle Paul mentions about the law:
+
+Grace, Mercy, Peace from God our Father and Jesus Christ our Lord.
+
+## The Law makes everyone guilty:
+Romans 3:19 KJV Now we know that what things soever the law saith, it saith to them who are under the law: that every mouth may be stopped, and all the world may become guilty before God.
+
+## The Law produces wrath (which we should put away: Eph 4:31):
+And where no law, there no transgression. Romans 4:15 KJV: Because the law worketh wrath: for where no law is, there is no transgression.
+
+## Sin is not imputed when there is no law:
+Romans 4:8 KJV Blessed is the man [aner] to whom the Lord will not impute sin. Romans 5:12,13 KJV Wherefore, as by one man sin entered into the world, and death by sin; and so death passed upon all men, for that all have sinned: (For until the law sin was in the world: but sin is not imputed when there is no law.
+
+## The Law causes sin, trespass (offence) to abound:
+Romans 5:20 KJV: Moreover the law entered, that the offence [paraptoma: sin, trespass] might abound [pleonazo]. But where sin abounded, grace did much more (hyper) abound [[hyperperisseuo]]:
+
+## Not under law, but under grace (so sin doesn't have dominion):
+Romans 6:14 KJV For sin shall not have dominion over you: for ye are not under the law, but under grace.
+
+## Connect these verses:
+Our Father ................ deliver us from evil: Luke 11:4, But now we are delivered from the law: Romans 7:6.
+
+## The Law causes sin to revive:
+Romans 7:9,10 KJV: For I was alive without the law once: but when the commandment came, sin revived, and I died. And the commandment, which was ordained to life, I found to be unto death.
+
+## Christ is the end of the law:
+Romans 10:4 KJV For Christ is the end of the law for righteousness to every one that believeth.
+
+## The Law is the strength (aka strong man) of sin:
+I Corinthians 15:56 KJV: The sting of death is sin; and the strength of sin is the law.
+
+## The Law was a ministration of death (to be done away):
+2 Corinthians 3:7 KJV: But if the ministration of death, written and engraven in stones, was glorious, so that the children of Israel could not stedfastly behold the face of Moses for the glory of his countenance; which glory was to be done away:
+
+## The Law was a ministration of condemnation:
+2 Corinthians 3:9 KJV: For if the ministration of condemnation be glory, much more doth the ministration of righteousness exceed in glory.
+
+## Connect these verses, both of Paul:
+whatsoever is NOT OF FAITH is sin: Romans 14:23b, And the law is NOT OF FAITH: Galatians 3:12a.
+
+## Law was our schoolmaster (which seemed to fail every student):
+Galatians 3:23-25 KJV But before faith came, we were kept under the law, shut up unto the faith which should afterwards be revealed. Wherefore the law was our schoolmaster to bring us unto Christ, that we might be justified by faith. But after that faith is come, we are no longer under a schoolmaster.
+
+## Salvation is by grace (no by law):
+Ephesians 2:8,9 KJV For by grace are ye saved through faith; and that not of yourselves: it is the gift of God: Not of works, lest any man should boast.
+
+## Christ abolished the law to be our peace:
+Ephesians 2:15 KJV Having abolished in his flesh the enmity, even the law of commandments contained in ordinances; for to make in himself of twain one new man, so making peace;
+
+etc.
+
+What are your insights re what Paul revealed about the law?
+
+The grace of our Lord Jesus Christ [be/is] with you all. Amen.

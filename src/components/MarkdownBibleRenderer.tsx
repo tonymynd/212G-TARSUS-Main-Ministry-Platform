@@ -240,12 +240,16 @@ function parseLinksAndBibleRefs(
         targetSlug = targetSlug.replace(/\.(md|htm|html)$/i, '').replace(/^\.\//, '');
 
         if (targetSlug) {
-          const sanitizedSlug = targetSlug
-            .toLowerCase()
-            .replace(/[^a-z0-9_&]+/g, '_')
-            .replace(/_+/g, '_')
-            .replace(/^_|_$/g, '');
-          url = `/pages/${sanitizedSlug}${hash}`;
+          if (targetSlug.startsWith('/pages/')) {
+            url = targetSlug + hash;
+          } else {
+            const sanitizedSlug = targetSlug
+              .toLowerCase()
+              .replace(/[^a-z0-9_&]+/g, '_')
+              .replace(/_+/g, '_')
+              .replace(/^_|_$/g, '');
+            url = `/pages/${sanitizedSlug}${hash}`;
+          }
         } else {
           url = hash;
         }
