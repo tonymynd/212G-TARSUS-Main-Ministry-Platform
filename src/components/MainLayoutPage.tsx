@@ -3,7 +3,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import MarkdownBibleRenderer from './MarkdownBibleRenderer';
-import MindOfChristGraph from './MindOfChristGraph';
 import ThemeToggle from './ThemeToggle';
 import { BibleNavigationProvider, useBibleNavigation } from '@/context/BibleContext';
 
@@ -149,12 +148,6 @@ function MainLayoutPageContent({
             onClick={() => setActiveTab('bible')}
           >
             Bible
-          </button>
-          <button
-            className={`tab-btn ${activeTab === 'graph' ? 'active' : ''}`}
-            onClick={() => setActiveTab('graph')}
-          >
-            Mind Map
           </button>
         </div>
 
@@ -302,8 +295,6 @@ function MainLayoutPageContent({
               </div>
             </div>
           )}
-
-          {activeTab === 'graph' && <MindOfChristGraph />}
         </div>
       </div>
 

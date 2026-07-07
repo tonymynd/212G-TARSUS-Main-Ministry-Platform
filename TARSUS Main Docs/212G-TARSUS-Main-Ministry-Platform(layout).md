@@ -10,7 +10,7 @@ modified: 2026-06-28
 related:
   - "[[Daniel Miles]]"
   - "[[GMP Bible Study]]"
-status: active
+status: completed
 vault_root: "C:\\STORAGE\\G\\GodShew"
 ---
 
@@ -59,7 +59,7 @@ vault_root: "C:\\STORAGE\\G\\GodShew"
 
 **Additional site features:**
 - Complete **AKJV** dynamic Bible in the left pane; Tarsus and pages can reference it.
-- **The Mind of Christ** — Obsidian-style knowledge graph for page connections and navigation.
+- ~**The Mind of Christ** — Obsidian-style knowledge graph for page connections and navigation.~ *(Deprecated to preserve sober simplicity)*
 - Contact page: [YOUR PHONE], [YOUR CITY] (placeholders — fill in Phase 4).
 - Dedicated testimony page.
 - Donations link.
@@ -104,26 +104,33 @@ vault_root: "C:\\STORAGE\\G\\GodShew"
 
 ---
 
-## 4. Organizing
+## 4. Tech Stack & Implementation Details
 
-*Awaiting human collaboration — do not implement until Phases 1–3 are aligned.*
+The project has transitioned from the planning phase and successfully reached its core goals.
 
-- [ ] Finalize information architecture (pages, nav, graph nodes).
-- [ ] Define embedding schema and chunking rules.
-- [ ] Map source paths → website URLs.
-- [ ] Select tech stack and hosting.
-- [ ] Organize curation batches (by year, theme, or source type).
+**Core Tech Stack:**
+- **Framework:** Next.js (App Router) with React.
+- **Language:** TypeScript.
+- **Styling:** Vanilla CSS (`globals.css`) with CSS variables supporting Light and Dark themes. Tailored for mobile responsiveness.
+- **Content Rendering:** Custom `MarkdownBibleRenderer` and `BibleRefRenderer` to parse and render corpus Markdown with integrated Bible citations.
+- **State Management:** React Context (`BibleContext`) for cross-pane synchronization (Chat, Bible Explorer, Studies).
+
+**Architecture Highlights:**
+- **Tarsus Chat:** Session-based persistent chat memory (`/api/chat`, `/api/sessions`) answering via curated corpus knowledge.
+- **Bible Explorer:** Synchronized scripture view (`/api/bible`) allowing users to follow along with citations provided by Tarsus.
+- **Studies Pane:** Filterable, categorized corpus archive.
 
 ---
 
-## 5. Next Actions
+## 5. Milestones Achieved
 
-*Human intelligence determines next action; AI assists.*
-
-- [ ] Review and approve Phases 1–3 in this layout.
-- [ ] Provide contact info (phone, city) to replace placeholders.
-- [ ] Confirm first curation batch (e.g. `Accepted/` emails + top GodShew pages).
-- [ ] Decide whether to create Todoist project for TARSUS.
+- [x] **Information Architecture Finalized:** App features a 2-pane layout (Sidebar with Studies & Bible Explorer, Main Content with Tarsus Chat and Study Viewer).
+- [x] **Tech Stack Selected:** Implemented with Next.js, React, and Vanilla CSS for a clean, essentialist design.
+- [x] **Tarsus Chat Integrated:** Functional chatbot returning Bible citations seamlessly mapped into the UI.
+- [x] **Bible API Integrated:** Full dynamic AKJV Bible reader built-in.
+- [x] **Mobile Responsiveness:** Adapted layout (`100dvh`, flexible flexbox constraints) to ensure worldwide accessibility across devices.
+- [x] **Design Restraint:** The "Mind of Christ" graph view (mind map) was initially built but later deprecated and removed to maintain simplicity and a sober, readable UI layout.
+- [x] **Design Constraints Met:** Maintained a white/dark mode toggle, Times New Roman font, and a restrained visual aesthetic fitting the ministry's purpose.
 
 ---
 

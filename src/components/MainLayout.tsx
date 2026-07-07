@@ -3,7 +3,6 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import Link from 'next/link';
 import MarkdownBibleRenderer, { Citation } from './MarkdownBibleRenderer';
-import MindOfChristGraph from './MindOfChristGraph';
 import ThemeToggle from './ThemeToggle';
 import { BibleNavigationProvider, useBibleNavigation } from '@/context/BibleContext';
 
@@ -312,12 +311,6 @@ I am Tarsus (The Apostle), grounding my answers strictly in the scripture of tru
           >
             Bible
           </button>
-          <button
-            className={`tab-btn ${activeTab === 'graph' ? 'active' : ''}`}
-            onClick={() => setActiveTab('graph')}
-          >
-            Mind Map
-          </button>
         </div>
 
         <div className="tab-content">
@@ -460,8 +453,6 @@ I am Tarsus (The Apostle), grounding my answers strictly in the scripture of tru
               </div>
             </div>
           )}
-
-          {activeTab === 'graph' && <MindOfChristGraph />}
         </div>
       </div>
 
