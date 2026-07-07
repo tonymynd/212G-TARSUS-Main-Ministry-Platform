@@ -78,7 +78,7 @@ function CitationBadge({ num, citation }: { num: string; citation: Citation }) {
           background: visible ? '#e8eaed' : '#f1f3f4',
           borderRadius: '9px',
           cursor: 'pointer',
-          marginLeft: '-6px',
+          marginLeft: '2px',
           marginRight: '2px',
           userSelect: 'none',
           transition: 'background 0.15s, color 0.15s',
@@ -328,7 +328,7 @@ export default function MarkdownBibleRenderer({ text, citations }: MarkdownBible
     else if (trimmed.startsWith('>')) {
       ElementType = 'blockquote';
       cleanLine = trimmed.substring(1).trim();
-      style = { borderLeft: '4px solid var(--primary)', paddingLeft: '1rem', fontStyle: 'italic', margin: '1.5rem 0', color: '#333', textIndent: 0 };
+      style = { borderLeft: '4px solid var(--primary)', paddingLeft: '1rem', fontStyle: 'italic', margin: '1.5rem 0', color: 'var(--blockquote-text)', textIndent: 0 };
     }
     // Lists
     else if (trimmed.startsWith('- ') || trimmed.startsWith('* ')) {
