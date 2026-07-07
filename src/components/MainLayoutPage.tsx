@@ -4,6 +4,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import MarkdownBibleRenderer from './MarkdownBibleRenderer';
 import MindOfChristGraph from './MindOfChristGraph';
+import ThemeToggle from './ThemeToggle';
 import { BibleNavigationProvider, useBibleNavigation } from '@/context/BibleContext';
 
 interface PageItem {
@@ -54,6 +55,8 @@ function MainLayoutPageContent({
     setSelectedBook,
     selectedChapter,
     setSelectedChapter,
+    highlightedVerses,
+    setHighlightedVerses,
     markedPageIds,
     toggleMarkPage
   } = useBibleNavigation();
@@ -111,14 +114,27 @@ function MainLayoutPageContent({
     loadChapters();
   }, [selectedBook]);
 
+  // Scroll to highlighted verse
+  useEffect(() => {
+    if (activeTab === 'bible' && highlightedVerses) {
+      setTimeout(() => {
+        const el = document.getElementById(`verse-${highlightedVerses.start}`);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 300);
+    }
+  }, [activeTab, highlightedVerses, verses]);
+
   return (
     <div className="app-container">
       {/* Left Sidebar */}
       <div className="sidebar">
         <div className="sidebar-header">
           <Link href="/">
-            <h1>212G TARSUS</h1>
+            <h1 style={{ margin: 0 }}>212G TARSUS</h1>
           </Link>
+          <ThemeToggle />
         </div>
 
         <div className="sidebar-tabs">
@@ -264,12 +280,25 @@ function MainLayoutPageContent({
               </div>
 
               <div className="bible-verses-list">
-                {verses.map((v, i) => (
-                  <div key={i} className="bible-verse-item">
-                    <span className="bible-verse-num">{v.verse}</span>
-                    {v.text}
-                  </div>
-                ))}
+                {verses.map((v, i) => {
+                  const isHighlighted = highlightedVerses && v.verse >= highlightedVerses.start && v.verse <= (highlightedVerses.end || highlightedVerses.start);
+                  return (
+                    <div 
+                      key={i}
+                      id={`verse-${v.verse}`}
+                      className="bible-verse-item"
+                      onClick={() => setHighlightedVerses({ start: v.verse, end: v.verse })}
+                      style={{
+                        cursor: 'pointer',
+                        transition: 'background-color 0.2s',
+                        ...(isHighlighted ? { backgroundColor: '#e2e8f0', borderRadius: '4px', padding: '4px', margin: '-4px 0 4px 0', borderLeft: '3px solid #64748b' } : {})
+                      }}
+                    >
+                      <span className="bible-verse-num" style={isHighlighted ? { fontWeight: 'bold', color: '#334155' } : {}}>{v.verse}</span>
+                      {v.text}
+                    </div>
+                  );
+                })}
               </div>
             </div>
           )}

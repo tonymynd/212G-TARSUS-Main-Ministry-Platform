@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef, useMemo } from 'react';
 import Link from 'next/link';
 import MarkdownBibleRenderer, { Citation } from './MarkdownBibleRenderer';
 import MindOfChristGraph from './MindOfChristGraph';
+import ThemeToggle from './ThemeToggle';
 import { BibleNavigationProvider, useBibleNavigation } from '@/context/BibleContext';
 
 interface PageItem {
@@ -293,8 +294,9 @@ I am Tarsus (The Apostle), grounding my answers strictly in the scripture of tru
       <div className="sidebar">
         <div className="sidebar-header">
           <Link href="/">
-            <h1>212G TARSUS</h1>
+            <h1 style={{ margin: 0 }}>212G TARSUS</h1>
           </Link>
+          <ThemeToggle />
         </div>
 
         <div className="sidebar-tabs">
