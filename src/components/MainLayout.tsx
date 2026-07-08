@@ -630,6 +630,10 @@ I am Tarsus (The Apostle), grounding my answers strictly in the scripture of tru
             value={inputVal}
             onChange={(e) => setInputVal(e.target.value)}
             disabled={isLoading}
+            autoComplete="off"
+            autoCorrect="off"
+            autoCapitalize="off"
+            spellCheck={false}
             onKeyDown={(e) => {
               if (e.key === 'Enter' && inputVal.trim() && !isLoading) {
                 handleSend(e as unknown as React.FormEvent);

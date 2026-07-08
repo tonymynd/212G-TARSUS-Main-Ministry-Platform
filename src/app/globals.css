@@ -463,11 +463,12 @@ html, body {
 .chat-message {
   display: flex;
   flex-direction: column;
-  max-width: 85%;
   padding: 1rem 1.2rem;
   border-radius: 8px;
   font-size: 1.15rem;
   line-height: 1.6;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .chat-message.user {
@@ -475,13 +476,16 @@ html, body {
   background: var(--chat-user-bg);
   color: var(--chat-user-text);
   border: none;
+  max-width: 85%;
+  width: auto;
 }
 
 .chat-message.bot {
-  align-self: flex-start;
+  align-self: stretch;
   background: var(--chat-bot-bg);
   color: var(--foreground);
   border: 1px solid var(--border);
+  width: 100%;
 }
 
 .chat-message p {
