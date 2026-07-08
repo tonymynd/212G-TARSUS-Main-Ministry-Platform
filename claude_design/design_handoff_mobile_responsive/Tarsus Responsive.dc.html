@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+  body { margin: 0; }
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-thumb { background: rgba(128,128,128,0.4); border-radius: 4px; }
+</style>
+</helmet>
+
+<div style="{{ pageStyle }}" data-screen-label="Tarsus Responsive">
+
+  <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+
+    <!-- ===================== MOBILE ===================== -->
+    <div style="{{ mobileTabStripStyle }}">
+      <div style="{{ mobileTab0Style }}" onClick="{{ selectPanel0 }}">Sources</div>
+      <div style="{{ mobileTab1Style }}" onClick="{{ selectPanel1 }}">Chat</div>
+      <div style="{{ mobileTab2Style }}" onClick="{{ selectPanel2 }}">History</div>
+      <div style="{{ viewToggleStyle }}" onClick="{{ cycleView }}">{{ viewToggleLabel }}</div>
+    </div>
+
+    <div style="{{ mobileTrackWrapStyle }}" onTouchStart="{{ onTouchStart }}" onTouchMove="{{ onTouchMove }}" onTouchEnd="{{ onTouchEnd }}">
+      <div style="{{ trackStyle }}">
+
+        <!-- Sources panel -->
+        <div style="{{ mobilePanelStyle }}">
+          <div style="{{ brandRowStyle }}">
+            <div style="{{ brandTextStyle }}">212G TARSUS</div>
+            <div style="{{ themeBtnStyle }}" onClick="{{ toggleTheme }}">{{ themeIcon }}</div>
+          </div>
+          <div style="{{ tabRowStyle }}">
+            <div style="{{ studiesTabStyle }}" onClick="{{ selectStudiesTab }}">Studies</div>
+            <div style="{{ bibleTabStyle }}" onClick="{{ selectBibleTab }}">Bible</div>
+          </div>
+          <sc-if value="{{ isStudiesTab }}" hint-placeholder-val="{{ true }}">
+            <input style="{{ filterInputStyle }}" placeholder="Filter studies..." value="{{ filterText }}" onChange="{{ onFilterChange }}"></input>
+            <div style="{{ catListStyle }}">
+              <sc-for list="{{ categories }}" as="cat" hint-placeholder-count="6">
+                <div style="{{ catRowStyle }}" onClick="{{ cat.toggle }}">
+                  <span style="{{ cat.caretStyle }}">▶</span>
+                  <span style="{{ catNameStyle }}">{{ cat.name }} ({{ cat.count }})</span>
+                </div>
+              </sc-for>
+            </div>
+          </sc-if>
+          <sc-if value="{{ isBibleTab }}" hint-placeholder-val="{{ false }}">
+            <div style="{{ biblePlaceholderStyle }}">AKJV Bible reader</div>
+          </sc-if>
+        </div>
+
+        <!-- Chat panel -->
+        <div style="{{ mobilePanelStyle }}">
+          <div style="{{ chatHeaderStyle }}">
+            <div style="{{ chatTitleStyle }}">Tarsus Chat</div>
+            <div style="{{ navRowStyle }}">
+              <a href="#" style="{{ navLinkStyle }}">Home</a>
+              <a href="#" style="{{ navLinkStyle }}">About</a>
+              <a href="#" style="{{ navLinkStyle }}">Testimony</a>
+            </div>
+          </div>
+          <div style="{{ memoryRowStyle }}">
+            <span style="{{ memoryLabelStyle }}">Context Memory:</span>
+            <div style="{{ memoryTrackStyle }}"><div style="{{ memoryFillStyle }}"></div></div>
+            <span style="{{ memoryCountStyle }}">{{ memoryLabel }}</span>
+          </div>
+          <div style="{{ messagesAreaStyle }}">
+            <sc-for list="{{ messages }}" as="msg" hint-placeholder-count="1">
+              <div style="{{ msg.bubbleStyle }}">{{ msg.text }}</div>
+            </sc-for>
+          </div>
+          <div style="{{ inputRowStyle }}">
+            <input style="{{ chatInputStyle }}" placeholder="Ask Tarsus about law vs grace, the 2Sons, cOLD vs LukeWarm..." value="{{ chatInput }}" onChange="{{ onChatInputChange }}" onKeyDown="{{ onChatKeyDown }}"></input>
+            <button style="{{ sendBtnStyle }}" onClick="{{ sendMessage }}">Send</button>
+          </div>
+        </div>
+
+        <!-- History panel -->
+        <div style="{{ mobilePanelStyle }}">
+          <div style="{{ historyHeaderStyle }}">
+            <div style="{{ historyTitleStyle }}">History</div>
+            <button style="{{ newChatBtnStyle }}" onClick="{{ newChat }}">+ New Chat</button>
+          </div>
+          <div style="{{ historyListStyle }}">
+            <sc-for list="{{ historyItems }}" as="item" hint-placeholder-count="6">
+              <div style="{{ historyRowStyle }}">
+                <span style="{{ historyTextStyle }}">{{ item.title }}</span>
+                <span style="{{ historyDeleteStyle }}" onClick="{{ item.del }}">✕</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </sc-if>
+
+  <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+
+    <!-- ===================== DESKTOP ===================== -->
+    <div style="{{ desktopRowStyle }}" data-screen-label="Desktop">
+
+      <div style="{{ leftPaneDesktopStyle }}">
+        <div style="{{ brandRowStyle }}">
+          <div style="{{ brandTextStyle }}">212G TARSUS</div>
+          <div style="{{ themeBtnStyle }}" onClick="{{ toggleTheme }}">{{ themeIcon }}</div>
+        </div>
+        <div style="{{ tabRowStyle }}">
+          <div style="{{ studiesTabStyle }}" onClick="{{ selectStudiesTab }}">Studies</div>
+          <div style="{{ bibleTabStyle }}" onClick="{{ selectBibleTab }}">Bible</div>
+        </div>
+        <sc-if value="{{ isStudiesTab }}" hint-placeholder-val="{{ true }}">
+          <input style="{{ filterInputStyle }}" placeholder="Filter studies..." value="{{ filterText }}" onChange="{{ onFilterChange }}"></input>
+          <div style="{{ catListStyle }}">
+            <sc-for list="{{ categories }}" as="cat" hint-placeholder-count="6">
+              <div style="{{ catRowStyle }}" onClick="{{ cat.toggle }}">
+                <span style="{{ cat.caretStyle }}">▶</span>
+                <span style="{{ catNameStyle }}">{{ cat.name }} ({{ cat.count }})</span>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+        <sc-if value="{{ isBibleTab }}" hint-placeholder-val="{{ false }}">
+          <div style="{{ biblePlaceholderStyle }}">AKJV Bible reader</div>
+        </sc-if>
+      </div>
+
+      <div style="{{ dividerStyle }}" onMouseDown="{{ startResizeLeft }}">
+        <div style="{{ gripStyle }}"></div>
+      </div>
+
+      <div style="{{ centerPaneStyle }}">
+        <div style="{{ chatHeaderStyle }}">
+          <div style="{{ chatTitleStyle }}">Tarsus Chat</div>
+          <div style="{{ navRowStyle }}">
+            <a href="#" style="{{ navLinkStyle }}">Home</a>
+            <a href="#" style="{{ navLinkStyle }}">About</a>
+            <a href="#" style="{{ navLinkStyle }}">Testimony</a>
+            <button style="{{ hideHistoryBtnStyle }}" onClick="{{ toggleHistory }}">{{ hideHistoryLabel }}</button>
+            <div style="{{ viewToggleStyle }}" onClick="{{ cycleView }}">{{ viewToggleLabel }}</div>
+          </div>
+        </div>
+        <div style="{{ memoryRowStyle }}">
+          <span style="{{ memoryLabelStyle }}">Context Memory:</span>
+          <div style="{{ memoryTrackStyle }}"><div style="{{ memoryFillStyle }}"></div></div>
+          <span style="{{ memoryCountStyle }}">{{ memoryLabel }}</span>
+        </div>
+        <div style="{{ messagesAreaStyle }}">
+          <sc-for list="{{ messages }}" as="msg" hint-placeholder-count="1">
+            <div style="{{ msg.bubbleStyle }}">{{ msg.text }}</div>
+          </sc-for>
+        </div>
+        <div style="{{ inputRowStyle }}">
+          <input style="{{ chatInputStyle }}" placeholder="Ask Tarsus about law vs grace, the 2Sons, cOLD vs LukeWarm..." value="{{ chatInput }}" onChange="{{ onChatInputChange }}" onKeyDown="{{ onChatKeyDown }}"></input>
+          <button style="{{ sendBtnStyle }}" onClick="{{ sendMessage }}">Send</button>
+        </div>
+      </div>
+
+      <sc-if value="{{ showHistory }}" hint-placeholder-val="{{ true }}">
+        <div style="{{ dividerStyle }}" onMouseDown="{{ startResizeRight }}">
+          <div style="{{ gripStyle }}"></div>
+        </div>
+        <div style="{{ rightPaneDesktopStyle }}">
+          <div style="{{ historyHeaderStyle }}">
+            <div style="{{ historyTitleStyle }}">History</div>
+            <button style="{{ newChatBtnStyle }}" onClick="{{ newChat }}">+ New Chat</button>
+          </div>
+          <div style="{{ historyListStyle }}">
+            <sc-for list="{{ historyItems }}" as="item" hint-placeholder-count="6">
+              <div style="{{ historyRowStyle }}">
+                <span style="{{ historyTextStyle }}">{{ item.title }}</span>
+                <span style="{{ historyDeleteStyle }}" onClick="{{ item.del }}">✕</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-if>
+
+    </div>
+
+  </sc-if>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = {
+    theme: 'light',
+    isMobile: (typeof window !== 'undefined' && window.innerWidth <= 760),
+    windowWidth: (typeof window !== 'undefined' ? window.innerWidth : 1200),
+    viewOverride: null,
+    activeSubTab: 'studies',
+    filterText: '',
+    expanded: {},
+    leftWidth: 300,
+    rightWidth: 320,
+    showHistory: true,
+    mobilePanel: 1,
+    dragPx: 0,
+    dragging: false,
+    chatInput: '',
+    messages: [
+      { role: 'assistant', text: 'Three best wishes unto YOU all: Grace, mercy, and peace, from God our Father and Jesus Christ our Lord.\n\nI am Tarsus (The Apostle), grounding my answers strictly in the scripture of truth and the curated teachings of Daniel Miles. How can I assist you in dividing the word of truth today?\n\nThe grace of our Lord Jesus Christ [be] with you all. Amen.' }
+    ],
+    historyItems: [
+      'Tarsus incorruptible meaning e...', 'what is evil', 'perfection of God', 'God of this world',
+      'Two allegorical Gods', 'Why stealing is law', 'Third day mystery', 'Speak truth with grace',
+      'Relationship status questioned', 'Newborn truth law essentials', 'Jesus Christ identity progression',
+      'Jesus Christ progression study', 'Psalms enemies enmity abolished', '2SonJesus identity question',
+      'Pastors gym misconduct', 'USA Christian foundation dece...', 'Perception of this note',
+      'Charity definition question', 'Israel prophecy law question', 'Grace versus law'
+    ].map((t, i) => ({ id: i, title: t }))
+  };
+
+  categories = [
+    { name: 'Social Media Captures', count: 991 },
+    { name: 'ABOVE All These Things', count: 40 },
+    { name: "Dan's Emails", count: 134 },
+    { name: 'Other Studies', count: 12 },
+    { name: 'GodShew', count: 297 },
+    { name: 'Daniel Miles Posts Archive', count: 3759 }
+  ];
+
+  componentDidMount() {
+    this._onResize = () => this.setState({ isMobile: window.innerWidth <= 760, windowWidth: window.innerWidth });
+    window.addEventListener('resize', this._onResize);
+    this._onMove = (e) => this.handleResizeMove(e);
+    this._onUp = () => this.handleResizeUp();
+    window.addEventListener('mousemove', this._onMove);
+    window.addEventListener('mouseup', this._onUp);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this._onResize);
+    window.removeEventListener('mousemove', this._onMove);
+    window.removeEventListener('mouseup', this._onUp);
+  }
+
+  colors() {
+    return this.state.theme === 'dark'
+      ? { bg:'#111318', panelBg:'#15171d', border:'#2b2e38', text:'#e9eaed', muted:'#9099a8', link:'#4fa3ff',
+          accent:'#3f6fd6', accentText:'#ffffff', inputBg:'#1c1f27', chatBubbleBg:'#1b1e26', danger:'#e0776a', divider:'#2b2e38' }
+      : { bg:'#ffffff', panelBg:'#ffffff', border:'#dcdcdc', text:'#1a1a1a', muted:'#666666', link:'#1a4fba',
+          accent:'#182a52', accentText:'#ffffff', inputBg:'#ffffff', chatBubbleBg:'#f7f7f5', danger:'#c0392b', divider:'#e5e5e5' };
+  }
+
+  toggleTheme = () => this.setState(s => ({ theme: s.theme === 'light' ? 'dark' : 'light' }));
+  setActiveSubTab = (t) => this.setState({ activeSubTab: t });
+  selectStudiesTab = () => this.setActiveSubTab('studies');
+  selectBibleTab = () => this.setActiveSubTab('bible');
+  selectPanel0 = () => this.selectPanel(0);
+  selectPanel1 = () => this.selectPanel(1);
+  selectPanel2 = () => this.selectPanel(2);
+  startResizeLeft = () => this.startResize('left');
+  startResizeRight = () => this.startResize('right');
+  cycleView = () => this.setState(s => ({ viewOverride: s.viewOverride === null ? 'mobile' : s.viewOverride === 'mobile' ? 'desktop' : null }));
+  onFilterChange = (e) => this.setState({ filterText: e.target.value });
+  toggleCategory = (name) => this.setState(s => ({ expanded: { ...s.expanded, [name]: !s.expanded[name] } }));
+  toggleHistory = () => this.setState(s => ({ showHistory: !s.showHistory }));
+  newChat = () => this.setState(s => ({ historyItems: [{ id: Date.now(), title: 'New Chat' }, ...s.historyItems] }));
+  deleteHistory = (idx) => this.setState(s => ({ historyItems: s.historyItems.filter((_, i) => i !== idx) }));
+  onChatInputChange = (e) => this.setState({ chatInput: e.target.value });
+  onChatKeyDown = (e) => { if (e.key === 'Enter') this.sendMessage(); };
+  sendMessage = () => {
+    const text = this.state.chatInput.trim();
+    if (!text) return;
+    this.setState(s => ({
+      chatInput: '',
+      messages: [...s.messages, { role: 'user', text }, { role: 'assistant', text: 'Grace and peace to you. (Response would be grounded in the curated corpus here.)' }]
+    }));
+  };
+
+  selectPanel = (idx) => this.setState({ mobilePanel: idx, dragPx: 0 });
+
+  onTouchStart = (e) => { this._touchStartX = e.touches[0].clientX; this.setState({ dragging: true }); };
+  onTouchMove = (e) => {
+    if (this._touchStartX == null) return;
+    const dx = e.touches[0].clientX - this._touchStartX;
+    this.setState({ dragPx: dx });
+  };
+  onTouchEnd = () => {
+    const threshold = window.innerWidth * 0.18;
+    let panel = this.state.mobilePanel;
+    if (this.state.dragPx > threshold) panel = Math.max(0, panel - 1);
+    else if (this.state.dragPx < -threshold) panel = Math.min(2, panel + 1);
+    this._touchStartX = null;
+    this.setState({ mobilePanel: panel, dragPx: 0, dragging: false });
+  };
+
+  startResize = (side) => { this._resize = { side, startLeft: this.state.leftWidth, startRight: this.state.rightWidth, startX: this._lastMouseX || 0 }; };
+  handleResizeMove = (e) => {
+    this._lastMouseX = e.clientX;
+    if (!this._resize) return;
+    if (this._resize.startX === 0) { this._resize.startX = e.clientX; return; }
+    const dx = e.clientX - this._resize.startX;
+    if (this._resize.side === 'left') {
+      const w = Math.max(160, Math.min(480, this._resize.startLeft + dx));
+      this.setState({ leftWidth: w });
+    } else {
+      const w = Math.max(160, Math.min(480, this._resize.startRight - dx));
+      this.setState({ rightWidth: w });
+    }
+  };
+  handleResizeUp = () => { this._resize = null; };
+
+  renderVals() {
+    const c = this.colors();
+    const s = this.state;
+    const effectiveMobile = s.viewOverride === 'mobile' ? true : s.viewOverride === 'desktop' ? false : s.isMobile;
+    const viewToggleStyle = { fontSize: '12px', padding: '8px 14px', borderRadius: '4px', border: '1px solid ' + c.border, background: 'transparent', color: c.muted, cursor: 'pointer', fontFamily: 'inherit', whiteSpace: 'nowrap' };
+    const viewToggleLabel = 'View: ' + (s.viewOverride === null ? 'Auto' : s.viewOverride === 'mobile' ? 'Mobile' : 'Desktop');
+    const caretStyleFor = (name) => ({ display: 'inline-block', marginRight: '10px', transform: s.expanded[name] ? 'rotate(90deg)' : 'none', transition: 'transform 0.15s', fontSize: '12px' });
+    const filtered = this.categories.filter(cat => cat.name.toLowerCase().includes(s.filterText.toLowerCase()))
+      .map(cat => ({ ...cat, caretStyle: caretStyleFor(cat.name), toggle: () => this.toggleCategory(cat.name) }));
+    const memCount = Math.min(15, s.messages.filter(m => m.role === 'user').length);
+
+    const pageStyle = { height: '100vh', width: '100vw', overflow: 'hidden', background: c.bg, color: c.text, fontFamily: '"Times New Roman", Times, serif', display: 'flex', flexDirection: 'column', boxSizing: 'border-box' };
+
+    const brandRowStyle = { display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '18px 20px', borderBottom: '1px solid ' + c.border };
+    const brandTextStyle = { fontSize: '22px', fontWeight: 'bold', color: c.link, textDecoration: 'underline' };
+    const themeBtnStyle = { fontSize: '20px', cursor: 'pointer', userSelect: 'none' };
+
+    const tabRowStyle = { display: 'flex', borderBottom: '1px solid ' + c.border };
+    const subTabStyle = (t) => ({
+      flex: 1, textAlign: 'center', padding: '14px 0', cursor: 'pointer', fontSize: '17px',
+      color: s.activeSubTab === t ? c.link : c.muted,
+      borderBottom: s.activeSubTab === t ? '2px solid ' + c.link : '2px solid transparent',
+      background: s.activeSubTab === t ? (s.theme === 'dark' ? '#1a1d24' : '#fafafa') : 'transparent'
+    });
+
+    const filterInputStyle = { display: 'block', width: 'calc(100% - 40px)', margin: '16px 20px', padding: '10px 12px', fontSize: '15px', fontFamily: 'inherit', border: '1px solid ' + c.border, borderRadius: '4px', background: c.inputBg, color: c.text, boxSizing: 'border-box' };
+    const catListStyle = { flex: 1, overflowY: 'auto', padding: '0 4px 16px' };
+    const catRowStyle = { padding: '14px 16px', cursor: 'pointer', fontSize: '16px', fontWeight: 'bold', borderRadius: '4px' };
+    const catNameStyle = { color: c.text };
+    const studiesTabStyle = subTabStyle('studies');
+    const bibleTabStyle = subTabStyle('bible');
+    const biblePlaceholderStyle = { flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', color: c.muted, fontSize: '18px', padding: '40px' };
+
+    const chatHeaderStyle = { display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '12px', padding: '20px 24px', borderBottom: '1px solid ' + c.border };
+    const chatTitleStyle = { fontSize: '26px', fontWeight: 'bold', color: c.link };
+    const navRowStyle = { display: 'flex', alignItems: 'center', gap: '18px', flexWrap: 'wrap' };
+    const navLinkStyle = { color: c.link, textDecoration: 'underline', fontSize: '17px' };
+    const hideHistoryBtnStyle = { fontSize: '15px', padding: '8px 14px', border: '1px solid ' + c.border, borderRadius: '4px', background: 'transparent', color: c.text, cursor: 'pointer', fontFamily: 'inherit' };
+
+    const memoryRowStyle = { display: 'flex', alignItems: 'center', gap: '12px', padding: '14px 24px', borderBottom: '1px solid ' + c.border };
+    const memoryLabelStyle = { fontSize: '15px', color: c.muted, whiteSpace: 'nowrap' };
+    const memoryTrackStyle = { flex: 1, height: '6px', background: s.theme === 'dark' ? '#2a2d36' : '#e0e0e0', borderRadius: '3px', overflow: 'hidden' };
+    const memoryFillStyle = { width: (memCount / 15 * 100) + '%', height: '100%', background: '#3fae5c' };
+    const memoryCountStyle = { fontSize: '15px', color: c.muted, whiteSpace: 'nowrap' };
+
+    const messagesAreaStyle = { flex: 1, overflowY: 'auto', padding: '24px' };
+    const bubbleStyleFor = (role) => ({
+      maxWidth: '720px', margin: role === 'user' ? '0 0 20px auto' : '0 0 20px 0',
+      padding: '18px 22px', borderRadius: '6px', fontSize: '18px', lineHeight: '1.6', whiteSpace: 'pre-wrap',
+      background: role === 'user' ? c.accent : c.chatBubbleBg,
+      color: role === 'user' ? c.accentText : c.text,
+      border: role === 'user' ? 'none' : '1px solid ' + c.border
+    });
+    const messagesWithStyle = s.messages.map(m => ({ ...m, bubbleStyle: bubbleStyleFor(m.role) }));
+
+    const inputRowStyle = { display: 'flex', gap: '12px', padding: '18px 24px', borderTop: '1px solid ' + c.border };
+    const chatInputStyle = { flex: '1 1 auto', minWidth: 0, padding: '14px 16px', fontSize: '16px', fontFamily: 'inherit', border: '1px solid ' + c.border, borderRadius: '4px', background: c.inputBg, color: c.text, boxSizing: 'border-box' };
+    const sendBtnStyle = { flexShrink: 0, padding: '0 28px', fontSize: '17px', fontFamily: 'inherit', border: 'none', borderRadius: '4px', background: '#2a6fdb', color: '#ffffff', cursor: 'pointer' };
+
+    const historyHeaderStyle = { display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '18px 20px', borderBottom: '1px solid ' + c.border };
+    const historyTitleStyle = { fontSize: '22px', fontWeight: 'bold' };
+    const newChatBtnStyle = { padding: '8px 14px', fontSize: '14px', fontFamily: 'inherit', border: 'none', borderRadius: '4px', background: c.accent, color: c.accentText, cursor: 'pointer' };
+    const historyListStyle = { flex: 1, overflowY: 'auto', padding: '4px 0' };
+    const historyRowStyle = { display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '13px 20px', borderBottom: '1px solid ' + (s.theme === 'dark' ? '#20232b' : '#f0f0f0'), gap: '10px' };
+    const historyTextStyle = { fontSize: '15px', color: c.text, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' };
+    const historyDeleteStyle = { color: c.danger, cursor: 'pointer', fontSize: '14px', flexShrink: 0 };
+
+    const dividerStyle = { width: '8px', flexShrink: 0, cursor: 'col-resize', background: c.divider, display: 'flex', alignItems: 'center', justifyContent: 'center' };
+    const gripStyle = { width: '3px', height: '32px', borderRadius: '2px', background: c.muted, opacity: 0.5 };
+
+    const desktopRowStyle = { flex: 1, display: 'flex', minHeight: 0, overflowX: 'auto' };
+    const centerMin = 360;
+    const dividerTotal = s.showHistory ? 16 : 8;
+    const rawRight = s.showHistory ? s.rightWidth : 0;
+    const available = Math.max(0, s.windowWidth - centerMin - dividerTotal);
+    let clampedLeft = s.leftWidth, clampedRight = rawRight;
+    const paneFloor = 160;
+    if (clampedLeft + clampedRight > available && (clampedLeft + clampedRight) > 0) {
+      const scale = Math.max(0, available / (clampedLeft + clampedRight));
+      clampedLeft = Math.max(paneFloor, Math.floor(s.leftWidth * scale));
+      if (s.showHistory) clampedRight = Math.max(paneFloor, Math.floor(rawRight * scale));
+    }
+    const leftPaneDesktopStyle = { width: clampedLeft + 'px', minWidth: paneFloor + 'px', maxWidth: '480px', flexShrink: 0, background: c.panelBg, display: 'flex', flexDirection: 'column', overflow: 'hidden' };
+    const centerPaneStyle = { flex: '1 0 ' + centerMin + 'px', minWidth: centerMin + 'px', display: 'flex', flexDirection: 'column', overflow: 'hidden' };
+    const rightPaneDesktopStyle = { width: clampedRight + 'px', minWidth: paneFloor + 'px', maxWidth: '480px', flexShrink: 0, background: c.panelBg, display: 'flex', flexDirection: 'column', overflow: 'hidden' };
+
+    const mobileTabStripStyle = { display: 'flex', borderBottom: '1px solid ' + c.border, background: c.panelBg, flexShrink: 0 };
+    const mobileTabStyleFor = (idx) => ({
+      flex: 1, textAlign: 'center', padding: '14px 0', fontSize: '15px', cursor: 'pointer',
+      color: s.mobilePanel === idx ? c.link : c.muted,
+      borderBottom: s.mobilePanel === idx ? '2px solid ' + c.link : '2px solid transparent'
+    });
+    const mobileTab0Style = mobileTabStyleFor(0);
+    const mobileTab1Style = mobileTabStyleFor(1);
+    const mobileTab2Style = mobileTabStyleFor(2);
+    const mobileTrackWrapStyle = { flex: 1, overflow: 'hidden', position: 'relative' };
+    const base = -s.mobilePanel * (100 / 3);
+    const trackStyle = {
+      display: 'flex', width: '300%', height: '100%',
+      transform: 'translateX(calc(' + base + '% + ' + s.dragPx + 'px))',
+      transition: s.dragging ? 'none' : 'transform 0.28s ease'
+    };
+    const mobilePanelStyle = { width: '33.3333%', height: '100%', flexShrink: 0, overflowY: 'auto', display: 'flex', flexDirection: 'column' };
+
+    return {
+      isMobile: effectiveMobile, isDesktop: !effectiveMobile,
+      viewToggleStyle, viewToggleLabel, cycleView: this.cycleView,
+      pageStyle, brandRowStyle, brandTextStyle, themeBtnStyle, themeIcon: s.theme === 'dark' ? '☀️' : '🌙',
+      tabRowStyle, studiesTabStyle, bibleTabStyle, filterInputStyle, filterText: s.filterText, onFilterChange: this.onFilterChange,
+      catListStyle, categories: filtered, catRowStyle, catNameStyle, toggleCategory: this.toggleCategory,
+      isStudiesTab: s.activeSubTab === 'studies', isBibleTab: s.activeSubTab === 'bible', setActiveSubTab: this.setActiveSubTab,
+      biblePlaceholderStyle,
+      chatHeaderStyle, chatTitleStyle, navRowStyle, navLinkStyle, hideHistoryBtnStyle, toggleHistory: this.toggleHistory,
+      hideHistoryLabel: s.showHistory ? 'Hide History' : 'Show History',
+      memoryRowStyle, memoryLabelStyle, memoryTrackStyle, memoryFillStyle, memoryCountStyle, memoryLabel: memCount + ' / 15',
+      messagesAreaStyle, messages: messagesWithStyle,
+      inputRowStyle, chatInputStyle, chatInput: s.chatInput, onChatInputChange: this.onChatInputChange, onChatKeyDown: this.onChatKeyDown,
+      sendBtnStyle, sendMessage: this.sendMessage,
+      historyHeaderStyle, historyTitleStyle, newChatBtnStyle, newChat: this.newChat,
+      historyListStyle, historyItems: s.historyItems.map((item, i) => ({ ...item, del: () => this.deleteHistory(i) })), historyRowStyle, historyTextStyle, historyDeleteStyle,
+      dividerStyle, gripStyle, startResizeLeft: this.startResizeLeft, startResizeRight: this.startResizeRight,
+      desktopRowStyle, leftPaneDesktopStyle, centerPaneStyle, rightPaneDesktopStyle, showHistory: s.showHistory,
+      mobileTabStripStyle, mobileTab0Style, mobileTab1Style, mobileTab2Style, selectPanel0: this.selectPanel0, selectPanel1: this.selectPanel1, selectPanel2: this.selectPanel2,
+      selectStudiesTab: this.selectStudiesTab, selectBibleTab: this.selectBibleTab,
+      mobileTrackWrapStyle, trackStyle, mobilePanelStyle,
+      onTouchStart: this.onTouchStart, onTouchMove: this.onTouchMove, onTouchEnd: this.onTouchEnd,
+      toggleTheme: this.toggleTheme
+    };
+  }
+}
+
+</script>
+</body>
+</html>

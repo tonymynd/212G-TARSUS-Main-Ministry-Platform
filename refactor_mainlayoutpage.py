@@ -1,89 +1,27 @@
-'use client';
+import sys
+import os
+import re
 
-import React, { useState, useEffect, useMemo } from 'react';
-import Link from 'next/link';
-import MarkdownBibleRenderer from './MarkdownBibleRenderer';
-import ThemeToggle from './ThemeToggle';
-import { BibleNavigationProvider, useBibleNavigation } from '@/context/BibleContext';
-import { useWindowSize } from '@/hooks/useWindowSize';
-import { useRef } from 'react';
+filepath = r'c:\STORAGE\M\Manifold-Grace\1-PROJECTS(Stove)\212G-TARSUS-Main-Ministry-Platform\src\components\MainLayoutPage.tsx'
+with open(filepath, 'r', encoding='utf-8') as f:
+    code = f.read()
 
+imports_addition = "import { useWindowSize } from '@/hooks/useWindowSize';\nimport { useRef } from 'react';\n"
+code = code.replace("import { BibleNavigationProvider, useBibleNavigation } from '@/context/BibleContext';", 
+                    "import { BibleNavigationProvider, useBibleNavigation } from '@/context/BibleContext';\n" + imports_addition)
 
-interface PageItem {
-  id: string;
-  title: string;
-  group?: string;
-}
-
-interface MainLayoutPageProps {
-  initialPages: PageItem[];
-  initialBooks: string[];
-  pageId: string;
-  pageTitle: string;
-  pageContent: string;
-}
-
-export default function MainLayoutPage({
-  initialPages,
-  initialBooks,
-  pageId,
-  pageTitle,
-  pageContent,
-}: MainLayoutPageProps) {
-  return (
-    <BibleNavigationProvider defaultBook={initialBooks[0] || 'Genesis'}>
-      <MainLayoutPageContent
-        initialPages={initialPages}
-        initialBooks={initialBooks}
-        pageId={pageId}
-        pageTitle={pageTitle}
-        pageContent={pageContent}
-      />
-    </BibleNavigationProvider>
-  );
-}
-
-function MainLayoutPageContent({
-  initialPages,
-  initialBooks,
-  pageId,
-  pageTitle,
-  pageContent,
-}: MainLayoutPageProps) {
-  const {
-    activeTab,
-    setActiveTab,
-    selectedBook,
-    setSelectedBook,
-    selectedChapter,
-    setSelectedChapter,
-    highlightedVerses,
-    setHighlightedVerses,
-    markedPageIds,
-    toggleMarkPage
-  } = useBibleNavigation();
-
-  const [availableChapters, setAvailableChapters] = useState<number[]>([1]);
-  const [verses, setVerses] = useState<any[]>([]);
-
-  // Search and Pagination for Studies
-  const [pageSearchQuery, setPageSearchQuery] = useState('');
-  const [visiblePageCount, setVisiblePageCount] = useState(100);
-
-  const filteredPages = useMemo(() => {
-    if (!pageSearchQuery) return initialPages;
-    const q = pageSearchQuery.toLowerCase();
-    return initialPages.filter(p => p.title.toLowerCase().includes(q));
-  }, [initialPages, pageSearchQuery]);
-
-
+hooks_addition = """
   // Layout state
   const windowSize = useWindowSize();
   const isMobile = windowSize.width <= 760;
   const [leftWidth, setLeftWidth] = useState(300);
-  const [mobileSourcesOpen, setMobileSourcesOpen] = useState(false);
+  const [mobilePanel, setMobilePanel] = useState(1);
+  const [dragPx, setDragPx] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
   const resizeRef = useRef<{ startX: number; startLeft: number } | null>(null);
+  const touchStartRef = useRef<number | null>(null);
 
+  // Resize Handlers
   useEffect(() => {
     const handleMove = (e: PointerEvent) => {
       if (!resizeRef.current) return;
@@ -104,6 +42,26 @@ function MainLayoutPageContent({
     resizeRef.current = { startX: e.clientX, startLeft: leftWidth };
   };
 
+  // Touch Handlers
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    touchStartRef.current = e.touches[0].clientX;
+    setIsDragging(true);
+  };
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (touchStartRef.current === null) return;
+    setDragPx(e.touches[0].clientX - touchStartRef.current);
+  };
+  const handleTouchEnd = () => {
+    const threshold = (typeof window !== 'undefined' ? window.innerWidth : 400) * 18 / 100;
+    let panel = mobilePanel;
+    if (dragPx > threshold) panel = Math.max(0, panel - 1);
+    else if (dragPx < -threshold) panel = Math.min(1, panel + 1);
+    setMobilePanel(panel);
+    setDragPx(0);
+    setIsDragging(false);
+    touchStartRef.current = null;
+  };
+
   const centerMin = 360;
   const dividerTotal = 8;
   const available = Math.max(0, windowSize.width - centerMin - dividerTotal);
@@ -111,60 +69,19 @@ function MainLayoutPageContent({
   if (clampedLeft > available && clampedLeft > 0) {
     clampedLeft = Math.max(160, available);
   }
+"""
 
-  const visiblePages = useMemo(() => {
-    return filteredPages.slice(0, visiblePageCount);
-  }, [filteredPages, visiblePageCount]);
-
-  // Load Bible chapters/verses when book or chapter changes
-  useEffect(() => {
-    const loadVerses = async () => {
-      try {
-        const res = await fetch(`/api/bible?book=${encodeURIComponent(selectedBook)}&chapter=${selectedChapter}&start=1&end=200`);
-        if (res.ok) {
-          const data = await res.json();
-          setVerses(data.verses || []);
-        }
-      } catch (err) {
-        console.error("Error loading verses:", err);
-      }
-    };
-    loadVerses();
-  }, [selectedBook, selectedChapter]);
-
-  // Fetch available chapters when book changes
-  useEffect(() => {
-    const loadChapters = async () => {
-      const maxChapters: Record<string, number> = {
-        'Genesis': 50, 'Exodus': 40, 'Leviticus': 27, 'Numbers': 36, 'Deuteronomy': 34,
-        'Matthew': 28, 'Mark': 16, 'Luke': 24, 'John': 21, 'Acts': 28, 'Romans': 16,
-        '1 Corinthians': 16, '2 Corinthians': 13, 'Galatians': 6, 'Ephesians': 6,
-        'Philippians': 4, 'Colossians': 4, '1 Thessalonians': 5, '2 Thessalonians': 3,
-        '1 Timothy': 6, '2 Timothy': 4, 'Titus': 3, 'Philemon': 1, 'Hebrews': 13,
-        'James': 5, '1 Peter': 5, '2 Peter': 3, '1 John': 5, '2 John': 1, '3 John': 1,
-        'Jude': 1, 'Revelation': 22
-      };
-      const maxCh = maxChapters[selectedBook] || 10;
-      const chapters = Array.from({ length: maxCh }, (_, i) => i + 1);
-      setAvailableChapters(chapters);
-      setSelectedChapter(1);
-    };
-    loadChapters();
-  }, [selectedBook]);
-
-  // Scroll to highlighted verse
-  useEffect(() => {
-    if (activeTab === 'bible' && highlightedVerses) {
-      setTimeout(() => {
-        const el = document.getElementById(`verse-${highlightedVerses.start}`);
-        if (el) {
-          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-      }, 300);
-    }
-  }, [activeTab, highlightedVerses, verses]);
+code = code.replace("  const visiblePages = useMemo(() => {", hooks_addition + "\n  const visiblePages = useMemo(() => {")
 
 
+return_match = re.search(r'  return \(\s*<div className="app-container">', code)
+if not return_match:
+    print("Could not find return statement")
+    sys.exit(1)
+
+pre_return = code[:return_match.start()]
+
+pane_contents = """
   const sourcesContent = (
     <>
       <div className="sidebar-header brand-row">
@@ -361,42 +278,27 @@ function MainLayoutPageContent({
     <div className="app-container">
       {isMobile ? (
         <>
-          {/* Sources Drawer Overlay */}
-          {mobileSourcesOpen && (
-            <div
-              className="mobile-drawer-backdrop"
-              onClick={() => setMobileSourcesOpen(false)}
-            />
-          )}
-          <div className={`mobile-drawer mobile-drawer-left ${mobileSourcesOpen ? 'open' : ''}`}>
-            <div className="mobile-drawer-handle">
-              <button
-                className="mobile-drawer-close"
-                onClick={() => setMobileSourcesOpen(false)}
-                aria-label="Close Sources"
-              >
-                ✕
-              </button>
-            </div>
-            {sourcesContent}
+          <div className="mobile-tab-strip">
+            <div className={`mobile-tab ${mobilePanel === 0 ? 'active' : ''}`} onClick={() => { setMobilePanel(0); setDragPx(0); }}>Sources</div>
+            <div className={`mobile-tab ${mobilePanel === 1 ? 'active' : ''}`} onClick={() => { setMobilePanel(1); setDragPx(0); }}>Study</div>
           </div>
-
-          {/* Mobile top bar */}
-          <div className="mobile-topbar">
-            <button
-              className="mobile-topbar-btn"
-              onClick={() => setMobileSourcesOpen(true)}
-              aria-label="Open Sources"
+          <div 
+            className="mobile-track-wrap"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
+            <div 
+              className="mobile-track" 
+              style={{
+                width: '200%',
+                transform: `translateX(calc(${-mobilePanel * 50}% + ${dragPx}px))`,
+                transition: isDragging ? 'none' : 'transform 0.28s ease'
+              }}
             >
-              ☰
-            </button>
-            <span className="mobile-topbar-title">Study Viewer</span>
-            <Link href="/" className="mobile-topbar-btn" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent)' }}>← Chat</Link>
-          </div>
-
-          {/* Full-screen study content */}
-          <div className="mobile-chat-fullscreen">
-            {studyContent}
+              <div className="mobile-panel" style={{ width: '50%' }}>{sourcesContent}</div>
+              <div className="mobile-panel" style={{ width: '50%' }}>{studyContent}</div>
+            </div>
           </div>
         </>
       ) : (
@@ -415,3 +317,7 @@ function MainLayoutPageContent({
     </div>
   );
 }
+"""
+
+with open(filepath, 'w', encoding='utf-8') as f:
+    f.write(pre_return + pane_contents)

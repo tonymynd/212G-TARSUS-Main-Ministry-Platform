@@ -1,100 +1,27 @@
-'use client';
+import sys
+import os
 
-import React, { useState, useEffect, useRef, useMemo } from 'react';
-import Link from 'next/link';
-import MarkdownBibleRenderer, { Citation } from './MarkdownBibleRenderer';
-import ThemeToggle from './ThemeToggle';
-import { BibleNavigationProvider, useBibleNavigation } from '@/context/BibleContext';
-import { useWindowSize } from '@/hooks/useWindowSize';
+filepath = r'c:\STORAGE\M\Manifold-Grace\1-PROJECTS(Stove)\212G-TARSUS-Main-Ministry-Platform\src\components\MainLayout.tsx'
+with open(filepath, 'r', encoding='utf-8') as f:
+    code = f.read()
 
+imports_addition = "import { useWindowSize } from '@/hooks/useWindowSize';\n"
+code = code.replace("import { BibleNavigationProvider, useBibleNavigation } from '@/context/BibleContext';", 
+                    "import { BibleNavigationProvider, useBibleNavigation } from '@/context/BibleContext';\n" + imports_addition)
 
-interface PageItem {
-  id: string;
-  title: string;
-  group?: string;
-}
-
-interface MainLayoutProps {
-  initialPages: PageItem[];
-  initialBooks: string[];
-}
-
-export default function MainLayout({ initialPages, initialBooks }: MainLayoutProps) {
-  return (
-    <BibleNavigationProvider defaultBook={initialBooks[0] || 'Genesis'}>
-      <MainLayoutContent initialPages={initialPages} initialBooks={initialBooks} />
-    </BibleNavigationProvider>
-  );
-}
-
-function MainLayoutContent({ initialPages, initialBooks }: MainLayoutProps) {
-  const {
-    activeTab,
-    setActiveTab,
-    selectedBook,
-    setSelectedBook,
-    selectedChapter,
-    setSelectedChapter,
-    highlightedVerses,
-    setHighlightedVerses,
-    markedPageIds,
-    toggleMarkPage,
-    clearMarkedPages
-  } = useBibleNavigation();
-
-  const [messages, setMessages] = useState<{ role: 'user' | 'bot'; content: string; citations?: Record<string, Citation> }[]>([
-    {
-      role: 'bot',
-      content: `**Three best wishes unto YOU all: Grace, mercy, and peace, from God our Father and Jesus Christ our Lord.**
-
-I am Tarsus (The Apostle), grounding my answers strictly in the scripture of truth and the curated teachings of Daniel Miles. How can I assist you in dividing the word of truth today?
-
-**The grace of our Lord Jesus Christ [be] with you all. Amen.**`
-    }
-  ]);
-  const [inputVal, setInputVal] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-
-  // Bible Explorer State
-  const [availableChapters, setAvailableChapters] = useState<number[]>([1]);
-  const [verses, setVerses] = useState<any[]>([]);
-
-  // Search and Pagination for Studies
-  const [pageSearchQuery, setPageSearchQuery] = useState('');
-  const [visiblePageCount, setVisiblePageCount] = useState(100);
-
-  const filteredPages = useMemo(() => {
-    if (!pageSearchQuery) return initialPages;
-    const q = pageSearchQuery.toLowerCase();
-    return initialPages.filter(p => p.title.toLowerCase().includes(q));
-  }, [initialPages, pageSearchQuery]);
-
-  // Chat History persistence state
-  const [sessions, setSessions] = useState<{ id: string; title: string; updatedAt: string }[]>([]);
-  const [currentSessionId, setCurrentSessionId] = useState<string | null>(null);
-  const [isHistoryOpen, setIsHistoryOpen] = useState(false);
-
-  useEffect(() => {
-    // Open history by default only on wider screens to prevent mobile blocking
-    if (typeof window !== 'undefined' && window.innerWidth > 850) {
-      setIsHistoryOpen(true);
-    }
-  }, []);
-
-
+hooks_addition = """
   // Layout state
   const windowSize = useWindowSize();
   const isMobile = windowSize.width <= 760;
   const [leftWidth, setLeftWidth] = useState(300);
   const [rightWidth, setRightWidth] = useState(320);
-
-  // Mobile drawer state (replaces carousel)
-  const [mobileSourcesOpen, setMobileSourcesOpen] = useState(false);
-  const [mobileHistoryOpen, setMobileHistoryOpen] = useState(false);
-
-  // Desktop resize handlers
+  const [mobilePanel, setMobilePanel] = useState(1);
+  const [dragPx, setDragPx] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
   const resizeRef = useRef<{ side: 'left' | 'right'; startX: number; startLeft: number; startRight: number } | null>(null);
+  const touchStartRef = useRef<number | null>(null);
 
+  // Resize Handlers
   useEffect(() => {
     const handleMove = (e: PointerEvent) => {
       if (!resizeRef.current) return;
@@ -122,6 +49,26 @@ I am Tarsus (The Apostle), grounding my answers strictly in the scripture of tru
     resizeRef.current = { side: 'right', startX: e.clientX, startLeft: leftWidth, startRight: rightWidth };
   };
 
+  // Touch Handlers
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    touchStartRef.current = e.touches[0].clientX;
+    setIsDragging(true);
+  };
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (touchStartRef.current === null) return;
+    setDragPx(e.touches[0].clientX - touchStartRef.current);
+  };
+  const handleTouchEnd = () => {
+    const threshold = (typeof window !== 'undefined' ? window.innerWidth : 400) * 0.18;
+    let panel = mobilePanel;
+    if (dragPx > threshold) panel = Math.max(0, panel - 1);
+    else if (dragPx < -threshold) panel = Math.min(2, panel + 1);
+    setMobilePanel(panel);
+    setDragPx(0);
+    setIsDragging(false);
+    touchStartRef.current = null;
+  };
+
   const centerMin = 360;
   const dividerTotal = isHistoryOpen ? 16 : 8;
   const available = Math.max(0, windowSize.width - centerMin - dividerTotal);
@@ -132,216 +79,22 @@ I am Tarsus (The Apostle), grounding my answers strictly in the scripture of tru
     clampedLeft = Math.max(160, Math.floor(leftWidth * scale));
     if (isHistoryOpen) clampedRight = Math.max(160, Math.floor(rightWidth * scale));
   }
+"""
+code = code.replace("  const fetchSessions = async () => {", hooks_addition + "\n  const fetchSessions = async () => {")
 
-  const fetchSessions = async () => {
-    try {
-      const res = await fetch('/api/sessions');
-      if (res.ok) {
-        const data = await res.json();
-        setSessions(data.sessions || []);
-      }
-    } catch (e) {
-      console.error("Error fetching sessions:", e);
-    }
-  };
+# Now I'll replace the return block with the new layout logic.
+# First, I'll extract everything before the `return (` statement.
+import re
 
-  useEffect(() => {
-    const restoreSession = async () => {
-      await fetchSessions();
-      const savedSessionId = sessionStorage.getItem('currentSessionId');
-      if (savedSessionId) {
-        try {
-          const res = await fetch(`/api/sessions/${savedSessionId}`);
-          if (res.ok) {
-            const data = await res.json();
-            if (data.session) {
-              setCurrentSessionId(data.session.id);
-              setMessages(data.session.messages);
-            }
-          }
-        } catch (e) {
-          console.error("Error restoring session:", e);
-        }
-      }
-    };
-    restoreSession();
-  }, []);
+return_match = re.search(r'  return \(\s*<div className="app-container">', code)
+if not return_match:
+    print("Could not find return statement")
+    sys.exit(1)
 
-  const saveCurrentSession = async (currentMessages: typeof messages, sessionId: string | null) => {
-    const hasUserMsg = currentMessages.some(m => m.role === 'user');
-    if (!hasUserMsg) return sessionId;
+pre_return = code[:return_match.start()]
 
-    const id = sessionId || `session_${Date.now()}`;
-    try {
-      const res = await fetch('/api/sessions', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ id, messages: currentMessages })
-      });
-      if (res.ok) {
-        const data = await res.json();
-        if (!sessionId) {
-          setCurrentSessionId(id);
-        }
-        sessionStorage.setItem('currentSessionId', id);
-        fetchSessions();
-        return id;
-      }
-    } catch (e) {
-      console.error("Error auto-saving session:", e);
-    }
-    return sessionId;
-  };
-
-  useEffect(() => {
-    if (messages.length > 1) {
-      saveCurrentSession(messages, currentSessionId);
-    }
-  }, [messages]);
-
-  const handleSelectSession = async (id: string) => {
-    try {
-      const res = await fetch(`/api/sessions/${id}`);
-      if (res.ok) {
-        const data = await res.json();
-        if (data.session) {
-          setCurrentSessionId(data.session.id);
-          setMessages(data.session.messages);
-          sessionStorage.setItem('currentSessionId', data.session.id);
-        }
-      }
-    } catch (e) {
-      console.error("Error loading session:", e);
-    }
-  };
-
-  const handleNewChat = () => {
-    setCurrentSessionId(null);
-    sessionStorage.removeItem('currentSessionId');
-    setMessages([
-      {
-        role: 'bot',
-        content: `**Three best wishes unto YOU all: Grace, mercy, and peace, from God our Father and Jesus Christ our Lord.**
-
-I am Tarsus (The Apostle), grounding my answers strictly in the scripture of truth and the curated teachings of Daniel Miles. How can I assist you in dividing the word of truth today?
-
-**The grace of our Lord Jesus Christ [be] with you all. Amen.**`
-      }
-    ]);
-  };
-
-  const handleDeleteSession = async (e: React.MouseEvent, id: string) => {
-    e.stopPropagation();
-    if (!confirm("Are you sure you want to delete this chat session?")) return;
-    try {
-      const res = await fetch(`/api/sessions/${id}`, { method: 'DELETE' });
-      if (res.ok) {
-        if (currentSessionId === id) {
-          handleNewChat();
-        }
-        fetchSessions();
-      }
-    } catch (e) {
-      console.error("Error deleting session:", e);
-    }
-  };
-
-  const chatEndRef = useRef<HTMLDivElement>(null);
-
-  // Auto-scroll chat
-  useEffect(() => {
-    chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages]);
-
-  // Load Bible chapters/verses when book or chapter changes
-  useEffect(() => {
-    const loadVerses = async () => {
-      try {
-        const res = await fetch(`/api/bible?book=${encodeURIComponent(selectedBook)}&chapter=${selectedChapter}&start=1&end=200`);
-        if (res.ok) {
-          const data = await res.json();
-          setVerses(data.verses || []);
-        }
-      } catch (err) {
-        console.error("Error loading verses:", err);
-      }
-    };
-    loadVerses();
-  }, [selectedBook, selectedChapter]);
-
-  // Fetch available chapters when book changes (mocking a max chapter check, or fetch from api)
-  useEffect(() => {
-    // Basic book max chapters mapping
-    const loadChapters = async () => {
-      // Just fetch verse 1 of chapter 1..150 to check what chapters exist
-      // In a real database, we can return the max chapter. To keep it simple, let's map standard book chapter lengths:
-      const maxChapters: Record<string, number> = {
-        'Genesis': 50, 'Exodus': 40, 'Leviticus': 27, 'Numbers': 36, 'Deuteronomy': 34,
-        'Matthew': 28, 'Mark': 16, 'Luke': 24, 'John': 21, 'Acts': 28, 'Romans': 16,
-        '1 Corinthians': 16, '2 Corinthians': 13, 'Galatians': 6, 'Ephesians': 6,
-        'Philippians': 4, 'Colossians': 4, '1 Thessalonians': 5, '2 Thessalonians': 3,
-        '1 Timothy': 6, '2 Timothy': 4, 'Titus': 3, 'Philemon': 1, 'Hebrews': 13,
-        'James': 5, '1 Peter': 5, '2 Peter': 3, '1 John': 5, '2 John': 1, '3 John': 1,
-        'Jude': 1, 'Revelation': 22
-      };
-      const maxCh = maxChapters[selectedBook] || 10;
-      const chapters = Array.from({ length: maxCh }, (_, i) => i + 1);
-      setAvailableChapters(chapters);
-      setSelectedChapter(1);
-    };
-    loadChapters();
-  }, [selectedBook]);
-
-  // Scroll to highlighted verse
-  useEffect(() => {
-    if (activeTab === 'bible' && highlightedVerses) {
-      setTimeout(() => {
-        const el = document.getElementById(`verse-${highlightedVerses.start}`);
-        if (el) {
-          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-      }, 300);
-    }
-  }, [activeTab, highlightedVerses, verses]);
-
-  const handleSend = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!inputVal.trim() || isLoading) return;
-
-    const userMsg = inputVal.trim();
-    if (!userMsg) return;
-
-    setInputVal('');
-    setMessages(prev => [...prev, { role: 'user', content: userMsg }]);
-    setIsLoading(true);
-
-    try {
-      const res = await fetch('/api/chat', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          messages: [...messages, { role: 'user', content: userMsg }],
-          markedPageIds
-        })
-      });
-
-      if (res.ok) {
-        const data = await res.json();
-        setMessages(prev => [...prev, { role: 'bot', content: data.text, citations: data.citations || {} }]);
-      } else {
-        setMessages(prev => [...prev, { role: 'bot', content: "Three best wishes unto YOU all: Grace, mercy, and peace, from God our Father and Jesus Christ our Lord.\n\nSeems there was a temporary error in our connection. Hmmm...\n\n**The grace of our Lord Jesus Christ [be] with you all. Amen.**" }]);
-      }
-    } catch (err) {
-      console.error("Chat error:", err);
-      setMessages(prev => [...prev, { role: 'bot', content: "Three best wishes unto YOU all: Grace, mercy, and peace, from God our Father and Jesus Christ our Lord.\n\nSeems there was a network error. Hmmm...\n\n**The grace of our Lord Jesus Christ [be] with you all. Amen.**" }]);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-
+# Add variables for pane contents
+pane_contents = """
   const sourcesContent = (
     <>
       <div className="sidebar-header brand-row">
@@ -732,70 +485,28 @@ I am Tarsus (The Apostle), grounding my answers strictly in the scripture of tru
     <div className="app-container">
       {isMobile ? (
         <>
-          {/* Mobile: Full-screen chat with slide-in drawers */}
-
-          {/* Sources Drawer Overlay */}
-          {mobileSourcesOpen && (
-            <div
-              className="mobile-drawer-backdrop"
-              onClick={() => setMobileSourcesOpen(false)}
-            />
-          )}
-          <div className={`mobile-drawer mobile-drawer-left ${mobileSourcesOpen ? 'open' : ''}`}>
-            <div className="mobile-drawer-handle">
-              <button
-                className="mobile-drawer-close"
-                onClick={() => setMobileSourcesOpen(false)}
-                aria-label="Close Sources"
-              >
-                ✕
-              </button>
-            </div>
-            {sourcesContent}
+          <div className="mobile-tab-strip">
+            <div className={`mobile-tab ${mobilePanel === 0 ? 'active' : ''}`} onClick={() => { setMobilePanel(0); setDragPx(0); }}>Sources</div>
+            <div className={`mobile-tab ${mobilePanel === 1 ? 'active' : ''}`} onClick={() => { setMobilePanel(1); setDragPx(0); }}>Chat</div>
+            <div className={`mobile-tab ${mobilePanel === 2 ? 'active' : ''}`} onClick={() => { setMobilePanel(2); setDragPx(0); }}>History</div>
           </div>
-
-          {/* History Drawer Overlay */}
-          {mobileHistoryOpen && (
-            <div
-              className="mobile-drawer-backdrop"
-              onClick={() => setMobileHistoryOpen(false)}
-            />
-          )}
-          <div className={`mobile-drawer mobile-drawer-right ${mobileHistoryOpen ? 'open' : ''}`}>
-            <div className="mobile-drawer-handle">
-              <button
-                className="mobile-drawer-close"
-                onClick={() => setMobileHistoryOpen(false)}
-                aria-label="Close History"
-              >
-                ✕
-              </button>
-            </div>
-            {historyContent}
-          </div>
-
-          {/* Mobile top bar with drawer triggers */}
-          <div className="mobile-topbar">
-            <button
-              className="mobile-topbar-btn"
-              onClick={() => { setMobileSourcesOpen(true); setMobileHistoryOpen(false); }}
-              aria-label="Open Sources"
+          <div 
+            className="mobile-track-wrap"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
+            <div 
+              className="mobile-track" 
+              style={{
+                transform: `translateX(calc(${-mobilePanel * 33.3333}% + ${dragPx}px))`,
+                transition: isDragging ? 'none' : 'transform 0.28s ease'
+              }}
             >
-              ☰
-            </button>
-            <span className="mobile-topbar-title">Tarsus Chat</span>
-            <button
-              className="mobile-topbar-btn"
-              onClick={() => { setMobileHistoryOpen(true); setMobileSourcesOpen(false); }}
-              aria-label="Open History"
-            >
-              🕐
-            </button>
-          </div>
-
-          {/* Full-screen chat */}
-          <div className="mobile-chat-fullscreen">
-            {chatContent}
+              <div className="mobile-panel">{sourcesContent}</div>
+              <div className="mobile-panel">{chatContent}</div>
+              <div className="mobile-panel">{historyContent}</div>
+            </div>
           </div>
         </>
       ) : (
@@ -824,3 +535,7 @@ I am Tarsus (The Apostle), grounding my answers strictly in the scripture of tru
     </div>
   );
 }
+"""
+
+with open(filepath, 'w', encoding='utf-8') as f:
+    f.write(pre_return + pane_contents)
