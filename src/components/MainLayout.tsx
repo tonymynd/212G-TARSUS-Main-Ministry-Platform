@@ -351,6 +351,36 @@ I am Tarsus (The Apostle), grounding my answers strictly in the scripture of tru
         <ThemeToggle />
       </div>
 
+      {/* Nav links + controls moved here from chat header */}
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: '16px',
+        padding: '12px 20px',
+        borderBottom: '1px solid var(--border)',
+        flexWrap: 'wrap'
+      }}>
+        <Link href="/" className="nav-link" style={{ fontSize: '14px' }}>Home</Link>
+        <Link href="/pages/about" className="nav-link" style={{ fontSize: '14px' }}>About</Link>
+        <Link href="/pages/daniels_testimony" className="nav-link" style={{ fontSize: '14px' }}>Testimony</Link>
+        <button
+          onClick={() => setIsHistoryOpen(!isHistoryOpen)}
+          style={{
+            marginLeft: 'auto',
+            padding: '3px 10px',
+            fontSize: '13px',
+            cursor: 'pointer',
+            background: 'transparent',
+            border: '1px solid var(--border)',
+            borderRadius: '4px',
+            color: 'var(--text-muted)',
+            fontFamily: 'inherit'
+          }}
+        >
+          {isHistoryOpen ? 'Hide History' : 'History ▶'}
+        </button>
+      </div>
+
       <div className="sidebar-tabs">
         <button
           className={`tab-btn ${activeTab === 'pages' ? 'active' : ''}`}
@@ -512,30 +542,6 @@ I am Tarsus (The Apostle), grounding my answers strictly in the scripture of tru
 
   const chatContent = (
     <>
-      <div className="main-header">
-        <h2>Tarsus Chat</h2>
-        <div className="nav-links">
-          <Link href="/" className="nav-link">Home</Link>
-          <Link href="/pages/about" className="nav-link">About</Link>
-          <Link href="/pages/daniels_testimony" className="nav-link">Testimony</Link>
-          <button 
-            onClick={() => setIsHistoryOpen(!isHistoryOpen)} 
-            className="tab-btn" 
-            style={{ 
-              padding: '4px 10px', 
-              fontSize: '15px', 
-              cursor: 'pointer', 
-              borderBottom: 'none',
-              background: 'transparent',
-              border: '1px solid var(--border)',
-              borderRadius: '4px'
-            }}
-          >
-            {isHistoryOpen ? 'Hide History' : 'History'}
-          </button>
-        </div>
-      </div>
-
       <div className="chat-container">
         <div style={{
           display: 'flex',
@@ -616,35 +622,22 @@ I am Tarsus (The Apostle), grounding my answers strictly in the scripture of tru
           </div>
         )}
 
-        <form className="chat-input-form" onSubmit={handleSend} style={{ display: 'flex', gap: '12px', padding: '18px 24px', borderTop: '1px solid var(--border)' }}>
-          <textarea
+        <form className="chat-input-form" onSubmit={handleSend} style={{ display: 'flex', gap: '10px', padding: '12px 16px', borderTop: '1px solid var(--border)', alignItems: 'center' }}>
+          <input
+            type="text"
             className="chat-input"
-            placeholder="Ask Tarsus about law vs grace, the 2Sons, cOLD vs LukeWarm..."
+            placeholder=""
             value={inputVal}
             onChange={(e) => setInputVal(e.target.value)}
             disabled={isLoading}
-            rows={1}
             onKeyDown={(e) => {
-              if (e.key === 'Enter' && !e.shiftKey) {
-                e.preventDefault();
-                if (inputVal.trim() && !isLoading) {
-                  handleSend(e as unknown as React.FormEvent);
-                }
+              if (e.key === 'Enter' && inputVal.trim() && !isLoading) {
+                handleSend(e as unknown as React.FormEvent);
               }
             }}
-            ref={(el) => {
-              if (el) {
-                el.style.height = 'auto';
-                el.style.height = Math.min(el.scrollHeight, 150) + 'px';
-                if (el.scrollHeight > 150) {
-                  el.style.overflowY = 'auto';
-                } else {
-                  el.style.overflowY = 'hidden';
-                }
-              }
-            }}
+            style={{ height: '44px', resize: 'none', overflowY: 'hidden' }}
           />
-          <button className="chat-send-btn" type="submit" disabled={isLoading}>
+          <button className="chat-send-btn" type="submit" disabled={isLoading} style={{ height: '44px', flexShrink: 0 }}>
             Send
           </button>
         </form>
