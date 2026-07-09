@@ -201,7 +201,9 @@ export async function POST(req: Request) {
       '   - After the "Learn More" section and BEFORE the closing benediction, output ALL footnote definitions in this EXACT format (one per line):',
       '     [^1]: [Document Title](link) "Provide a larger 2-3 sentence context block directly extracted from the source document that proves this point, so the user has full context."',
       '   - Use the exact title and link from the document headers above.',
-      '   - Ensure the context block is a direct copy-paste from the source document, preserving all punctuation, capitalization, and formatting. Do NOT paraphrase or summarize.',
+      isSpanish
+        ? '   - Since the user query is in Spanish, translate the 2-3 sentence context block ("snippet") into Spanish to assist the user. At the end of the translated quote inside the double quotes, append: " (Traducido al español para asistir al usuario, pero esta fuente está originalmente en inglés)" if the source document is in English. Do NOT translate the document title or link.'
+        : '   - Ensure the context block is a direct copy-paste from the source document, preserving all punctuation, capitalization, and formatting. Do NOT paraphrase or summarize.',
       '   - DIVERSITY OF SOURCES IS CRITICAL: You MUST draw evidence from AS MANY DIFFERENT source documents as possible. Each paragraph should ideally cite at least 2-3 DIFFERENT documents. Do NOT rely heavily on a single document for the entire response.',
       '   - EACH FOOTNOTE MUST REFERENCE A DIFFERENT DOCUMENT whenever possible. If the same claim is supported by multiple documents, create SEPARATE footnotes for each one (e.g., [^1] [^2] [^3] after the claim). This gives the user cross-referencing power across the corpus.',
       '   - Aim for a MINIMUM of 5-8 unique footnotes per response, each from a different source document. You have up to 10 source documents available—use them all if relevant.',
