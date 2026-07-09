@@ -10,6 +10,9 @@ interface PageProps {
 export default async function Page({ params }: PageProps) {
   const resolvedParams = await params;
   const slug = resolvedParams.slug;
+  if (slug.endsWith('.json') || slug.toLowerCase() === 'bible') {
+    notFound();
+  }
   const pages = getPagesList();
   const books = listBooks();
 
