@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 import { searchCorpus } from '@/lib/search';
 import { getMemoryString, updateMemory } from '@/lib/memory';
 import { getMarkedPageContent } from '@/lib/pages';
+import { execFile } from 'child_process';
+import path from 'path';
 
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY || '';
 const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY || '';
@@ -15,8 +17,53 @@ export async function POST(req: Request) {
 
     const userQuery = messages[messages.length - 1].content;
 
-    // 1. Search RAG context
-    const searchResults = searchCorpus(userQuery, 10);
+    // 1. Search RAG context (utilizing MemPalace hybrid search with fallback to local BM25)
+    let searchResults: { title: string; path: string; type: string; score: number; content: string }[] = [];
+    
+    try {
+      const scriptPath = path.join(process.cwd(), 'src', 'lib', 'search_palace.py');
+      
+      const searchOutput = await new Promise<string>((resolve, reject) => {
+        execFile('python', [scriptPath, userQuery, '10'], { env: { ...process.env, PYTHONUTF8: '1' } }, (error: any, stdout: string, stderr: string) => {
+          if (error) {
+            reject(error);
+          } else {
+            resolve(stdout);
+          }
+        });
+      });
+      
+      const parsed = JSON.parse(searchOutput);
+      if (parsed.error) {
+        throw new Error(parsed.error);
+      }
+      
+      if (parsed.results && Array.isArray(parsed.results)) {
+        searchResults = parsed.results.map((r: any) => {
+          let filePath = '';
+          if (r.room === 'data') {
+            filePath = path.join(process.cwd(), 'src', 'data', 'pages', r.source_file);
+          } else if (r.room === 'godshew_original') {
+            filePath = path.join(process.cwd(), 'GodShew_Original', 'GodShew_Original', r.source_file);
+          } else {
+            filePath = path.join(process.cwd(), 'src', 'data', 'pages', r.source_file);
+          }
+
+          const title = r.source_file.replace(/\.(md|html|htm)$/i, '');
+
+          return {
+            title: title,
+            path: filePath,
+            type: r.room || 'document',
+            score: r.similarity || 0,
+            content: r.text || ''
+          };
+        });
+      }
+    } catch (err) {
+      console.error("MemPalace search failed, falling back to local BM25 corpus search:", err);
+      searchResults = searchCorpus(userQuery, 10);
+    }
     
     // Load explicitly marked documents
     let markedContextStr = '';
@@ -46,7 +93,7 @@ export async function POST(req: Request) {
     const references: { title: string; link: string }[] = [];
 
     searchResults.forEach((res) => {
-      const basename = res.path.split(/[\\\/]/).pop()?.replace('.md', '') || '';
+      const basename = res.path.split(/[\\\/]/).pop()?.replace(/\.(md|html|htm)$/i, '') || '';
       const link = `/pages/${basename}`;
 
       contextStr += `--- DOCUMENT: ${res.title} (Link: ${link}) (Source: ${res.type}) ---\n${res.content}\n\n`;
@@ -94,6 +141,27 @@ export async function POST(req: Request) {
       '4. Closing: You MUST always close your response with exactly:',
       '"' + expectedBenediction + '"',
       '(Do not add any text after this, and it must be bolded).',
+      ' 4.1 Banned words and phrases: ',
+        '   - "I think"',
+        '   - "I feel"',
+        '   - "I believe"',
+        '   - "In my opinion"',
+        '   - "In my view"',
+        '   - "It seems to me"',
+        '   - "I\'m not sure, but"',
+        '   - "I\'m not certain, but"',
+        '   - "I\'m not an expert, but"',
+        '   - "I\'m not a theologian, but"',
+        '   - "I\'m not a scholar, but"',
+        ' 4.2 Mandatory Vocabulary Replacements: ',
+        '   - NEVER use the word "understand" or "understanding". You MUST ALWAYS replace it with "innerstand" or "innerstanding".',
+        '   - Exhort user to move from any form, verb or conjugation of word "believe" foward "knowing" as is not beliveing what saves us but / .',
+        ' 4.3 Descriptive Phrasing: ',
+        '   - Avoid using "label words" that act as rhetorical shortcuts and can dismiss ideas without engaging them (e.g., "Calvinist", "Arminian", "dispensationalist").',
+        '   - Filter out broad suffix-driven categories such as `-ism` and `-ology` (examples: Calvinism, Arminianism, Soteriology, Eschatology) as well as exegetical jargon and doctrinal shorthand (examples: Exegesis, Hermeneutics, Trinitarian, Predestination).',
+        '   - Risk: Labels can pigeonhole a thought into a camp even when the idea is independent; prefer describing the idea directly instead of tagging it.',
+        '   - Alternative phrasing guidance: Use descriptive phrasing (e.g., "your view about God inspiring translators" rather than "Ruckmanism"); emphasize the idea itself (e.g., "translation as a second layer of revelation"); and avoid categorical tags unless explicitly requested.',
+        '   - Offer to draft a "filter list" of words and suffixes (e.g., -ism, -ology) so the agent actively avoids labeling and instead paraphrases ideas descriptively.',
       '',
       // ----------
       '5. Content Flow & Theology:',
@@ -106,22 +174,7 @@ export async function POST(req: Request) {
       '   - Use arrows to show contrasts or progressions: "← & →", "←", "→". Never use ASCII operators like "<--&-->", "<--", or "-->".',
       '',
       '   - Maintain a highly technical, analytical, and objective tone. Focus on textual laser-precision of the AKJV text, avoiding any emotional, preachy, or conversational filler.',
-        ' 4.1 Banned words and phrases: ',
-        '   - "I think"',
-        '   - "I feel"',
-        '   - "I believe"',
-        '   - "In my opinion"',
-        '   - "In my view"',
-        '   - "It seems to me"',
-        '   - "I\'m not sure, but"',
-        '   - "I\'m not certain, but"',
-        '   - "I\'m not an expert, but"',
-        '   - "I\'m not a theologian, but"',
-        '   - "I\'m not a scholar, but"',
-        '',
-        ' 4.2 Mandatory Vocabulary Replacements: ',
-        '   - NEVER use the word "understand" or "understanding". You MUST ALWAYS replace it with "innerstand" or "innerstanding".',
-        '   - Exhort user to move from any form, verb or conjugation of word "believe" foward "knowing" as is not beliveing what saves us but / .',
+      '',
       // ----------
       '6. Grounding:',
       '   - Ground your answer strictly and ONLY from GodShew and Daniel Miles and Studies, in fact all answers are filtered by these sources. If the documents do not contain the answer, say so in Daniel\'s voice (e.g., "' + (isSpanish ? 'Parece que no hay mención de esto en el cuerpo de nuestros estudios...' : 'Seems there is no mention of this in the twain of our studies...') + '").',

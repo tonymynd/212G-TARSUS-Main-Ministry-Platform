@@ -147,7 +147,6 @@ function MainLayoutPageContent({
       const maxCh = maxChapters[selectedBook] || 10;
       const chapters = Array.from({ length: maxCh }, (_, i) => i + 1);
       setAvailableChapters(chapters);
-      setSelectedChapter(1);
     };
     loadChapters();
   }, [selectedBook]);
@@ -288,7 +287,10 @@ function MainLayoutPageContent({
               <select
                 className="bible-select"
                 value={selectedBook}
-                onChange={(e) => setSelectedBook(e.target.value)}
+                onChange={(e) => {
+                  setSelectedBook(e.target.value);
+                  setSelectedChapter(1);
+                }}
               >
                 {initialBooks.map((b) => (
                   <option key={b} value={b}>
