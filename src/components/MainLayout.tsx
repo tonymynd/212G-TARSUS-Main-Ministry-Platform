@@ -6,6 +6,7 @@ import MarkdownBibleRenderer, { Citation } from './MarkdownBibleRenderer';
 import ThemeToggle from './ThemeToggle';
 import { BibleNavigationProvider, useBibleNavigation } from '@/context/BibleContext';
 import { useWindowSize } from '@/hooks/useWindowSize';
+import { getBookDisplayName, type BibleVersion } from '@/lib/bible-shared';
 
 
 interface PageItem {
@@ -39,7 +40,11 @@ function MainLayoutContent({ initialPages, initialBooks }: MainLayoutProps) {
     setHighlightedVerses,
     markedPageIds,
     toggleMarkPage,
-    clearMarkedPages
+    clearMarkedPages,
+    bibleLanguage,
+    setBibleLanguage,
+    bibleVersion,
+    setBibleVersion
   } = useBibleNavigation();
 
   const [messages, setMessages] = useState<{ role: 'user' | 'bot'; content: string; citations?: Record<string, Citation> }[]>([
@@ -257,7 +262,7 @@ I am Tarsus (The Apostle), grounding my answers strictly in the scripture of tru
   useEffect(() => {
     const loadVerses = async () => {
       try {
-        const res = await fetch(`/api/bible?book=${encodeURIComponent(selectedBook)}&chapter=${selectedChapter}&start=1&end=200`);
+        const res = await fetch(`/api/bible?book=${encodeURIComponent(selectedBook)}&chapter=${selectedChapter}&start=1&end=200&version=${bibleVersion}`);
         if (res.ok) {
           const data = await res.json();
           setVerses(data.verses || []);
@@ -267,7 +272,7 @@ I am Tarsus (The Apostle), grounding my answers strictly in the scripture of tru
       }
     };
     loadVerses();
-  }, [selectedBook, selectedChapter]);
+  }, [selectedBook, selectedChapter, bibleVersion]);
 
   // Fetch available chapters when book changes (mocking a max chapter check, or fetch from api)
   useEffect(() => {
@@ -309,6 +314,22 @@ I am Tarsus (The Apostle), grounding my answers strictly in the scripture of tru
 
     const userMsg = inputVal.trim();
     if (!userMsg) return;
+
+    // Detect language of the user's message to update the default Bible Explorer version
+    const spanishPatterns = /\b(el|la|los|las|un|una|del|con|para|por|como|que|gracia|ley|paz|esta|este|es|si|no|cómo|qué|por qué|quién|dónde|cuándo|cuál|quiénes)\b/i;
+    const englishPatterns = /\b(the|and|of|in|to|for|is|it|that|with|this|what|how|why|who|where|when|which)\b/i;
+    const spanishMatches = (userMsg.match(spanishPatterns) || []).length;
+    const englishMatches = (userMsg.match(englishPatterns) || []).length;
+
+    if (spanishMatches > englishMatches) {
+      if (bibleLanguage !== 'es') {
+        setBibleLanguage('es');
+      }
+    } else if (englishMatches > spanishMatches) {
+      if (bibleLanguage !== 'en') {
+        setBibleLanguage('en');
+      }
+    }
 
     setInputVal('');
     setMessages(prev => [...prev, { role: 'user', content: userMsg }]);
@@ -486,7 +507,35 @@ I am Tarsus (The Apostle), grounding my answers strictly in the scripture of tru
 
         {activeTab === 'bible' && (
           <div className="bible-explorer">
-            <div className="bible-selectors">
+            <div className="bible-selectors" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', marginBottom: '8px' }}>
+              <select
+                className="bible-select"
+                value={bibleLanguage}
+                onChange={(e) => setBibleLanguage(e.target.value as 'en' | 'es')}
+                title="Language"
+              >
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+              </select>
+
+              <select
+                className="bible-select"
+                value={bibleVersion}
+                onChange={(e) => setBibleVersion(e.target.value as BibleVersion)}
+                title="Version"
+              >
+                {bibleLanguage === 'en' ? (
+                  <option value="kjv">AKJV</option>
+                ) : (
+                  <>
+                    <option value="rvg10">RVG-10</option>
+                    <option value="rv1602p">RV1602P</option>
+                  </>
+                )}
+              </select>
+            </div>
+
+            <div className="bible-selectors" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
               <select
                 className="bible-select"
                 value={selectedBook}
@@ -497,7 +546,7 @@ I am Tarsus (The Apostle), grounding my answers strictly in the scripture of tru
               >
                 {initialBooks.map((b) => (
                   <option key={b} value={b}>
-                    {b}
+                    {getBookDisplayName(b, bibleLanguage)}
                   </option>
                 ))}
               </select>
@@ -509,7 +558,7 @@ I am Tarsus (The Apostle), grounding my answers strictly in the scripture of tru
               >
                 {availableChapters.map((ch) => (
                   <option key={ch} value={ch}>
-                    Ch {ch}
+                    {bibleLanguage === 'es' ? `Cap ${ch}` : `Ch ${ch}`}
                   </option>
                 ))}
               </select>

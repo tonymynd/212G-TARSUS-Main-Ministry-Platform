@@ -9,7 +9,8 @@ interface Verse {
   text: string;
 }
 
-export type BibleVersion = 'kjv' | 'rv1602p' | 'rvg10';
+export * from './bible-shared';
+import { type BibleVersion, BIBLE_VERSIONS } from './bible-shared';
 
 const bibleCache: Partial<Record<BibleVersion, Record<string, Verse[]>>> = {};
 
@@ -19,11 +20,6 @@ const BIBLE_FILES: Record<BibleVersion, string> = {
   rvg10: 'bible-rvg10.json',
 };
 
-export const BIBLE_VERSIONS: Record<BibleVersion, { label: string; language: string }> = {
-  kjv: { label: 'King James Version', language: 'en' },
-  rv1602p: { label: 'Reina-Valera 1602 Purificada', language: 'es' },
-  rvg10: { label: 'Reina Valera Gómez 2010', language: 'es' },
-};
 
 function loadBible(version: BibleVersion = 'kjv') {
   if (!bibleCache[version]) {
@@ -55,7 +51,7 @@ const abbrevMap: Record<string, string> = {
   '2th': '2 Thessalonians', '2the': '2 Thessalonians', '2thess': '2 Thessalonians', '2tesalonicenses': '2 Thessalonians', '2ts': '2 Thessalonians', '1ti': '1 Timothy', '1tim': '1 Timothy', '1timoteo': '1 Timothy', '2ti': '2 Timothy', '2tim': '2 Timothy', '2timoteo': '2 Timothy',
   'tit': 'Titus', 'ti': 'Titus', 'tito': 'Titus', 'phm': 'Philemon', 'phile': 'Philemon', 'filemn': 'Philemon', 'flm': 'Philemon', 'heb': 'Hebrews', 'he': 'Hebrews', 'hebreos': 'Hebrews', 'jam': 'James', 'jas': 'James', 'santiago': 'James', 'stg': 'James',
   '1pe': '1 Peter', '1pet': '1 Peter', '1pedro': '1 Peter', '2pe': '2 Peter', '2pet': '2 Peter', '2pedro': '2 Peter', '1jo': '1 John', '1jon': '1 John', '1jn': '1 John', '1juan': '1 John',
-  '2jo': '2 John', '2jon': '2 John', '2jn': '2 John', '2juan': '2 John', '3jo': '3 John', '3jon': '3 John', '3jn': '3 John', '3juan': '3 John', 'jde': 'Jude', 'judas': 'Jude', 'jud': 'Jude',
+  '2jo': '2 John', '2jon': '2 John', '2jn': '2 John', '2juan': '2 John', '3jo': '3 John', '3jon': '3 John', '3jn': '3 John', '3juan': '3 John', 'jde': 'Jude', 'judas': 'Jude',
   'rev': 'Revelation', 're': 'Revelation', 'apocalipsis': 'Revelation', 'ap': 'Revelation',
   // Starman's Two-Letter Abbreviations
   'am': 'Amos', 'cl': 'Colossians', 'da': 'Daniel', 'dt': 'Deuteronomy', 'ec': 'Ecclesiastes', 'er': 'Ezra', 'es': 'Esther', 'ez': 'Ezekiel', 

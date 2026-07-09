@@ -7,6 +7,7 @@ import ThemeToggle from './ThemeToggle';
 import { BibleNavigationProvider, useBibleNavigation } from '@/context/BibleContext';
 import { useWindowSize } from '@/hooks/useWindowSize';
 import { useRef } from 'react';
+import { getBookDisplayName, type BibleVersion } from '@/lib/bible-shared';
 
 
 interface PageItem {
@@ -60,7 +61,11 @@ function MainLayoutPageContent({
     highlightedVerses,
     setHighlightedVerses,
     markedPageIds,
-    toggleMarkPage
+    toggleMarkPage,
+    bibleLanguage,
+    setBibleLanguage,
+    bibleVersion,
+    setBibleVersion
   } = useBibleNavigation();
 
   const [availableChapters, setAvailableChapters] = useState<number[]>([1]);
@@ -120,7 +125,7 @@ function MainLayoutPageContent({
   useEffect(() => {
     const loadVerses = async () => {
       try {
-        const res = await fetch(`/api/bible?book=${encodeURIComponent(selectedBook)}&chapter=${selectedChapter}&start=1&end=200`);
+        const res = await fetch(`/api/bible?book=${encodeURIComponent(selectedBook)}&chapter=${selectedChapter}&start=1&end=200&version=${bibleVersion}`);
         if (res.ok) {
           const data = await res.json();
           setVerses(data.verses || []);
@@ -130,7 +135,7 @@ function MainLayoutPageContent({
       }
     };
     loadVerses();
-  }, [selectedBook, selectedChapter]);
+  }, [selectedBook, selectedChapter, bibleVersion]);
 
   // Fetch available chapters when book changes
   useEffect(() => {
@@ -283,7 +288,35 @@ function MainLayoutPageContent({
 
         {activeTab === 'bible' && (
           <div className="bible-explorer">
-            <div className="bible-selectors">
+            <div className="bible-selectors" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', marginBottom: '8px' }}>
+              <select
+                className="bible-select"
+                value={bibleLanguage}
+                onChange={(e) => setBibleLanguage(e.target.value as 'en' | 'es')}
+                title="Language"
+              >
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+              </select>
+
+              <select
+                className="bible-select"
+                value={bibleVersion}
+                onChange={(e) => setBibleVersion(e.target.value as BibleVersion)}
+                title="Version"
+              >
+                {bibleLanguage === 'en' ? (
+                  <option value="kjv">AKJV</option>
+                ) : (
+                  <>
+                    <option value="rvg10">RVG-10</option>
+                    <option value="rv1602p">RV1602P</option>
+                  </>
+                )}
+              </select>
+            </div>
+
+            <div className="bible-selectors" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
               <select
                 className="bible-select"
                 value={selectedBook}
@@ -294,7 +327,7 @@ function MainLayoutPageContent({
               >
                 {initialBooks.map((b) => (
                   <option key={b} value={b}>
-                    {b}
+                    {getBookDisplayName(b, bibleLanguage)}
                   </option>
                 ))}
               </select>
@@ -306,7 +339,7 @@ function MainLayoutPageContent({
               >
                 {availableChapters.map((ch) => (
                   <option key={ch} value={ch}>
-                    Ch {ch}
+                    {bibleLanguage === 'es' ? `Cap ${ch}` : `Ch ${ch}`}
                   </option>
                 ))}
               </select>

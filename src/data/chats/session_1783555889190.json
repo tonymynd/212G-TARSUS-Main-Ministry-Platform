@@ -1,0 +1,26 @@
+{
+  "id": "session_1783555889190",
+  "title": "Cambio de nombre Saulo Pablo",
+  "messages": [
+    {
+      "role": "bot",
+      "content": "**Three best wishes unto YOU all: Grace, mercy, and peace, from God our Father and Jesus Christ our Lord.**\n\nI am Tarsus (The Apostle), grounding my answers strictly in the scripture of truth and the curated teachings of Daniel Miles. How can I assist you in dividing the word of truth today?\n\n**The grace of our Lord Jesus Christ [be] with you all. Amen.**"
+    },
+    {
+      "role": "user",
+      "content": "Hola Tarsus, porque el cambio de nombre de Saul a Pual, quien se lo cambio y porque y en que momento sucede esto."
+    },
+    {
+      "role": "bot",
+      "content": "> **Thinking Process:**\n> \n> The user, Antonio, asks about the name change from Saul to Paul: who changed it, why, and when. This is a classic point of confusion in Acts. I must ground this strictly in the AKJV text and the provided documents. The bible.json documents show Acts 13:9 as the pivotal verse: \"Then Saul, (who also is called Paul,) filled with the Holy Ghost, set his eyes on him.\" This is the first occurrence of \"Paul\" in Acts. The text does not say God changed his name like with Abram/Abraham or Jacob/Israel. Instead, it presents a dual identity. The user's profile mentions progression from law to grace, which is key. Saul (the Hebrew name, associated with the cOLD king of Israel) represents his Jewish, law-bound identity. Paul (the Roman/Greek name) represents his new identity as the apostle to the Gentiles (the nations), which is a grace ministry. The \"why\" is not a divine renaming but a shift in focus and calling. The \"who\" is not God directly, but the text simply states \"who also is called Paul,\" implying it was his other name, perhaps adopted or given by the Spirit for his new work. The \"when\" is Acts 13:9, at the beginning of his first missionary journey, right after the confrontation with Elymas the sorcerer. I will use the bible.json documents for the verse and the 1_samuel document to contrast the cOLD king Saul with the apostle. I will avoid any \"under\" language and focus on the progression from the cOLD covenant (Saul) to the new creation in Christ (Paul). I will use footnotes for the key verse and the contrast with the OT Saul.\n\n**Tres mejores deseos para TODOS vosotros: Gracia, misericordia y paz, de Dios nuestro Padre y de Jesucristo nuestro Señor.**\n\nAntonio, tu pregunta toca un punto de inflexión crucial en la dispensación de la gracia. El cambio de \"Saulo\" a \"Pablo\" no es un simple cambio de nombre como el de Abram a Abraham (Gn 17:5), donde Dios mismo impone un nuevo nombre para sellar un pacto. Mmmm... Parece que en Hechos 13:9, el texto dice: \"Entonces Saulo, que también es Pablo, lleno del Espíritu Santo, fijando en él los ojos...\" [^1]. Nota la construcción: \"que también es Pablo\". No dice \"y Dios lo llamó Pablo\", ni \"su nombre fue cambiado a Pablo\". Es una declaración de identidad dual. Saulo es su nombre hebreo, el nombre del primer rey de Israel, un rey de la carne, de la ley, que perseguía a David (tipo de Cristo). Pablo es su nombre romano o griego, que significa \"pequeño\" o \"poco\". Este es el nombre que usa para su ministerio a los gentiles, porque la gracia no se impone por la fuerza de la ley, sino que se recibe en humildad.\n\n¿Por qué ocurre en ese momento preciso? Porque es el punto de inflexión donde el evangelio comienza a girar hacia los gentiles de manera oficial. Inmediatamente antes, en Hechos 13:6-8, se enfrenta a Elimas, el hechicero, un judío falso profeta que resistía la fe. Al vencer esa resistencia, Saulo, el perseguidor, se convierte en Pablo, el apóstol de los gentiles. Es un cambio de comisión, no de esencia. La cOLD identidad de Saulo (perseguidor, fariseo, celoso de la ley) queda sepultada en el bautismo del Espíritu, y surge Pablo, el embajador de la gracia. Es la misma persona, pero con una nueva función: \"apartado para el evangelio de Dios\" (Ro 1:1). No está \"bajo\" una nueva ley, sino que está \"con\" una nueva comisión.\n\nY... esto es profundo: el nombre \"Saulo\" está ligado al rey Saúl, un hombre que comenzó bien pero terminó en desobediencia y muerte, persiguiendo a David. El apóstol Pablo, al usar su nombre gentil, está declarando que la vieja creación (el judaísmo de la ley) ha pasado, y he aquí, todas las cosas son hechas nuevas (2 Co 5:17). No es que Dios le cambiara el nombre como una imposición externa, sino que el Espíritu Santo, al llenarlo, activó la identidad que siempre estuvo allí para la obra a la que fue llamado: predicar a Cristo entre los gentiles (Gá 2:7-8). Es un movimiento de la cOLD letra que mata hacia el Espíritu que da vida.\n\nLearn More:\n- [Hechos 13:9 - La Biblia](/pages/bible.json)\n\n**La gracia de nuestro Señor Jesucristo [sea] con todos vosotros. Amén.**",
+      "citations": {
+        "1": {
+          "title": "Hechos 13:9",
+          "link": "/pages/bible.json",
+          "snippet": "Entonces Saulo, que también es Pablo, lleno del Espíritu Santo, fijando en él los ojos, dijo: Oh, lleno de todo engaño y de toda maldad, hijo del diablo, enemigo de toda justicia, ¿no cesarás de trastornar los caminos rectos del Señor?"
+        }
+      }
+    }
+  ],
+  "updatedAt": "2026-07-09T00:17:55.429Z"
+}

@@ -64,6 +64,12 @@ export async function POST(req: Request) {
       console.error("MemPalace search failed, falling back to local BM25 corpus search:", err);
       searchResults = searchCorpus(userQuery, 10);
     }
+
+    // Filter searchResults to exclude JSON database files from context and references
+    searchResults = searchResults.filter(res => 
+      !res.path.toLowerCase().endsWith('.json') && 
+      !res.title.toLowerCase().endsWith('.json')
+    );
     
     // Load explicitly marked documents
     let markedContextStr = '';

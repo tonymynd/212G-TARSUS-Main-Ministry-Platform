@@ -28,7 +28,7 @@ const abbrevMap: Record<string, string> = {
   '2th': '2 Thessalonians', '2the': '2 Thessalonians', '2thess': '2 Thessalonians', '2tesalonicenses': '2 Thessalonians', '2ts': '2 Thessalonians', '1ti': '1 Timothy', '1tim': '1 Timothy', '1timoteo': '1 Timothy', '2ti': '2 Timothy', '2tim': '2 Timothy', '2timoteo': '2 Timothy',
   'tit': 'Titus', 'ti': 'Titus', 'tito': 'Titus', 'phm': 'Philemon', 'phile': 'Philemon', 'filemn': 'Philemon', 'flm': 'Philemon', 'heb': 'Hebrews', 'he': 'Hebrews', 'hebreos': 'Hebrews', 'jam': 'James', 'jas': 'James', 'santiago': 'James', 'stg': 'James',
   '1pe': '1 Peter', '1pet': '1 Peter', '1pedro': '1 Peter', '2pe': '2 Peter', '2pet': '2 Peter', '2pedro': '2 Peter', '1jo': '1 John', '1jon': '1 John', '1jn': '1 John', '1juan': '1 John',
-  '2jo': '2 John', '2jon': '2 John', '2jn': '2 John', '2juan': '2 John', '3jo': '3 John', '3jon': '3 John', '3jn': '3 John', '3juan': '3 John', 'jde': 'Jude', 'judas': 'Jude', 'jud': 'Jude',
+  '2jo': '2 John', '2jon': '2 John', '2jn': '2 John', '2juan': '2 John', '3jo': '3 John', '3jon': '3 John', '3jn': '3 John', '3juan': '3 John', 'jde': 'Jude', 'judas': 'Jude',
   'rev': 'Revelation', 're': 'Revelation', 'apocalipsis': 'Revelation', 'ap': 'Revelation',
   // Starman's Two-Letter Abbreviations
   'am': 'Amos', 'cl': 'Colossians', 'da': 'Daniel', 'dt': 'Deuteronomy', 'ec': 'Ecclesiastes', 'er': 'Ezra', 'es': 'Esther', 'ez': 'Ezekiel', 
@@ -43,7 +43,13 @@ export default function BiblePopoverLink({ refText, book, chapter, startVerse, e
   const [verses, setVerses] = useState<any[]>([]);
   const [popoverPos, setPopoverPos] = useState({ top: 0, left: 0 });
   const triggerRef = useRef<HTMLSpanElement>(null);
-  const { navigateToBible } = useBibleNavigation();
+  const { navigateToBible, bibleVersion } = useBibleNavigation();
+
+  const versionLabels: Record<string, string> = {
+    kjv: 'AKJV',
+    rv1602p: 'RV1602P',
+    rvg10: 'RVG-10',
+  };
 
   const handleMouseEnter = async (e: React.MouseEvent) => {
     setIsOpen(true);
@@ -61,7 +67,7 @@ export default function BiblePopoverLink({ refText, book, chapter, startVerse, e
     }
 
     try {
-      const res = await fetch(`/api/bible?book=${encodeURIComponent(book)}&chapter=${chapter}${startVerse ? `&start=${startVerse}` : ''}${endVerse ? `&end=${endVerse}` : ''}`);
+      const res = await fetch(`/api/bible?book=${encodeURIComponent(book)}&chapter=${chapter}${startVerse ? `&start=${startVerse}` : ''}${endVerse ? `&end=${endVerse}` : ''}&version=${bibleVersion}`);
       if (res.ok) {
         const data = await res.json();
         setVerses(data.verses || []);
@@ -105,7 +111,7 @@ export default function BiblePopoverLink({ refText, book, chapter, startVerse, e
           onMouseLeave={handleMouseLeave}
         >
           <div className="verse-popover-header">
-            <span>{refText} (KJV)</span>
+            <span>{refText} ({versionLabels[bibleVersion] || 'AKJV'})</span>
           </div>
           <div className="verse-popover-text">
             {verses.length > 0 ? (

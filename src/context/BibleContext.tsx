@@ -1,6 +1,7 @@
 'use client';
 
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
+import { type BibleVersion } from '@/lib/bible-shared';
 
 type TabType = 'pages' | 'bible' | 'graph';
 
@@ -17,6 +18,10 @@ interface BibleContextType {
   markedPageIds: string[];
   toggleMarkPage: (id: string) => void;
   clearMarkedPages: () => void;
+  bibleLanguage: 'en' | 'es';
+  setBibleLanguage: (lang: 'en' | 'es') => void;
+  bibleVersion: BibleVersion;
+  setBibleVersion: (version: BibleVersion) => void;
 }
 
 const BibleContext = createContext<BibleContextType | undefined>(undefined);
@@ -33,6 +38,35 @@ export function BibleNavigationProvider({
   const [selectedChapter, setSelectedChapter] = useState<number>(1);
   const [highlightedVerses, setHighlightedVerses] = useState<{ start: number; end?: number } | null>(null);
   const [markedPageIds, setMarkedPageIds] = useState<string[]>([]);
+  const [bibleLanguage, setBibleLanguageState] = useState<'en' | 'es'>('en');
+  const [bibleVersion, setBibleVersionState] = useState<BibleVersion>('kjv');
+
+  useEffect(() => {
+    const savedLang = localStorage.getItem('tarsus-bible-language') as 'en' | 'es';
+    const savedVer = localStorage.getItem('tarsus-bible-version') as BibleVersion;
+    if (savedLang === 'en' || savedLang === 'es') {
+      setBibleLanguageState(savedLang);
+    }
+    if (savedVer === 'kjv' || savedVer === 'rv1602p' || savedVer === 'rvg10') {
+      setBibleVersionState(savedVer);
+    }
+  }, []);
+
+  const setBibleLanguage = (lang: 'en' | 'es') => {
+    setBibleLanguageState(lang);
+    localStorage.setItem('tarsus-bible-language', lang);
+    const defaultVer = lang === 'en' ? 'kjv' : 'rvg10';
+    setBibleVersionState(defaultVer);
+    localStorage.setItem('tarsus-bible-version', defaultVer);
+  };
+
+  const setBibleVersion = (version: BibleVersion) => {
+    setBibleVersionState(version);
+    localStorage.setItem('tarsus-bible-version', version);
+    const lang = version === 'kjv' ? 'en' : 'es';
+    setBibleLanguageState(lang);
+    localStorage.setItem('tarsus-bible-language', lang);
+  };
 
   const navigateToBible = (book: string, chapter: number, startVerse?: number, endVerse?: number) => {
     setSelectedBook(book);
@@ -69,7 +103,11 @@ export function BibleNavigationProvider({
         navigateToBible,
         markedPageIds,
         toggleMarkPage,
-        clearMarkedPages
+        clearMarkedPages,
+        bibleLanguage,
+        setBibleLanguage,
+        bibleVersion,
+        setBibleVersion
       }}
     >
       {children}
@@ -77,10 +115,10 @@ export function BibleNavigationProvider({
   );
 }
 
+
 export function useBibleNavigation() {
   const context = useContext(BibleContext);
   if (!context) {
-    // Return a dummy context so it doesn't crash if rendered outside the provider (e.g. in some isolated view)
     return {
       activeTab: 'pages' as TabType,
       setActiveTab: () => {},
@@ -93,7 +131,11 @@ export function useBibleNavigation() {
       navigateToBible: () => {},
       markedPageIds: [] as string[],
       toggleMarkPage: () => {},
-      clearMarkedPages: () => {}
+      clearMarkedPages: () => {},
+      bibleLanguage: 'en' as const,
+      setBibleLanguage: () => {},
+      bibleVersion: 'kjv' as const,
+      setBibleVersion: () => {}
     };
   }
   return context;
