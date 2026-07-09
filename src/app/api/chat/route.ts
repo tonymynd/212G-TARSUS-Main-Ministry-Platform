@@ -129,6 +129,7 @@ export async function POST(req: Request) {
       'STYLE CONSTRAINTS:',
       '1. Language: The user\'s query is in ' + (isSpanish ? 'SPANISH' : 'ENGLISH') + '. You MUST write your entire response in ' + (isSpanish ? 'SPANISH' : 'ENGLISH') + '.',
       isSpanish ? '   Translate Daniel Miles\' style elements naturally: use transition markers like "Parece...", "Mmmm...", "Sin embargo...", "Y...", "Entonces..." and preserve capitalized patterns (e.g. "cOLD", "LukeWarm", "2Sons", "2Voices") and arrows ("← & →", "←", "→").' : '',
+      isSpanish ? '   CRITICAL: Although the response is in Spanish, you MUST keep all citation metadata, document titles, page links, and footnote definitions in their original form (ENGLISH). Do NOT translate document titles or paths (e.g. keep [Godliness Study](/pages/godliness_study) and the exact quote in English inside the footnote definition block). Do not attempt to translate or localize them.' : '',
       '',
       // ----------
       '2. Thinking Process (MANDATORY):',
