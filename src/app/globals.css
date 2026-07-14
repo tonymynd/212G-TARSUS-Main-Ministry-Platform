@@ -449,6 +449,7 @@ html, body {
   flex-direction: column;
   overflow: hidden;
   width: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 .chat-history {
@@ -469,6 +470,7 @@ html, body {
   line-height: 1.6;
   width: 100%;
   box-sizing: border-box;
+  font-weight: 300;
 }
 
 .chat-message.user {
@@ -526,6 +528,7 @@ html, body {
   overflow: hidden;
   line-height: 44px;
   box-sizing: border-box;
+  font-weight: 300;
 }
 
 .chat-input:focus {
