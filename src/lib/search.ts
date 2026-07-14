@@ -91,6 +91,16 @@ export function searchCorpus(query: string, limit = 5) {
       }
     }
 
+    // Boost filename match using whole-word matches and ignoring stopwords
+    const filename = path.basename(doc.path).toLowerCase();
+    const filenameWords = filename.split(/[^a-z0-9]/).filter(Boolean);
+    for (const token of finalTokens) {
+      if (STOPWORDS.has(token)) continue;
+      if (filenameWords.includes(token)) {
+        score += 8.0; // Significant boost for filename matches
+      }
+    }
+
     if (score > 0) {
       scores.push({ doc, score });
     }

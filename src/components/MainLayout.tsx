@@ -71,7 +71,7 @@ I am Tarsus (The Apostle), grounding my answers strictly in the scripture of tru
   const filteredPages = useMemo(() => {
     if (!pageSearchQuery) return initialPages;
     const q = pageSearchQuery.toLowerCase();
-    return initialPages.filter(p => p.title.toLowerCase().includes(q));
+    return initialPages.filter(p => p.title.toLowerCase().includes(q) || p.id.toLowerCase().includes(q));
   }, [initialPages, pageSearchQuery]);
 
   // Chat History persistence state
