@@ -335,8 +335,57 @@ I am Tarsus (The Apostle), grounding my answers strictly in the scripture of tru
       });
 
       if (res.ok) {
-        const data = await res.json();
-        setMessages(prev => [...prev, { role: 'bot', content: data.text, citations: data.citations || {} }]);
+        // Initialize empty bot response message
+        setMessages(prev => [...prev, { role: 'bot', content: '', citations: {} }]);
+
+        const reader = res.body!.getReader();
+        const decoder = new TextDecoder();
+        let rawText = '';
+
+        while (true) {
+          const { value, done } = await reader.read();
+          if (done) break;
+
+          const chunk = decoder.decode(value, { stream: true });
+          rawText += chunk;
+
+          // Update message text as it streams
+          setMessages(prev => {
+            const updated = [...prev];
+            const last = updated[updated.length - 1];
+            if (last && last.role === 'bot') {
+              last.content = rawText;
+            }
+            return updated;
+          });
+        }
+
+        // Once stream is done, extract citation footnote definitions and cleanup text
+        const citations: Record<string, { title: string; link: string; snippet: string }> = {};
+        const citationRegex = /^\[\^(\d+)\]:\s*\[([^\]]+)\]\(([^)]+)\)\s*"([^"]*)"/gm;
+        let citationMatch;
+        citationRegex.lastIndex = 0;
+        while ((citationMatch = citationRegex.exec(rawText)) !== null) {
+          citations[citationMatch[1]] = {
+            title: citationMatch[2],
+            link: citationMatch[3],
+            snippet: citationMatch[4],
+          };
+        }
+
+        const cleanedBody = rawText.replace(/^\[\^\d+\]:.*$/gm, '').replace(/\n{3,}/g, '\n\n').trim();
+
+        // Save cleaned content and final parsed citations
+        setMessages(prev => {
+          const updated = [...prev];
+          const last = updated[updated.length - 1];
+          if (last && last.role === 'bot') {
+            last.content = cleanedBody;
+            last.citations = citations;
+          }
+          return updated;
+        });
+
       } else {
         setMessages(prev => [...prev, { role: 'bot', content: "Three best wishes unto YOU all: Grace, mercy, and peace, from God our Father and Jesus Christ our Lord.\n\nSeems there was a temporary error in our connection. Hmmm...\n\n**The grace of our Lord Jesus Christ [be] with you all. Amen.**" }]);
       }

@@ -318,220 +318,220 @@ export async function POST(req: Request) {
 
     // Check for mock mode first
     if (!DEEPSEEK_API_KEY && !GEMINI_API_KEY) {
-      const text = isSpanish 
+      const mockText = isSpanish 
         ? expectedSalutation + '\n\nParece que al mirar tu pregunta, debemos dividir la cOLD Ley del Antiguo Testamento de la Gracia del Nuevo Testamento. Jesucristo vino no para mantenernos bajo la ley, sino para traernos gracia y verdad. ¿Por qué? Porque la ley por medio de Moisés fue dada, pero la gracia y la verdad vinieron por medio de Jesucristo. Mmmm...\n\nSe requiere dejar el modo cOLD de Mt y Mk para entrar en el modo LukeWarm de Lk, Jn y Hechos, donde la Voz del NT dice: "vive" ← & → la Voz del OT que dice: "juicio también". Escuchemos todos y tengamos una sola voz: "vive".\n\nLearn More:\n' + references.map(r => '- [' + r.title + '](' + r.link + ')').join('\n') + '\n\n' + expectedBenediction
         : expectedSalutation + '\n\nSeems when looking at your question, we must divide cOLD OT Law from NT Grace. JC came not to keep us under the law, but to bring us into grace and truth. Why? Because the law was given by Moses, but grace and truth came by Jesus Christ. Hmmm...\n\nIt takes leaving the cOLD mode of Mt and Mk to enter into the LukeWarm mode of Lk, Jn, and Acts, where the NT Voice says: "live" ← & → OT Voice which says: "judgment also". Let\'s all hear and have only one voice: "live".\n\nLearn More:\n' + references.map(r => '- [' + r.title + '](' + r.link + ')').join('\n') + '\n\n' + expectedBenediction;
       
-      return NextResponse.json({ text });
+      const encoder = new TextEncoder();
+      const customStream = new ReadableStream({
+        async start(controller) {
+          const words = mockText.split(' ');
+          for (const word of words) {
+            controller.enqueue(encoder.encode(word + ' '));
+            await new Promise(resolve => setTimeout(resolve, 50));
+          }
+          controller.close();
+        }
+      });
+      return new Response(customStream, {
+        headers: { 'Content-Type': 'text/plain; charset=utf-8' }
+      });
     }
 
-    async function executeModelCall(customSystemPrompt: string, customHistoryDeepSeek: any[], customHistoryGemini: any[]): Promise<string> {
-      if (DEEPSEEK_API_KEY) {
-        let attempts = 0;
-        let response;
-        while (attempts < 3) {
-          response = await fetch(
-            'https://api.deepseek.com/v1/chat/completions',
-            {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-                'Authorization': 'Bearer ' + DEEPSEEK_API_KEY
-              },
-              body: JSON.stringify({
-                model: 'deepseek-chat',
-                messages: [
-                  {
-                    role: 'system',
-                    content: customSystemPrompt
-                  },
-                  ...customHistoryDeepSeek
-                ],
-                temperature: 0.2,
-                max_tokens: 8192
-              })
-            }
-          );
-
-          if (response.ok) {
-            break;
-          }
-
-          if (response.status === 429 || response.status === 503 || response.status === 502) {
-            attempts++;
-            console.warn(`[tarsus-api] DeepSeek API returned status ${response.status}. Retrying attempt ${attempts}/3 after delay...`);
-            await new Promise(resolve => setTimeout(resolve, attempts * 2000));
-          } else {
-            break;
-          }
+    // Helper to parse Gemini's chunked stream array JSON structure
+    function parseGeminiChunks(buffer: string): { objects: any[], remaining: string } {
+      const objects: any[] = [];
+      let startIdx = 0;
+      
+      while (true) {
+        const openBrace = buffer.indexOf('{', startIdx);
+        if (openBrace === -1) {
+          break;
         }
-
-        if (!response || !response.ok) {
-          const errData = await response?.json().catch(() => ({})) || {};
-          throw new Error('DeepSeek API error: ' + (response?.status || 'unknown') + ' - ' + JSON.stringify(errData));
-        }
-
-        const data = await response.json();
-        return data.choices?.[0]?.message?.content || '';
-      } else {
-        const response = await fetch(
-          'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=' + GEMINI_API_KEY,
-          {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              systemInstruction: {
-                parts: [{ text: customSystemPrompt }]
-              },
-              contents: customHistoryGemini,
-              generationConfig: {
-                temperature: 0.2,
-                maxOutputTokens: 12288,
-              },
-            }),
-          }
-        );
-
-        if (!response.ok) {
-          const errData = await response.json().catch(() => ({}));
-          throw new Error('Gemini API error: ' + response.status + ' - ' + JSON.stringify(errData));
-        }
-
-        const data = await response.json();
-        return data.candidates?.[0]?.content?.parts?.[0]?.text || '';
-      }
-    }
-
-    function sanitize(rawText: string): string {
-      let t = rawText.trim();
-
-      // Extract thinking process block if present (preserve it)
-      let thinkingBlock = '';
-      const thinkingMatch = t.match(/^((?:>.*\n?)+)/m);
-      if (thinkingMatch && thinkingMatch.index !== undefined) {
-        const blockEnd = thinkingMatch.index + thinkingMatch[0].length;
-        const afterBlock = t.substring(blockEnd).trim();
-        // Only treat as thinking if it appears before the salutation
-        if (afterBlock.includes(expectedSalutation.replace(/\*\*/g, '')) || afterBlock.includes(expectedSalutation)) {
-          thinkingBlock = thinkingMatch[0].trim();
-          t = afterBlock;
-        }
-      }
-
-      // Ensure it starts with the salutation
-      if (!t.startsWith(expectedSalutation)) {
-        const rawSalutation = expectedSalutation.replace(/\*\*/g, '');
-        const indexBold = t.indexOf(expectedSalutation);
-        const indexRaw = t.indexOf(rawSalutation);
         
-        if (indexBold !== -1) {
-          t = t.substring(indexBold);
-        } else if (indexRaw !== -1) {
-          t = expectedSalutation + "\n\n" + t.substring(indexRaw + rawSalutation.length).trim();
-        } else {
-          t = expectedSalutation + "\n\n" + t;
+        let braceCount = 0;
+        let endBrace = -1;
+        let inString = false;
+        let escape = false;
+        
+        for (let i = openBrace; i < buffer.length; i++) {
+          const char = buffer[i];
+          if (escape) {
+            escape = false;
+            continue;
+          }
+          if (char === '\\') {
+            escape = true;
+            continue;
+          }
+          if (char === '"') {
+            inString = !inString;
+            continue;
+          }
+          if (!inString) {
+            if (char === '{') braceCount++;
+            else if (char === '}') {
+              braceCount--;
+              if (braceCount === 0) {
+                endBrace = i;
+                break;
+              }
+            }
+          }
         }
-      }
-
-      // Re-attach thinking block before the salutation
-      if (thinkingBlock) {
-        t = thinkingBlock + '\n\n' + t;
-      }
-
-      // Ensure it ends with the benediction
-      if (!t.endsWith(expectedBenediction)) {
-        const index = t.lastIndexOf(expectedBenediction.replace(/\*\*/g, ''));
-        if (index !== -1) {
-          t = t.substring(0, index) + expectedBenediction;
-        } else {
-          t = t + "\n\n" + expectedBenediction;
+        
+        if (endBrace === -1) {
+          break;
         }
+        
+        const jsonStr = buffer.substring(openBrace, endBrace + 1);
+        try {
+          const parsed = JSON.parse(jsonStr);
+          objects.push(parsed);
+        } catch (e) {
+          // ignore parsing error of incomplete json chunks
+        }
+        startIdx = endBrace + 1;
       }
-
-      // Replace any accidental ascii arrows with unicode arrows
-      t = t.replace(/<--&-->/g, '← & →');
-      t = t.replace(/<--/g, '←');
-      t = t.replace(/-->/g, '→');
-
-      return t;
-    }
-
-    // First model generation call
-    let text = await executeModelCall(systemPrompt, historyDeepSeek, historyGemini);
-    
-    // First sanitization + validation
-    let sanitizedText = sanitize(text);
-    let validation = validateResponse(sanitizedText, isSpanish, references);
-    
-    // Truncation check
-    const hasBenediction = text.includes(expectedBenediction) || text.includes(expectedBenediction.replace(/\*\*/g, ''));
-    if (!hasBenediction) {
-      validation.ok = false;
-      validation.violations.push('Response was truncated (missing benediction)');
-    }
-
-    // One corrective retry loop if validation fails
-    if (!validation.ok) {
-      console.warn('[tarsus-validate] First response failed validation. Initiating corrective retry. Violations:', validation.violations);
       
-      const violationListStr = validation.violations.map(v => `- ${v}`).join('\n');
-      const retryUserMessageContent = `Your previous response violated these mandatory rules:\n${violationListStr}\n\nRegenerate the FULL response, correcting every violation. All other rules still apply.`;
-      
-      const retryHistoryDeepSeek = [
-        ...historyDeepSeek,
-        { role: 'assistant', content: text },
-        { role: 'user', content: retryUserMessageContent }
-      ];
-      
-      const retryHistoryGemini = [
-        ...historyGemini,
-        { role: 'model', parts: [{ text: text }] },
-        { role: 'user', parts: [{ text: retryUserMessageContent }] }
-      ];
-
-      // Second generation attempt
-      text = await executeModelCall(systemPrompt, retryHistoryDeepSeek, retryHistoryGemini);
-      
-      // Post-retry sanitization + validation
-      sanitizedText = sanitize(text);
-      validation = validateResponse(sanitizedText, isSpanish, references);
-      const hasBenedictionSecond = text.includes(expectedBenediction) || text.includes(expectedBenediction.replace(/\*\*/g, ''));
-      if (!hasBenedictionSecond) {
-        validation.violations.push('Response was truncated (missing benediction) on retry');
-      }
-
-      if (!validation.ok) {
-        console.warn('[tarsus-validate] Retry response also failed validation. Violations:', validation.violations);
-      } else {
-        console.log('[tarsus-validate] Retry response passed validation successfully.');
-      }
-    } else {
-      console.log('[tarsus-validate] First response passed validation successfully.');
-    }
-
-    // Trigger background memory extraction
-    updateMemory(userQuery, sanitizedText).catch(console.error);
-
-    // Extract footnote definitions → citations
-    // Format: [^1]: [Title](link) "snippet"
-    const citationRegex = /^\[\^(\d+)\]:\s*\[([^\]]+)\]\(([^)]+)\)\s*"([^"]*)"/gm;
-    const citations: Record<string, { title: string; link: string; snippet: string }> = {};
-    let citationMatch;
-    citationRegex.lastIndex = 0;
-    while ((citationMatch = citationRegex.exec(sanitizedText)) !== null) {
-      citations[citationMatch[1]] = {
-        title: citationMatch[2],
-        link: citationMatch[3],
-        snippet: citationMatch[4],
+      return {
+        objects,
+        remaining: buffer.substring(startIdx)
       };
     }
 
-    // Strip all footnote definition lines from the visible text body
-    const cleanedBody = sanitizedText.replace(/^\[\^\d+\]:.*$/gm, '').replace(/\n{3,}/g, '\n\n').trim();
+    const encoder = new TextEncoder();
+    const customStream = new ReadableStream({
+      async start(controller) {
+        let fullText = '';
+        try {
+          if (DEEPSEEK_API_KEY) {
+            let response = await fetch(
+              'https://api.deepseek.com/v1/chat/completions',
+              {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Authorization': 'Bearer ' + DEEPSEEK_API_KEY
+                },
+                body: JSON.stringify({
+                  model: 'deepseek-chat',
+                  messages: [
+                    {
+                      role: 'system',
+                      content: systemPrompt
+                    },
+                    ...historyDeepSeek
+                  ],
+                  temperature: 0.2,
+                  max_tokens: 8192,
+                  stream: true
+                })
+              }
+            );
 
-    return NextResponse.json({ text: cleanedBody, citations });
+            if (!response.ok) {
+              const errData = await response.json().catch(() => ({}));
+              throw new Error('DeepSeek API error: ' + response.status + ' - ' + JSON.stringify(errData));
+            }
+
+            const reader = response.body!.getReader();
+            const decoder = new TextDecoder();
+            let buffer = '';
+
+            while (true) {
+              const { done, value } = await reader.read();
+              if (done) break;
+              buffer += decoder.decode(value, { stream: true });
+
+              const lines = buffer.split('\n');
+              buffer = lines.pop() || '';
+
+              for (const line of lines) {
+                const trimmed = line.trim();
+                if (!trimmed) continue;
+                if (trimmed.startsWith('data: ')) {
+                  const dataStr = trimmed.substring(6);
+                  if (dataStr === '[DONE]') continue;
+                  try {
+                    const parsed = JSON.parse(dataStr);
+                    const text = parsed.choices?.[0]?.delta?.content || '';
+                    if (text) {
+                      fullText += text;
+                      controller.enqueue(encoder.encode(text));
+                    }
+                  } catch (e) {
+                    // ignore
+                  }
+                }
+              }
+            }
+          } else {
+            const response = await fetch(
+              'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:streamGenerateContent?key=' + GEMINI_API_KEY,
+              {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                  systemInstruction: {
+                    parts: [{ text: systemPrompt }]
+                  },
+                  contents: historyGemini,
+                  generationConfig: {
+                    temperature: 0.2,
+                    maxOutputTokens: 12288,
+                  },
+                }),
+              }
+            );
+
+            if (!response.ok) {
+              const errData = await response.json().catch(() => ({}));
+              throw new Error('Gemini API error: ' + response.status + ' - ' + JSON.stringify(errData));
+            }
+
+            const reader = response.body!.getReader();
+            const decoder = new TextDecoder();
+            let buffer = '';
+
+            while (true) {
+              const { done, value } = await reader.read();
+              if (done) break;
+              buffer += decoder.decode(value, { stream: true });
+
+              const result = parseGeminiChunks(buffer);
+              buffer = result.remaining;
+
+              for (const obj of result.objects) {
+                const text = obj.candidates?.[0]?.content?.parts?.[0]?.text || '';
+                if (text) {
+                  fullText += text;
+                  controller.enqueue(encoder.encode(text));
+                }
+              }
+            }
+          }
+
+          // Trigger background memory extraction after streaming ends
+          updateMemory(userQuery, fullText).catch(console.error);
+          
+          controller.close();
+        } catch (err: any) {
+          console.error('Error during streaming:', err);
+          controller.error(err);
+        }
+      }
+    });
+
+    return new Response(customStream, {
+      headers: {
+        'Content-Type': 'text/plain; charset=utf-8',
+        'Cache-Control': 'no-cache',
+        'Connection': 'keep-alive',
+      }
+    });
   } catch (error: any) {
     console.error('Error in chat API:', error);
     return NextResponse.json({ error: error.message || 'Internal Server Error' }, { status: 500 });
