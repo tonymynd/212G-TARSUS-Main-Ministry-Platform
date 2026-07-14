@@ -302,7 +302,7 @@ I am Tarsus (The Apostle), grounding my answers strictly in the scripture of tru
       setTimeout(() => {
         const el = document.getElementById(`verse-${highlightedVerses.start}`);
         if (el) {
-          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       }, 300);
     }

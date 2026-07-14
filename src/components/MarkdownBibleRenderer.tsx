@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Link from 'next/link';
 import BibleRefRenderer from './BibleRefRenderer';
 
@@ -18,6 +18,9 @@ interface MarkdownBibleRendererProps {
 // Citation superscript with hover popover
 function CitationBadge({ num, citation }: { num: string; citation: Citation }) {
   const [visible, setVisible] = useState(false);
+  const [popoverPos, setPopoverPos] = useState({ top: 0, left: 0 });
+  const triggerRef = useRef<HTMLSpanElement>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   let linkHref = citation.link;
   let isInternalCitation = false;
@@ -57,13 +60,58 @@ function CitationBadge({ num, citation }: { num: string; citation: Citation }) {
     }
   }
 
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+    setVisible(true);
+    
+    // Position popover
+    if (triggerRef.current) {
+      const rect = triggerRef.current.getBoundingClientRect();
+      const popoverWidth = 280;
+      const estimatedHeight = 160; // estimate citation popover height
+      const viewportHeight = window.innerHeight;
+      const viewportWidth = window.innerWidth;
+      
+      let left = rect.left;
+      let top = rect.bottom + 5; // default position below trigger
+      
+      // If it goes off the bottom of the viewport
+      if (top + estimatedHeight > viewportHeight) {
+        // Place above the trigger
+        top = rect.top - estimatedHeight - 5;
+      }
+      
+      // If it goes off the right side of the screen
+      if (left + popoverWidth > viewportWidth) {
+        left = viewportWidth - popoverWidth - 20;
+      }
+      
+      // Prevent off-screen left
+      if (left < 10) {
+        left = 10;
+      }
+      
+      setPopoverPos({ top, left });
+    }
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setVisible(false);
+    }, 300); // 300ms delay to cross the gap
+  };
+
   return (
     <span 
       style={{ position: 'relative', display: 'inline-block', textIndent: 0 }}
-      onMouseEnter={() => setVisible(true)}
-      onMouseLeave={() => setVisible(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <sup
+        ref={triggerRef}
         onTouchStart={() => setVisible(v => !v)}
         style={{
           display: 'inline-flex',
@@ -91,11 +139,13 @@ function CitationBadge({ num, citation }: { num: string; citation: Citation }) {
       </sup>
       {visible && (
         <span
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
           style={{
-            position: 'absolute',
-            bottom: '100%',
-            left: '-10px',
-            zIndex: 2000,
+            position: 'fixed',
+            top: popoverPos.top,
+            left: popoverPos.left,
+            zIndex: 10000, // On top of panels
             width: '280px',
             background: 'white',
             border: '1px solid var(--border)',

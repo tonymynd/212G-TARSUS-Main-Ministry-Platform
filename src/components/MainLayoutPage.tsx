@@ -162,7 +162,7 @@ function MainLayoutPageContent({
       setTimeout(() => {
         const el = document.getElementById(`verse-${highlightedVerses.start}`);
         if (el) {
-          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       }, 300);
     }

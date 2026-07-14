@@ -1,0 +1,232 @@
+{
+  "header": {
+    "timestamp": "2026-07-14T04:58:51.111Z",
+    "apiKeyConfigured": true,
+    "apiKeySource": "DEEPSEEK_API_KEY",
+    "averageScore": 3.9,
+    "rubricAverages": {
+      "R1": "0.4",
+      "R2": "0.4",
+      "R3": "0.4",
+      "R4": "0.4",
+      "R5": "0.4",
+      "R6": "0.4",
+      "R7": "0.4",
+      "R8": "0.0",
+      "R9": "0.4",
+      "R10": "0.4"
+    }
+  },
+  "results": [
+    {
+      "id": "en-01",
+      "question": "Explain the difference between law and grace.",
+      "lang": "en",
+      "score": 0,
+      "error": "HTTP error! status: 500"
+    },
+    {
+      "id": "en-02",
+      "question": "What is the meaning of the 2Sons allegory?",
+      "lang": "en",
+      "score": 0,
+      "error": "HTTP error! status: 500"
+    },
+    {
+      "id": "en-03",
+      "question": "How do we distinguish between the 2Voices?",
+      "lang": "en",
+      "score": 0,
+      "error": "HTTP error! status: 500"
+    },
+    {
+      "id": "en-04",
+      "question": "What does it mean to be LukeWarm?",
+      "lang": "en",
+      "score": 0,
+      "error": "HTTP error! status: 500"
+    },
+    {
+      "id": "en-05",
+      "question": "What is the relationship between the kingdom of God and the believer?",
+      "lang": "en",
+      "score": 90,
+      "rubric": {
+        "R1": 10,
+        "R2": 10,
+        "R3": 10,
+        "R4": 10,
+        "R5": 10,
+        "R6": 10,
+        "R7": 10,
+        "R8": 0,
+        "R9": 10,
+        "R10": 10
+      },
+      "text": "> **Thinking Process:**\n\n**Three best wishes unto YOU all: Grace, mercy, and peace, from God our Father and Jesus Christ our Lord.**\n\nThe kingdom of God is not a place to enter. It is a Person to be with. The believer is not under the kingdom. The believer is in Christ, and Christ is the kingdom. For the kingdom of God is not meat and drink; but righteousness, and peace, and joy in the Holy Ghost (Rom 14:17). This is not a realm of law. This is the realm of grace.\n\n- kingdom of heaven ← allegory for law (cOLD covenant)  \n- kingdom of God → allegory for grace (new covenant)  \n- The believer is translated from the power of darkness into the kingdom of God's dear Son (Col 1:13).  \n\nThe kingdom of God is \"within you\" (Lk 17:21). This is only innerstood after grace is mentioned in Luke 2:40. Before grace, the kingdom of heaven was preached by John the Baptist (violent law prophet). After John beheaded, JC began preaching the kingdom of God (Mk 1:1-15; Lk 16:16). This is the end of law and prophets mode, the begin of grace and truth mode. [^1]\n\nThe believer does not seek the kingdom of heaven. The believer seeks first the kingdom of God (Mt 6:33). Why? Because the kingdom of heaven is like leaven (Mt 13:33). Leaven is a type of sin and law. The kingdom of God is like a grain of mustard seed (Mt 13:31). Mustard seed is faith. Faith is not of law. Faith is of grace. [^2]\n\nThe believer's relationship to the kingdom of God is not of f-laws. It is of knowing. Knowing is what saves us (Jn 8:32). Not believing. Believing is still a work. Knowing is a gift. The kingdom of God is given to the believer. It is not earned. It is not kept by law. It is kept by grace. [^3]\n\nThe kingdom of God is within you. This means the believer is the temple of the Holy Ghost. The kingdom is not external. It is internal. It is not a future hope. It is a present reality. The believer is already seated in heavenly places in Christ Jesus (Eph 2:6). This is the kingdom of God. [^4]\n\nLukeWarm mode is mixing law and grace. This is the error of the Galatians. They began in the Spirit but ended in the flesh (Gal 3:3). The believer must ear what the Spirit saith unto the churches: law is not of faith (Gal 3:12). The kingdom of God is not of law. It is of grace. [^5]\n\nThe believer is not under the kingdom. The believer is with the kingdom. The kingdom is within. The believer is in Christ. Christ is the head. The believer is the body. The head and body are one. This is the mystery of the kingdom of God. [^6]\n\n**Learn More:**  \n- [The Kingdom of Heaven vs Kingdom of God](https://godshew.org/pages/kingdoms)  \n- [Post 2670: Kingdom Allegories](https://godshew.org/pages/post_2670)  \n- [Post 2603: Kingdom of God Within You](https://godshew.org/pages/post_2603)  \n- [Post 0931: Kingdom Occurrences](https://godshew.org/pages/post_0931)  \n- [Post 1822: Kingdom Difference](https://godshew.org/pages/post_1822)  \n- [Post 1734: Kingdom of God Within](https://godshew.org/pages/post_1734)  \n- [Shewbread 7: Two Worlds](https://godshew.org/pages/shewbread7)  \n\n**The grace of our Lord Jesus Christ [be] with you all. Amen.**",
+      "citations": {
+        "1": {
+          "title": "Post 2670",
+          "link": "https://godshew.org/pages/post_2670",
+          "snippet": "it kinda makes the 9 'Blessed's mentioned in Mt 5 to be law blessed, which can still be both blessed & cursed by law is both good & evil."
+        },
+        "2": {
+          "title": "Post 2603",
+          "link": "https://godshew.org/pages/post_2603",
+          "snippet": "For the kingdom of heaven is like unto leaven: Mt 13:33."
+        },
+        "3": {
+          "title": "Post 0931",
+          "link": "https://godshew.org/pages/post_0931",
+          "snippet": "JC doesn't even BEGIN to preach gospel of the kingdom of God UNTIL John the Baptist beheaded = end of the law & the prophets."
+        },
+        "4": {
+          "title": "Kingdoms Study",
+          "link": "https://godshew.org/pages/kingdoms",
+          "snippet": "The 'kingdom of heaven' only occurs in Matthew, wherein JC Mt 6:33 said: But seek ye first the 'kingdom of God'."
+        },
+        "5": {
+          "title": "Post 1822",
+          "link": "https://godshew.org/pages/post_1822",
+          "snippet": "Seems 'kingdom of heaven' phrase was as allegory for law and 'kingdom of God' is allegory for grace."
+        },
+        "6": {
+          "title": "Post 1734",
+          "link": "https://godshew.org/pages/post_1734",
+          "snippet": "Of twain, only the 'kingdom of God' is said to be 'within you'."
+        },
+        "7": {
+          "title": "Shewbread 7",
+          "link": "https://godshew.org/pages/shewbread7",
+          "snippet": "JC said God said, speaking to Pilate: my 'kingdom' is not of 'this world'."
+        }
+      }
+    },
+    {
+      "id": "en-06",
+      "question": "Explain the resurrection according to Daniel Miles.",
+      "lang": "en",
+      "score": 0,
+      "error": "fetch failed"
+    },
+    {
+      "id": "en-07",
+      "question": "What is true prayer?",
+      "lang": "en",
+      "score": 0,
+      "error": "fetch failed"
+    },
+    {
+      "id": "en-08",
+      "question": "Contrast the old and new covenants.",
+      "lang": "en",
+      "score": 0,
+      "error": "fetch failed"
+    },
+    {
+      "id": "en-09",
+      "question": "How is grace different from unmerited favor?",
+      "lang": "en",
+      "score": 0,
+      "error": "fetch failed"
+    },
+    {
+      "id": "en-10",
+      "question": "Explain the backward CJ ordering in Philippians 4:7.",
+      "lang": "en",
+      "score": 0,
+      "error": "fetch failed"
+    },
+    {
+      "id": "en-11",
+      "question": "Why is law not of faith?",
+      "lang": "en",
+      "score": 0,
+      "error": "fetch failed"
+    },
+    {
+      "id": "en-12",
+      "question": "What are the f-laws of the cOLD covenant?",
+      "lang": "en",
+      "score": 0,
+      "error": "fetch failed"
+    },
+    {
+      "id": "en-13",
+      "question": "Why does the NT voice say live while the OT voice says judgment also?",
+      "lang": "en",
+      "score": 0,
+      "error": "fetch failed"
+    },
+    {
+      "id": "en-14",
+      "question": "What is the difference between believing and knowing?",
+      "lang": "en",
+      "score": 0,
+      "error": "fetch failed"
+    },
+    {
+      "id": "en-15",
+      "question": "How should the Body of Christ cast down law imaginations?",
+      "lang": "en",
+      "score": 0,
+      "error": "fetch failed"
+    },
+    {
+      "id": "es-01",
+      "question": "¿Cuál es la diferencia entre la ley y la gracia?",
+      "lang": "es",
+      "score": 0,
+      "error": "fetch failed"
+    },
+    {
+      "id": "es-02",
+      "question": "¿Qué significa la alegoría de los dos hijos (2Sons)?",
+      "lang": "es",
+      "score": 0,
+      "error": "fetch failed"
+    },
+    {
+      "id": "es-03",
+      "question": "¿Cómo distinguimos entre las dos voces (2Voices)?",
+      "lang": "es",
+      "score": 0,
+      "error": "fetch failed"
+    },
+    {
+      "id": "es-04",
+      "question": "¿Qué significa ser tibio (LukeWarm)?",
+      "lang": "es",
+      "score": 0,
+      "error": "fetch failed"
+    },
+    {
+      "id": "es-05",
+      "question": "¿Cómo se relaciona el reino de Dios con el creyente?",
+      "lang": "es",
+      "score": 0,
+      "error": "fetch failed"
+    },
+    {
+      "id": "es-06",
+      "question": "¿Cuál es el pacto de la gracia frente a la ley cOLD?",
+      "lang": "es",
+      "score": 0,
+      "error": "fetch failed"
+    },
+    {
+      "id": "es-07",
+      "question": "¿Por qué la paz viene antes del entendimiento en Filipenses 4:7?",
+      "lang": "es",
+      "score": 0,
+      "error": "fetch failed"
+    },
+    {
+      "id": "es-08",
+      "question": "¿Cómo es la gracia mucho más que el favor inmerecido?",
+      "lang": "es",
+      "score": 0,
+      "error": "fetch failed"
+    }
+  ]
+}

@@ -41,11 +41,26 @@ def main():
         print(json.dumps({"error": f"Palace path does not exist: {palace_path}"}))
         sys.exit(1)
         
+    # Read project-specific wing name from mempalace.yaml
+    wing_name = None
+    try:
+        import yaml
+        yaml_path = os.path.join(os.getcwd(), 'mempalace.yaml')
+        if os.path.exists(yaml_path):
+            with open(yaml_path, 'r', encoding='utf-8') as f:
+                proj_config = yaml.safe_load(f)
+                if proj_config and 'wing' in proj_config:
+                    wing_name = proj_config['wing']
+    except Exception as e:
+        # Fallback to no wing filtering if parsing fails
+        pass
+
     # Run search
     try:
         res = search_memories(
             query=query,
             palace_path=palace_path,
+            wing=wing_name,
             n_results=n_results
         )
         print(json.dumps(res, indent=2))

@@ -68,7 +68,10 @@ export function getPageData(slug: string): ResolvedPageData | null {
       if (file.endsWith('.md')) {
         const fileBasename = file.replace('.md', '');
         const normalizedFile = fileBasename.toLowerCase().replace(/[^a-z0-9]/g, '');
-        if (normalizedFile === normalizedSlug || normalizedSlug.includes(normalizedFile) || normalizedFile.includes(normalizedSlug)) {
+        if (
+          normalizedFile === normalizedSlug || 
+          (normalizedFile.length >= 5 && (normalizedSlug.includes(normalizedFile) || normalizedFile.includes(normalizedSlug)))
+        ) {
           filePath = pagesDir + '/' + file;
           resolvedSlug = fileBasename;
           found = true;
@@ -90,7 +93,10 @@ export function getPageData(slug: string): ResolvedPageData | null {
               if (titleMatch) {
                 const title = titleMatch[1].trim();
                 const normalizedTitle = title.toLowerCase().replace(/[^a-z0-9]/g, '');
-                if (normalizedTitle.includes(normalizedSlug) || normalizedSlug.includes(normalizedTitle)) {
+                if (
+                  normalizedTitle === normalizedSlug || 
+                  (normalizedTitle.length >= 5 && (normalizedTitle.includes(normalizedSlug) || normalizedSlug.includes(normalizedTitle)))
+                ) {
                   filePath = pagesDir + '/' + file;
                   resolvedSlug = fileBasename;
                   found = true;
