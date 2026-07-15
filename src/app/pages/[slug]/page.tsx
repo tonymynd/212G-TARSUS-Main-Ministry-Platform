@@ -3,6 +3,8 @@ import { listBooks } from '@/lib/bible';
 import MainLayoutPage from '@/components/MainLayoutPage';
 import { getPagesList, getPageData } from '@/lib/pages';
 
+export const dynamic = 'force-dynamic';
+
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
