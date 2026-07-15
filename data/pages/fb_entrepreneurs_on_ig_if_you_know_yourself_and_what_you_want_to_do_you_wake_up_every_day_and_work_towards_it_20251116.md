@@ -3,6 +3,7 @@ title: "If_you_know_yourself_and_what_you_want_to_do_you_wake_up_every_day_and_w
 type: "post"
 original_path: "C:\STORAGE\M\Manifold-Grace\3-RESOURCES(Pantry)\ORG-NOTES\Social-Media-Captures\DSM\FB\FB-Entrepreneurs_On_IG-If_you_know_yourself_and_what_you_want_to_do_you_wake_up_every_day_and_work_towards_it-20251116.md"
 ---
+Related Tarsus page: [[fb_entrepreneurs_on_ig_if_you_know_yourself_and_what_you_want_to_do_you_wake_up_every_day_and_work_towards_it_20251116]]
 [FB-Entrepreneurs_On_IG-If_you_know_yourself_and_what_you_want_to_do_you_wake_up_every_day_and_work_towards_it-20251116.mp4](<file:///F:/O/ORG/Social Media Video Wisdom (ORG)/DSM/FB/FB-Entrepreneurs_On_IG-If_you_know_yourself_and_what_you_want_to_do_you_wake_up_every_day_and_work_towards_it-20251116.mp4>)
 
 ## Description

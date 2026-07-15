@@ -5,6 +5,8 @@ original_path: "C:\STORAGE\M\Manifold-Grace\3-RESOURCES(Pantry)\GMP-NOTES\GodShe
 ---
 
 
+Related Tarsus page: [[1-PROJECTS(Stove)/212G-TARSUS-Main-Ministry-Platform/data/pages/law]]
+
 # The Law: we are delivered from the law [as](Allegory.md) from [Evil](BiblicalDots.md)
 
 [Imperfect](http://pub30.bravenet.com/forum/static/show.php?usernum=2526810710&frmid=179&msgid=318377&cmd=show) Law: Mend it -or- End it? End it! [Christ is the end of the law](RevelatorySermons17.md): Romans 10:4.  

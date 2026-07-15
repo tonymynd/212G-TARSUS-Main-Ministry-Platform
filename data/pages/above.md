@@ -1,7 +1,7 @@
 ---
 title: "above"
 type: "study"
-original_path: '"C:\STORAGE\M\Manifold-Grace\3-RESOURCES(Pantry)\GMP-NOTES\GodShew\above.md"'
+original_path: "C:\STORAGE\M\Manifold-Grace\3-RESOURCES(Pantry)\GMP-NOTES\GodShew\above.md"
 ---
 
 **an high priest became: us, holy, harmless, undefiled, separate from sinners, and made, higher than the heavens**

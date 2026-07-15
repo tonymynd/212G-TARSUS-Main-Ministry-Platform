@@ -9,6 +9,8 @@ original_path: "C:\STORAGE\M\Manifold-Grace\3-RESOURCES(Pantry)\ORG-NOTES\Social
 
 The Easiest Way To Ruin A Connection With Women
 
+Related Tarsus page: [[1-PROJECTS(Stove)/212G-TARSUS-Main-Ministry-Platform/data/pages/fb_elite_dating_advice_competing_with_hypergamy_kills_relationships_20251127]]
+
 ## Transcript
 
 So, what a lot of guys don't

@@ -5,6 +5,8 @@ original_path: "C:\STORAGE\M\Manifold-Grace\3-RESOURCES(Pantry)\GMP-NOTES\GodShe
 ---
     
 
+Related Tarsus page: [[1-PROJECTS(Stove)/212G-TARSUS-Main-Ministry-Platform/data/pages/cj]]
+
 Seems Heb 10:31 allegory describes a ↓fall↓ into plural "hands" of a "living God", who's L/R hands are Fearful←&→Fall. Fall from where? How?
 
 Seems this "living God", mentioned 15 times in NT, is somehow different than the "God of the living" = not God of the dead, mentioned thrice, and as if "ye do err", and ye do greatly err, if think there's a God of the dead... perhaps like the Holy Ghost of Ghost/Spirit. Hence only Spirit of truth will guide you, of ye/you, into all truth = no lie = all grace = no law; And only after Jesus = Go Away: Depart: John 16:7→13. Interesting stuff.

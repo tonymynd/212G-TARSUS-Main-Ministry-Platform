@@ -3,6 +3,7 @@ title: "men_try_to_steel_business_but_women_are_more_loyal"
 type: "post"
 original_path: "C:\STORAGE\M\Manifold-Grace\3-RESOURCES(Pantry)\ORG-NOTES\Social-Media-Captures\DSM\FB\FB-Tycoonclub-men_try_to_steel_business_but_women_are_more_loyal-20251026.md"
 ---
+Related Tarsus page: [[fb_tycoonclub_men_try_to_steel_business_but_women_are_more_loyal_20251026]]
 [FB-Tycoonclub-men_try_to_steel_business_but_women_are_more_loyal-20251026.mp4](<file:///F:/O/ORG/Social Media Video Wisdom (ORG)/DSM/FB/FB-Tycoonclub-men_try_to_steel_business_but_women_are_more_loyal-20251026.mp4>)
 
 ## Transcript

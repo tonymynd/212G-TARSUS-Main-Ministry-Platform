@@ -13,6 +13,8 @@ _Last updated at 2021-06-16T05:26:02-05:00._
 
 ---
 
+Related Tarsus page: [[1-PROJECTS(Stove)/212G-TARSUS-Main-Ministry-Platform/data/pages/biblical_mystery_things_to_notice_ponder_discuss]]
+
 # Biblical MYSTERY things to notice, ponder, discuss
 
 

@@ -5,6 +5,8 @@ original_path: "C:\STORAGE\M\Manifold-Grace\3-RESOURCES(Pantry)\ORG-NOTES\Social
 ---
 [FB-pattyflores463-CURP_Biométrico_-_más_control-20250925.mp4](<file:///F:/O/ORG/Social Media Video Wisdom (ORG)/GMP/FB/FB-pattyflores463-CURP_Biométrico_-_más_control-20250925.mp4>)
 
+Related Tarsus page: [[1-PROJECTS(Stove)/212G-TARSUS-Main-Ministry-Platform/data/pages/fb_pattyflores463_curp_biom_trico_m_s_control_20250925]]
+
 ## Transcript
 
 hace unos momentos la presidenta de México

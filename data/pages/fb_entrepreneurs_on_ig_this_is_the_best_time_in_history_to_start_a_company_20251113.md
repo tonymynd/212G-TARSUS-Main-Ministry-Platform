@@ -3,6 +3,7 @@ title: "This_is_the_best_time_in_history_to_start_a_company"
 type: "post"
 original_path: "C:\STORAGE\M\Manifold-Grace\3-RESOURCES(Pantry)\ORG-NOTES\Social-Media-Captures\DSM\FB\FB-Entrepreneurs_On_IG-This_is_the_best_time_in_history_to_start_a_company-20251113.md"
 ---
+Related Tarsus page: [[fb_entrepreneurs_on_ig_this_is_the_best_time_in_history_to_start_a_company_20251113]]
 [FB-Entrepreneurs_On_IG-This_is_the_best_time_in_history_to_start_a_company-20251113.mp4](<file:///F:/O/ORG/Social Media Video Wisdom (ORG)/DSM/FB/FB-Entrepreneurs_On_IG-This_is_the_best_time_in_history_to_start_a_company-20251113.mp4>)
 
 ## Description

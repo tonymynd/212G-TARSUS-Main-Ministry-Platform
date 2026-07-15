@@ -24,6 +24,7 @@ Siblings:
 Created: Saturday 28th December 2024 12:34:18
 ---
 
+Related Tarsus page: [[knowledge_publishing]]
 
 # KNOWLEDGE (part1)
 To All: Grace, Mercy and Peace, from God our Father and Jesus Christ our Lord.

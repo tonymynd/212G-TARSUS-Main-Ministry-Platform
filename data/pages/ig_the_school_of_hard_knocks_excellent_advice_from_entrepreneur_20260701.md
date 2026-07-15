@@ -3,6 +3,8 @@ title: "excellent advice from entrepreneur"
 type: "post"
 original_path: "C:\STORAGE\M\Manifold-Grace\3-RESOURCES(Pantry)\ORG-NOTES\Social-Media-Captures\DSM\IG\IG-The_School_Of_Hard_Knocks-excellent_advice_from_entrepreneur-20260701.md"
 ---
+Related Tarsus page: [[ig_the_school_of_hard_knocks_excellent_advice_from_entrepreneur_20260701]]
+
 [IG-The_School_Of_Hard_Knocks-excellent_advice_from_entrepreneur-20260701.mp4](<file:///F:/O/ORG/Social Media Video Wisdom (ORG)/DSM/IG/IG-The_School_Of_Hard_Knocks-excellent_advice_from_entrepreneur-20260701.mp4>)
 
 ## Transcript

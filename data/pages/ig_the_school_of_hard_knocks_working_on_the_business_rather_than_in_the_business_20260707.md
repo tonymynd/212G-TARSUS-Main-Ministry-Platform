@@ -1,0 +1,15 @@
+---
+title: "working on the business rather than in the business"
+type: "post"
+original_path: "C:\STORAGE\M\Manifold-Grace\3-RESOURCES(Pantry)\ORG-NOTES\Social-Media-Captures\DSM\IG\IG-The_School_Of_Hard_Knocks-working_on_the_business_rather_than_in_the_business-20260707.md"
+---
+[IG-The_School_Of_Hard_Knocks-working_on_the_business_rather_than_in_the_business-20260707.mp4](<file:///F:/O/ORG/Social Media Video Wisdom (ORG)/DSM/IG/IG-The_School_Of_Hard_Knocks-working_on_the_business_rather_than_in_the_business-20260707.mp4>)
+
+## Transcript
+Excuse me sir, I wouldn't question for you. How old were you when you became a millionaire? How do you know I'm a millionaire? You look like money man. I had a few billionaires all up at the world. How old were you? I was a 26. And what a lot of business for you? How did you get rich? Health care. Are you a business owner? I don't know, over 22 companies in the health care. Are you serious? And what was the most amount I'm going to be made a single year? Well last year we did $3 billion. With a B? With a B. Are you a billionaire? Yeah. You are? Yeah. Can I any of you for a minute?
+
+Did you come from money growing up? Oh no. I lived in the projects my whole life. I didn't have a father. Went into foster care when I was 13. So who taught you business? Oh I've studied everything. But cause I was so insecure without having to agree. I had an unending thirst for knowledge. Did you have any investors in your company? No. No outside money. No. How did you scale it to a $3 billion company then? It's working on the business instead of in the business. And the main thing I've done is I never saw myself as a victim. A lot of people blame everybody else when they fell. I don't blame anybody but me. That's how you escape poverty. Absolutely. Well I can't control anybody else. I can only control myself.
+
+Are you a good salesman? I was. I probably still am. What was your number one sales and negotiation advice to any entrepreneur? The number one thing is that you can have everything in the world you want if you help other people get what they want. The more money you make other people, the more money you're going to make yourself. Yeah but it's not my money. It's God's money. So you believe in God? Oh absolutely. And I think God has prepared me for what I'm about to do now. What are you doing now? I'm running for governor of Georgia. Are you actually? Yeah. Like I believe that God sent Jesus here not to save Republicans or not to save Democrats but to save everybody. How are you today? I'm 72.
+
+And if me and you died tomorrow and you could leave one more message with the younger generation right here, what would that be? Never, ever. Give up. Can I tell you something? Yeah. You have amazing advice sir. Well thank you. Every week I host live calls with the billionaires that I interview where they mentor my audience. Would you do a live call and mentor my audience? Oh a live call? I mentor my audience. Oh of course. All they have to do is comment billionaire below and we'll give them the access. Okay.

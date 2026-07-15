@@ -3,6 +3,14 @@ title: "castingdown"
 type: "study"
 original_path: "C:\STORAGE\M\Manifold-Grace\3-RESOURCES(Pantry)\GMP-NOTES\GodShew\castingdown.md"
 ---
+---
+tags:
+  - study
+Parent:
+created: 2026-07-14 11:55 pm
+Related:
+---
+
 Indeed,
 
 **b/c some of things we’ve heard & believed**,
@@ -41,7 +49,7 @@ By replacing CJ’s BetterLaw with JC’s Grace & Truth.
 
 For the only foundation laid = JC = Grace & Truth… Yet
 
-There’s also an UpGrade to Peace & Victory #thru JàC
+There’s also an UpGrade to Peace & Victory #thru J->C
 
 AsIf TheTruth to know is an UpGrade from believe to know,
 

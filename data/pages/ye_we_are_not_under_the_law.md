@@ -13,6 +13,8 @@ _Last updated at 2022-04-04T14:56:05-05:00._
 
 ---
 
+Related Tarsus page: [[1-PROJECTS(Stove)/212G-TARSUS-Main-Ministry-Platform/data/pages/ye_we_are_not_under_the_law]]
+
 # ye/we are not UNDER the law
 
 

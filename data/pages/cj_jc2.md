@@ -4,6 +4,8 @@ type: "study"
 original_path: "C:\STORAGE\M\Manifold-Grace\3-RESOURCES(Pantry)\GMP-NOTES\GodShew\cj-jc2.md"
 ---
 
+Related Tarsus page: [[1-PROJECTS(Stove)/212G-TARSUS-Main-Ministry-Platform/data/pages/cj_jc2]]
+
 Jose Antonio Garciarivas - CJ & JC contrast is noticed in Philippians 2:5-11 KJV (also using greek mode for man), where it   
 - begins with CJ allows himself to crucified when he found himself in fashion of 'anthropos' man ("liar" in Rom 3:4)   
 - ends with every "tongue" should confess JC = Lord, to the glory of the Father (after every "knee" bows to Jesus)   
